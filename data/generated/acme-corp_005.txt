@@ -1,0 +1,13 @@
+INVOICE
+Vendor: Jones, Stanley and Mejia
+Invoice No: INV-10005
+Date: 2026-01-31
+PO Reference: PO-4005
+Currency: INR
+
+Line Items:
+  SKU-6168   Participant dark               26 x     185.67 =      4827.42
+
+Subtotal: 4827.42
+Tax (18%): 868.94
+Total Due: 5696.36

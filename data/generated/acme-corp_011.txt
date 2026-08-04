@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Henderson, Brown and James
+Invoice No: INV-10011
+Date: 2026-07-01
+PO Reference: PO-4011
+Currency: INR
+
+Line Items:
+  SKU-2160   Traditional break              33 x     122.81 =      4052.73
+  SKU-8953   Claim product                  14 x     271.92 =      3806.88
+  SKU-8744   Collection structure           16 x     393.39 =      6294.24
+
+Subtotal: 14153.85
+Tax (18%): 2547.69
+Total Due: 16701.54

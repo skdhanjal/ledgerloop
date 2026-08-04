@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Foster-Rocha
+Invoice No: INV-10009
+Date: 2026-06-28
+PO Reference: PO-4009
+Currency: INR
+
+Line Items:
+  SKU-4258   Term almost                    10 x     190.09 =      1900.90
+  SKU-3646   Support four                   35 x     476.98 =     16694.30
+  SKU-9689   Institution executive           1 x     301.48 =       301.48
+  SKU-9005   Attorney development            2 x      60.37 =       120.74
+  SKU-6947   White yes                      20 x     123.53 =      2470.60
+  SKU-4946   Our under                      37 x     473.74 =     17528.38
+  SKU-2403   Serious forward                47 x     245.57 =     11541.79
+  SKU-2133   Difference reality             49 x     268.69 =     13165.81
+
+Subtotal: 63724.00
+Tax (18%): 11470.32
+Total Due: 75194.32

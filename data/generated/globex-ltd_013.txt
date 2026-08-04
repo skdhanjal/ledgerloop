@@ -1,0 +1,13 @@
+INVOICE
+Vendor: Ryan PLC
+Invoice No: INV-10013
+Date: 2026-01-01
+PO Reference: PO-4013
+Currency: INR
+
+Line Items:
+  SKU-1821   Hour sound                     38 x     241.01 =      9158.38
+
+Subtotal: 9158.38
+Tax (18%): 1648.51
+Total Due: 10806.89

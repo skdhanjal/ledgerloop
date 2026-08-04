@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Taylor Inc
+Invoice No: INV-10000
+Date: 2026-07-31
+PO Reference: PO-4000
+Currency: INR
+
+Line Items:
+  SKU-5012   Purpose brother                15 x      74.07 =      1111.05
+  SKU-2679   Ago site                       44 x     371.63 =     16351.72
+  SKU-9935   Face election                   6 x     297.29 =      1783.74
+
+Subtotal: 19246.51
+Tax (18%): 3464.37
+Total Due: 22710.88

@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Williams and Sons
+Invoice No: INV-10004
+Date: 2026-04-23
+PO Reference: PO-4004
+Currency: INR
+
+Line Items:
+  SKU-5010   Not capital                    11 x     315.66 =      3472.26
+  SKU-5422   Win human                      41 x     345.64 =     14171.24
+  SKU-4598   Bar old                        44 x     165.52 =      7282.88
+  SKU-1916   Finally themselves             15 x     411.79 =      6176.85
+  SKU-6168   Production present             26 x     137.53 =      3575.78
+  SKU-4456   Value training                 37 x     438.80 =     16235.60
+  SKU-6155   High participant               14 x     329.44 =      4612.16
+  SKU-7482   Dark sea                       42 x     232.13 =      9749.46
+
+Subtotal: 65276.23
+Tax (18%): 11749.72
+Total Due: 77025.95

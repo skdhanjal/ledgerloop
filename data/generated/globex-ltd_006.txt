@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Ramirez-Reid
+Invoice No: INV-10006
+Date: 2026-05-22
+PO Reference: PO-4006
+Currency: INR
+
+Line Items:
+  SKU-9179   Top early                      26 x     442.92 =     11515.92
+  SKU-8517   Trial blood                    10 x     136.12 =      1361.20
+
+Subtotal: 12877.12
+Tax (18%): 2317.88
+Total Due: 15195.00

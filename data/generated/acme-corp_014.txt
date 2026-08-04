@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Gill, Romero and Rodriguez
+Invoice No: INV-10014
+Date: 2026-04-26
+PO Reference: PO-4014
+Currency: INR
+
+Line Items:
+  SKU-4116   Seven type                     35 x     306.53 =     10728.55
+  SKU-7912   Serve everyone                 12 x     142.88 =      1714.56
+
+Subtotal: 12443.11
+Tax (18%): 2239.76
+Total Due: 14682.87

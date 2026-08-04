@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Davis and Sons
+Invoice No: INV-10001
+Date: 2026-07-16
+PO Reference: PO-4001
+Currency: INR
+
+Line Items:
+  SKU-4811   Begin performance              33 x     303.00 =      9999.00
+  SKU-4257   Knowledge almost               46 x     326.69 =     15027.74
+
+Subtotal: 25026.74
+Tax (18%): 4504.81
+Total Due: 29531.55

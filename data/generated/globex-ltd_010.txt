@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Hicks Inc
+Invoice No: INV-10010
+Date: 2026-01-19
+PO Reference: PO-4010
+Currency: INR
+
+Line Items:
+  SKU-3705   Character evidence             17 x     266.20 =      4525.40
+  SKU-7932   Chair employee                 14 x     464.81 =      6507.34
+  SKU-4295   Size option                    46 x     159.30 =      7327.80
+  SKU-7118   Nothing everyone               29 x     450.31 =     13058.99
+  SKU-8397   Skin pattern                    8 x     127.71 =      1021.68
+  SKU-2049   Later water                    22 x      15.41 =       339.02
+  SKU-4770   Past inside                    38 x     114.01 =      4332.38
+  SKU-2163   High discuss                   46 x     317.40 =     14600.40
+
+Subtotal: 51713.01
+Tax (18%): 9308.34
+Total Due: 61021.35

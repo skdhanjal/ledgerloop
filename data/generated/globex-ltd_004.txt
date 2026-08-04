@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Davis and Sons
+Invoice No: INV-10001
+Date: 2026-05-21
+PO Reference: PO-4004
+Currency: INR
+
+Line Items:
+  SKU-6977   Throw guy                      11 x     188.24 =      2070.64
+  SKU-4432   Pm everything                  43 x     137.15 =      5897.45
+  SKU-2169   Surface animal                 39 x     319.31 =     12453.09
+  SKU-9751   Show machine                   47 x     126.18 =      5930.46
+  SKU-8573   Not capital                    25 x     138.62 =      3465.50
+
+Subtotal: 29817.14
+Tax (18%): 5367.09
+Total Due: 35184.23

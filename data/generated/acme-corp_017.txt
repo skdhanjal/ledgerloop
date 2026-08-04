@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Harris, Collins and Carney
+Invoice No: INV-10017
+Date: 2026-05-26
+PO Reference: PO-4017
+Currency: INR
+
+Line Items:
+  SKU-7054   Woman notice                   19 x      83.08 =      1578.52
+  SKU-9900   Someone show                   46 x     154.75 =      7118.50
+
+Subtotal: 8697.02
+Tax (18%): 1565.46
+Total Due: 10262.48

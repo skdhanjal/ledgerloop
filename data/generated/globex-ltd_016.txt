@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Brown PLC
+Invoice No: INV-10016
+Date: 2026-01-31
+PO Reference: PO-99016
+Currency: INR
+
+Line Items:
+  SKU-7930   Woman him                      45 x     478.87 =     21549.15
+  SKU-8973   Unit theory                    10 x      99.00 =       990.00
+  SKU-4566   Surface food                    4 x     291.69 =      1166.76
+
+Subtotal: 23705.91
+Tax (18%): 4267.06
+Total Due: 27972.97

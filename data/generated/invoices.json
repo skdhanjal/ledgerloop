@@ -1,0 +1,754 @@
+[
+  {
+    "invoice_no": "INV-10000",
+    "vendor": "Taylor Inc",
+    "po_number": "PO-4000",
+    "currency": "INR",
+    "date": "2026-07-31",
+    "lines": [
+      {
+        "sku": "SKU-5012",
+        "description": "Purpose brother",
+        "quantity": 15,
+        "unit_price": 74.07
+      },
+      {
+        "sku": "SKU-2679",
+        "description": "Ago site",
+        "quantity": 44,
+        "unit_price": 371.63
+      },
+      {
+        "sku": "SKU-9935",
+        "description": "Face election",
+        "quantity": 6,
+        "unit_price": 297.29
+      }
+    ],
+    "subtotal": 19246.51,
+    "tax": 3464.37,
+    "total": 22710.88,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10001",
+    "vendor": "Davis and Sons",
+    "po_number": "PO-4001",
+    "currency": "INR",
+    "date": "2026-07-16",
+    "lines": [
+      {
+        "sku": "SKU-4811",
+        "description": "Begin performance",
+        "quantity": 33,
+        "unit_price": 303.0
+      },
+      {
+        "sku": "SKU-4257",
+        "description": "Knowledge almost",
+        "quantity": 46,
+        "unit_price": 326.69
+      }
+    ],
+    "subtotal": 25026.74,
+    "tax": 4504.81,
+    "total": 29531.55,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10002",
+    "vendor": "Lawrence-Pacheco",
+    "po_number": "PO-4002",
+    "currency": "INR",
+    "date": "2026-01-03",
+    "lines": [
+      {
+        "sku": "SKU-5557",
+        "description": "Play agreement",
+        "quantity": 1,
+        "unit_price": 380.61
+      },
+      {
+        "sku": "SKU-3615",
+        "description": "Option decide",
+        "quantity": 45,
+        "unit_price": 214.19
+      },
+      {
+        "sku": "SKU-5552",
+        "description": "Sense rate",
+        "quantity": 10,
+        "unit_price": 111.58
+      },
+      {
+        "sku": "SKU-6514",
+        "description": "Science offer",
+        "quantity": 7,
+        "unit_price": 50.91
+      },
+      {
+        "sku": "SKU-2584",
+        "description": "Kind discussion",
+        "quantity": 23,
+        "unit_price": 424.51
+      }
+    ],
+    "subtotal": 21255.06,
+    "tax": 3825.91,
+    "total": 25080.97,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10003",
+    "vendor": "Garcia-James",
+    "po_number": "PO-4003",
+    "currency": "INR",
+    "date": "2026-05-20",
+    "lines": [
+      {
+        "sku": "SKU-9785",
+        "description": "Song sure",
+        "quantity": 8,
+        "unit_price": 486.69
+      },
+      {
+        "sku": "SKU-7201",
+        "description": "Collection save",
+        "quantity": 6,
+        "unit_price": 278.26
+      },
+      {
+        "sku": "SKU-6925",
+        "description": "Knowledge grow",
+        "quantity": 37,
+        "unit_price": 100.18
+      },
+      {
+        "sku": "SKU-2139",
+        "description": "Fall clearly",
+        "quantity": 3,
+        "unit_price": 332.33
+      },
+      {
+        "sku": "SKU-5741",
+        "description": "Dinner source",
+        "quantity": 6,
+        "unit_price": 428.38
+      }
+    ],
+    "subtotal": 12837.01,
+    "tax": 2310.66,
+    "total": 15147.67,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10001",
+    "vendor": "Davis and Sons",
+    "po_number": "PO-4004",
+    "currency": "INR",
+    "date": "2026-05-21",
+    "lines": [
+      {
+        "sku": "SKU-6977",
+        "description": "Throw guy",
+        "quantity": 11,
+        "unit_price": 188.24
+      },
+      {
+        "sku": "SKU-4432",
+        "description": "Pm everything",
+        "quantity": 43,
+        "unit_price": 137.15
+      },
+      {
+        "sku": "SKU-2169",
+        "description": "Surface animal",
+        "quantity": 39,
+        "unit_price": 319.31
+      },
+      {
+        "sku": "SKU-9751",
+        "description": "Show machine",
+        "quantity": 47,
+        "unit_price": 126.18
+      },
+      {
+        "sku": "SKU-8573",
+        "description": "Not capital",
+        "quantity": 25,
+        "unit_price": 138.62
+      }
+    ],
+    "subtotal": 29817.14,
+    "tax": 5367.09,
+    "total": 35184.23,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_reason": "duplicate"
+  },
+  {
+    "invoice_no": "INV-10005",
+    "vendor": "Jones, Stanley and Mejia",
+    "po_number": "PO-4005",
+    "currency": "INR",
+    "date": "2026-01-31",
+    "lines": [
+      {
+        "sku": "SKU-6168",
+        "description": "Participant dark",
+        "quantity": 26,
+        "unit_price": 185.67
+      }
+    ],
+    "subtotal": 4827.42,
+    "tax": 868.94,
+    "total": 5696.36,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_reason": "price_variance"
+  },
+  {
+    "invoice_no": "INV-10006",
+    "vendor": "Ramirez-Reid",
+    "po_number": "PO-4006",
+    "currency": "INR",
+    "date": "2026-05-22",
+    "lines": [
+      {
+        "sku": "SKU-9179",
+        "description": "Top early",
+        "quantity": 26,
+        "unit_price": 442.92
+      },
+      {
+        "sku": "SKU-8517",
+        "description": "Trial blood",
+        "quantity": 10,
+        "unit_price": 136.12
+      }
+    ],
+    "subtotal": 12877.12,
+    "tax": 2317.88,
+    "total": 15195.0,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10007",
+    "vendor": "Martin Group",
+    "po_number": "PO-4007",
+    "currency": "INR",
+    "date": "2026-04-15",
+    "lines": [
+      {
+        "sku": "SKU-8019",
+        "description": "Commercial hospital",
+        "quantity": 38,
+        "unit_price": 202.7
+      },
+      {
+        "sku": "SKU-4593",
+        "description": "Hear determine",
+        "quantity": 9,
+        "unit_price": 257.22
+      },
+      {
+        "sku": "SKU-2489",
+        "description": "Religious example",
+        "quantity": 49,
+        "unit_price": 28.32
+      },
+      {
+        "sku": "SKU-2796",
+        "description": "Science write",
+        "quantity": 10,
+        "unit_price": 315.59
+      },
+      {
+        "sku": "SKU-7916",
+        "description": "Result raise",
+        "quantity": 39,
+        "unit_price": 36.45
+      },
+      {
+        "sku": "SKU-7252",
+        "description": "Away politics",
+        "quantity": 39,
+        "unit_price": 498.08
+      },
+      {
+        "sku": "SKU-9669",
+        "description": "Prove Congress",
+        "quantity": 17,
+        "unit_price": 485.68
+      },
+      {
+        "sku": "SKU-1188",
+        "description": "None shoulder",
+        "quantity": 44,
+        "unit_price": 361.76
+      }
+    ],
+    "subtotal": 59581.83,
+    "tax": 10724.73,
+    "total": 70306.56,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10008",
+    "vendor": "Cameron-Parsons",
+    "po_number": "PO-4008",
+    "currency": "INR",
+    "date": "2026-03-30",
+    "lines": [
+      {
+        "sku": "SKU-2827",
+        "description": "Wish push",
+        "quantity": 19,
+        "unit_price": 220.21
+      },
+      {
+        "sku": "SKU-8433",
+        "description": "Rise onto",
+        "quantity": 1,
+        "unit_price": 477.14
+      },
+      {
+        "sku": "SKU-5315",
+        "description": "Discuss reveal",
+        "quantity": 33,
+        "unit_price": 382.17
+      }
+    ],
+    "subtotal": 17272.74,
+    "tax": 3109.09,
+    "total": 20660.29,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_reason": "tax_error"
+  },
+  {
+    "invoice_no": "INV-10009",
+    "vendor": "Foster-Rocha",
+    "po_number": "PO-4009",
+    "currency": "INR",
+    "date": "2026-06-28",
+    "lines": [
+      {
+        "sku": "SKU-4258",
+        "description": "Term almost",
+        "quantity": 10,
+        "unit_price": 190.09
+      },
+      {
+        "sku": "SKU-3646",
+        "description": "Support four",
+        "quantity": 35,
+        "unit_price": 476.98
+      },
+      {
+        "sku": "SKU-9689",
+        "description": "Institution executive",
+        "quantity": 1,
+        "unit_price": 301.48
+      },
+      {
+        "sku": "SKU-9005",
+        "description": "Attorney development",
+        "quantity": 2,
+        "unit_price": 60.37
+      },
+      {
+        "sku": "SKU-6947",
+        "description": "White yes",
+        "quantity": 20,
+        "unit_price": 123.53
+      },
+      {
+        "sku": "SKU-4946",
+        "description": "Our under",
+        "quantity": 37,
+        "unit_price": 473.74
+      },
+      {
+        "sku": "SKU-2403",
+        "description": "Serious forward",
+        "quantity": 47,
+        "unit_price": 245.57
+      },
+      {
+        "sku": "SKU-2133",
+        "description": "Difference reality",
+        "quantity": 49,
+        "unit_price": 268.69
+      }
+    ],
+    "subtotal": 63724.0,
+    "tax": 11470.32,
+    "total": 75194.32,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10010",
+    "vendor": "Hicks Inc",
+    "po_number": "PO-4010",
+    "currency": "INR",
+    "date": "2026-01-19",
+    "lines": [
+      {
+        "sku": "SKU-3705",
+        "description": "Character evidence",
+        "quantity": 17,
+        "unit_price": 266.2
+      },
+      {
+        "sku": "SKU-7932",
+        "description": "Chair employee",
+        "quantity": 14,
+        "unit_price": 464.81
+      },
+      {
+        "sku": "SKU-4295",
+        "description": "Size option",
+        "quantity": 46,
+        "unit_price": 159.3
+      },
+      {
+        "sku": "SKU-7118",
+        "description": "Nothing everyone",
+        "quantity": 29,
+        "unit_price": 450.31
+      },
+      {
+        "sku": "SKU-8397",
+        "description": "Skin pattern",
+        "quantity": 8,
+        "unit_price": 127.71
+      },
+      {
+        "sku": "SKU-2049",
+        "description": "Later water",
+        "quantity": 22,
+        "unit_price": 15.41
+      },
+      {
+        "sku": "SKU-4770",
+        "description": "Past inside",
+        "quantity": 38,
+        "unit_price": 114.01
+      },
+      {
+        "sku": "SKU-2163",
+        "description": "High discuss",
+        "quantity": 46,
+        "unit_price": 317.4
+      }
+    ],
+    "subtotal": 51713.01,
+    "tax": 9308.34,
+    "total": 61021.35,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10011",
+    "vendor": "Henderson, Brown and James",
+    "po_number": "PO-4011",
+    "currency": "INR",
+    "date": "2026-07-01",
+    "lines": [
+      {
+        "sku": "SKU-2160",
+        "description": "Traditional break",
+        "quantity": 33,
+        "unit_price": 122.81
+      },
+      {
+        "sku": "SKU-8953",
+        "description": "Claim product",
+        "quantity": 14,
+        "unit_price": 271.92
+      },
+      {
+        "sku": "SKU-8744",
+        "description": "Collection structure",
+        "quantity": 16,
+        "unit_price": 393.39
+      }
+    ],
+    "subtotal": 14153.85,
+    "tax": 2547.69,
+    "total": 16701.54,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10012",
+    "vendor": "Valencia, Smith and Le",
+    "po_number": "PO-4012",
+    "currency": "INR",
+    "date": "2026-07-28",
+    "lines": [
+      {
+        "sku": "SKU-8062",
+        "description": "Newspaper enter",
+        "quantity": 23,
+        "unit_price": 214.67
+      }
+    ],
+    "subtotal": 4937.41,
+    "tax": 888.73,
+    "total": 5826.14,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_reason": "short_shipment"
+  },
+  {
+    "invoice_no": "INV-10013",
+    "vendor": "Peterson, Carter and Moore",
+    "po_number": "PO-4013",
+    "currency": "INR",
+    "date": "2026-01-02",
+    "lines": [
+      {
+        "sku": "SKU-1993",
+        "description": "Social example",
+        "quantity": 26,
+        "unit_price": 365.47
+      }
+    ],
+    "subtotal": 9502.22,
+    "tax": 1710.4,
+    "total": 11212.62,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10014",
+    "vendor": "Gill, Romero and Rodriguez",
+    "po_number": "PO-4014",
+    "currency": "INR",
+    "date": "2026-04-26",
+    "lines": [
+      {
+        "sku": "SKU-4116",
+        "description": "Seven type",
+        "quantity": 35,
+        "unit_price": 306.53
+      },
+      {
+        "sku": "SKU-7912",
+        "description": "Serve everyone",
+        "quantity": 12,
+        "unit_price": 142.88
+      }
+    ],
+    "subtotal": 12443.11,
+    "tax": 2239.76,
+    "total": 14682.87,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_reason": "price_variance"
+  },
+  {
+    "invoice_no": "INV-10015",
+    "vendor": "Sellers, George and Burns",
+    "po_number": "PO-4015",
+    "currency": "INR",
+    "date": "2026-02-13",
+    "lines": [
+      {
+        "sku": "SKU-2604",
+        "description": "Thought purpose",
+        "quantity": 4,
+        "unit_price": 327.81
+      },
+      {
+        "sku": "SKU-9856",
+        "description": "Movement politics",
+        "quantity": 1,
+        "unit_price": 484.65
+      },
+      {
+        "sku": "SKU-4872",
+        "description": "Decide claim",
+        "quantity": 11,
+        "unit_price": 206.17
+      },
+      {
+        "sku": "SKU-8886",
+        "description": "Hour sound",
+        "quantity": 14,
+        "unit_price": 433.0
+      },
+      {
+        "sku": "SKU-1960",
+        "description": "Color notice",
+        "quantity": 11,
+        "unit_price": 192.59
+      }
+    ],
+    "subtotal": 12244.25,
+    "tax": 2203.97,
+    "total": 14448.22,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10016",
+    "vendor": "Brown PLC",
+    "po_number": "PO-99016",
+    "currency": "INR",
+    "date": "2026-01-31",
+    "lines": [
+      {
+        "sku": "SKU-7930",
+        "description": "Woman him",
+        "quantity": 45,
+        "unit_price": 478.87
+      },
+      {
+        "sku": "SKU-8973",
+        "description": "Unit theory",
+        "quantity": 10,
+        "unit_price": 99.0
+      },
+      {
+        "sku": "SKU-4566",
+        "description": "Surface food",
+        "quantity": 4,
+        "unit_price": 291.69
+      }
+    ],
+    "subtotal": 23705.91,
+    "tax": 4267.06,
+    "total": 27972.97,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_reason": "missing_po"
+  },
+  {
+    "invoice_no": "INV-10017",
+    "vendor": "Cabrera-Spence",
+    "po_number": "PO-4017",
+    "currency": "INR",
+    "date": "2026-07-26",
+    "lines": [
+      {
+        "sku": "SKU-1821",
+        "description": "Bed sign",
+        "quantity": 38,
+        "unit_price": 241.01
+      }
+    ],
+    "subtotal": 9158.38,
+    "tax": 1648.51,
+    "total": 10806.89,
+    "tenant_id": "globex-ltd",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  },
+  {
+    "invoice_no": "INV-10018",
+    "vendor": "Keller PLC",
+    "po_number": "PO-4018",
+    "currency": "INR",
+    "date": "2026-03-06",
+    "lines": [
+      {
+        "sku": "SKU-9320",
+        "description": "Space car",
+        "quantity": 6,
+        "unit_price": 426.41
+      }
+    ],
+    "subtotal": 2558.46,
+    "tax": 460.52,
+    "total": 3099.81,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_reason": "tax_error"
+  },
+  {
+    "invoice_no": "INV-10019",
+    "vendor": "Harris, Collins and Carney",
+    "po_number": "PO-4019",
+    "currency": "INR",
+    "date": "2026-05-26",
+    "lines": [
+      {
+        "sku": "SKU-2964",
+        "description": "Evidence news",
+        "quantity": 37,
+        "unit_price": 126.88
+      },
+      {
+        "sku": "SKU-1651",
+        "description": "Turn policy",
+        "quantity": 40,
+        "unit_price": 45.58
+      },
+      {
+        "sku": "SKU-9565",
+        "description": "Land development",
+        "quantity": 21,
+        "unit_price": 467.68
+      },
+      {
+        "sku": "SKU-4346",
+        "description": "Woman notice",
+        "quantity": 43,
+        "unit_price": 359.51
+      },
+      {
+        "sku": "SKU-4910",
+        "description": "Someone show",
+        "quantity": 17,
+        "unit_price": 200.91
+      }
+    ],
+    "subtotal": 35213.44,
+    "tax": 6338.42,
+    "total": 41551.86,
+    "tenant_id": "acme-corp",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_reason": null
+  }
+]

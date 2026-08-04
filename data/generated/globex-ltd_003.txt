@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Munoz-Roman
+Invoice No: INV-10003
+Date: 2026-06-28
+PO Reference: PO-4003
+Currency: INR
+
+Line Items:
+  SKU-3045   Song sure                      25 x      59.41 =      1485.25
+  SKU-5803   Collection save                41 x     311.17 =     12757.97
+  SKU-6925   Knowledge grow                 37 x     100.18 =      3706.66
+  SKU-2139   Fall clearly                    3 x     332.33 =       996.99
+  SKU-5741   Dinner source                   6 x     428.38 =      2570.28
+  SKU-2654   Great blue                     25 x     142.60 =      3565.00
+  SKU-6977   Best husband                   11 x     188.24 =      2070.64
+  SKU-4432   Bill her                       43 x     137.15 =      5897.45
+
+Subtotal: 33050.24
+Tax (18%): 5949.04
+Total Due: 38999.28

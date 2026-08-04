@@ -1,0 +1,13 @@
+INVOICE
+Vendor: Cabrera-Spence
+Invoice No: INV-10018
+Date: 2026-07-26
+PO Reference: PO-4018
+Currency: INR
+
+Line Items:
+  SKU-1821   Bed sign                       38 x     241.01 =      9158.38
+
+Subtotal: 9158.38
+Tax (18%): 1648.51
+Total Due: 10806.89

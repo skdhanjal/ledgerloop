@@ -1,0 +1,13 @@
+INVOICE
+Vendor: Valencia, Smith and Le
+Invoice No: INV-10012
+Date: 2026-07-28
+PO Reference: PO-4012
+Currency: INR
+
+Line Items:
+  SKU-8062   Newspaper enter                23 x     214.67 =      4937.41
+
+Subtotal: 4937.41
+Tax (18%): 888.73
+Total Due: 5826.14

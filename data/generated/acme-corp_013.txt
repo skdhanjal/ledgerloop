@@ -1,0 +1,13 @@
+INVOICE
+Vendor: Peterson, Carter and Moore
+Invoice No: INV-10013
+Date: 2026-01-02
+PO Reference: PO-4013
+Currency: INR
+
+Line Items:
+  SKU-1993   Social example                 26 x     365.47 =      9502.22
+
+Subtotal: 9502.22
+Tax (18%): 1710.40
+Total Due: 11212.62

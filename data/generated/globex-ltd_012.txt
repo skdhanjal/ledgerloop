@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Evans, Fowler and Lynch
+Invoice No: INV-10012
+Date: 2026-03-01
+PO Reference: PO-99012
+Currency: INR
+
+Line Items:
+  SKU-7930   Month sound                    45 x     478.87 =     21549.15
+  SKU-8973   Could movement                 10 x      99.00 =       990.00
+  SKU-4566   While born                      4 x     291.69 =      1166.76
+
+Subtotal: 23705.91
+Tax (18%): 4267.06
+Total Due: 27972.97

@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Sellers, George and Burns
+Invoice No: INV-10015
+Date: 2026-02-13
+PO Reference: PO-4015
+Currency: INR
+
+Line Items:
+  SKU-2604   Thought purpose                 4 x     327.81 =      1311.24
+  SKU-9856   Movement politics               1 x     484.65 =       484.65
+  SKU-4872   Decide claim                   11 x     206.17 =      2267.87
+  SKU-8886   Hour sound                     14 x     433.00 =      6062.00
+  SKU-1960   Color notice                   11 x     192.59 =      2118.49
+
+Subtotal: 12244.25
+Tax (18%): 2203.97
+Total Due: 14448.22

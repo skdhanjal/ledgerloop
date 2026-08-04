@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Garcia-James
+Invoice No: INV-10003
+Date: 2026-05-20
+PO Reference: PO-4003
+Currency: INR
+
+Line Items:
+  SKU-9785   Song sure                       8 x     486.69 =      3893.52
+  SKU-7201   Collection save                 6 x     278.26 =      1669.56
+  SKU-6925   Knowledge grow                 37 x     100.18 =      3706.66
+  SKU-2139   Fall clearly                    3 x     332.33 =       996.99
+  SKU-5741   Dinner source                   6 x     428.38 =      2570.28
+
+Subtotal: 12837.01
+Tax (18%): 2310.66
+Total Due: 15147.67

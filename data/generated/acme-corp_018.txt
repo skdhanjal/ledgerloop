@@ -1,0 +1,13 @@
+INVOICE
+Vendor: Keller PLC
+Invoice No: INV-10018
+Date: 2026-03-06
+PO Reference: PO-4018
+Currency: INR
+
+Line Items:
+  SKU-9320   Space car                       6 x     426.41 =      2558.46
+
+Subtotal: 2558.46
+Tax (18%): 460.52
+Total Due: 3099.81

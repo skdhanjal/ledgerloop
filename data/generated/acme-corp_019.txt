@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Harris, Collins and Carney
+Invoice No: INV-10019
+Date: 2026-05-26
+PO Reference: PO-4019
+Currency: INR
+
+Line Items:
+  SKU-2964   Evidence news                  37 x     126.88 =      4694.56
+  SKU-1651   Turn policy                    40 x      45.58 =      1823.20
+  SKU-9565   Land development               21 x     467.68 =      9821.28
+  SKU-4346   Woman notice                   43 x     359.51 =     15458.93
+  SKU-4910   Someone show                   17 x     200.91 =      3415.47
+
+Subtotal: 35213.44
+Tax (18%): 6338.42
+Total Due: 41551.86
