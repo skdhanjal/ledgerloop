@@ -1,13 +1,20 @@
-"""Assemble and compile the graph."""
-from langgraph.graph import StateGraph, START, END
+"""Assemble the graph with a context schema and a public contract."""
+from langgraph.graph import END, START, StateGraph
 
-from .nodes import intake, extract, decide, post
+from .context import LedgerContext
+from .nodes import decide, extract, intake, post
+from .schemas import DecisionResult, InvoiceRequest
 from .state import InvoiceState
 
-def build_graph():
-    builder = StateGraph(InvoiceState)
 
-    # names are durable identifiers - they show up in checkpoints and traces
+def build_graph():
+    builder = StateGraph(
+        InvoiceState,                    # internal working state
+        context_schema=LedgerContext,    # per-run dependencies
+        input_schema=InvoiceRequest,     # what callers may send
+        output_schema=DecisionResult,    # what callers receive
+    )
+
     builder.add_node("intake", intake)
     builder.add_node("extract", extract)
     builder.add_node("decide", decide)
@@ -22,4 +29,4 @@ def build_graph():
     return builder.compile()
 
 
-graph = build_graph()          # module-level so `langgraph dev` can find it (Day 25)
+graph = build_graph()

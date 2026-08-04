@@ -1,28 +1,34 @@
-"""Graph state. Kept deliberately thin today - reducers arrive on Day 3."""
-from typing import TypedDict, Literal
+"""Graph state, now with explicit merge rules per channel."""
+import operator
+from typing import Annotated, Literal, TypedDict
+
+from .reducers import bounded_audit, dedupe_exceptions, merge_line_matches
 
 class InvoiceState(TypedDict, total=False):
-    """State for one invoice moving through the graph.
-
-    total=False means every key is optional at runtime. That matches reality:
-    a node early in the graph has not yet written the keys later nodes produce.
-    """
-    # set by the caller
+    # ---- single-writer channels: default overwrite ----------------------
+    # If two nodes ever write these in one super-step, LangGraph raises
+    # InvalidUpdateError. That crash is intentional - it means a wiring bug.
     invoice_path: str
-
-    # written by intake
     raw_text: str
     invoice_id: str
-
-    # written by extract   (hardcoded today, real on Day 8)
+    tenant_id: str
     vendor: str
     invoice_no: str
     po_number: str
     total: float
-
-    # written by decide    (hardcoded today, real on Day 5)
     decision: Literal["auto_approve", "hold", "reject"]
     reason: str
-
-    # written by post      (hardcoded today, real on Day 19)
     posted: bool
+
+    # ---- multi-writer channels: reducers required ------------------------
+    # Day 14 fans out one matcher per line item; all land in one super-step.
+    line_matches: Annotated[list[dict], merge_line_matches]
+
+    # Any node may raise an exception flag; we want one per code, most severe.
+    exceptions: Annotated[list[dict], dedupe_exceptions]
+
+    # Append-only, capped. Every routing decision lands here (Day 15).
+    audit: Annotated[list[dict], bounded_audit]
+
+    # Plain accumulation - used by the Day 6 investigator's scratch notes.
+    notes: Annotated[list[str], operator.add]
