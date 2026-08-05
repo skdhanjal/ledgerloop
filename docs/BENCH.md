@@ -9,3 +9,11 @@
 | `acme-corp_004` | price_variance | hold | hold | 5.7s | OK |
 | `acme-corp_005` | clean | auto_approve | hold | 5.4s | MISS |
 | `acme-corp_006` | clean | auto_approve | hold | 5.6s | MISS |
+
+
+## hand-built loop vs create_agent
+
+| implementation | policy acc | investigated | agent agreed | unparsed | wall clock | per invoice |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| handbuilt | 10/20 | 3 | 1/3 | 0 | 8.4s | 0.4s |
+| harness | 10/20 | 3 | 2/3 | 0 | 8.7s | 0.4s |

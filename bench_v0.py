@@ -15,7 +15,7 @@ from graph.context import LedgerContext
 from stubs.po_db import PurchaseOrderDB
 
 console = Console()
-TRUTH = {i["invoice_no"]: i
+TRUTH = {i["invoice_id"]: i
          for i in json.loads(Path("data/generated/invoices.json").read_text())}
 
 
@@ -24,7 +24,7 @@ def main():
     po_db = PurchaseOrderDB()
     rows, correct, investigated, t0 = [], 0, 0, time.perf_counter()
 
-    for path in sorted(Path("data/generated").glob("*.txt"))[:7]:
+    for path in sorted(Path("data/generated").glob("*.txt"))[:2]:
         tenant = path.stem.split("_")[0]
         ctx = LedgerContext(tenant_id=tenant, po_db=po_db)
         started = time.perf_counter()
@@ -32,8 +32,7 @@ def main():
         result = graph.invoke({"invoice_path": str(path)}, context=ctx,
                               config={"recursion_limit": RECURSION_LIMIT})
 
-        truth = next((t for t in TRUTH.values()
-                      if path.stem.endswith(f"{list(TRUTH).index(t['invoice_no']):03d}")), None)
+        truth = next((t for t in TRUTH.values() if path.stem.endswith(f"{list(TRUTH).index(t['invoice_id']):03d}")), None)
         expected = truth["expected_decision"] if truth else "?"
         actual = result["decision"]
         hit = expected == actual

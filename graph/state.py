@@ -16,6 +16,7 @@ class InvoiceState(TypedDict, total=False):
     invoice_no: str
     po_number: str
     total: float
+    subtotal: float
     decision: Literal["auto_approve", "hold", "reject"]
     reason: str
     posted: bool

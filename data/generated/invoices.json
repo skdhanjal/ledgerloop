@@ -1,6 +1,7 @@
 [
   {
     "invoice_no": "INV-10000",
+    "invoice_id": "acme-corp_000",
     "vendor": "Taylor Inc",
     "po_number": "PO-4000",
     "currency": "INR",
@@ -35,6 +36,7 @@
   },
   {
     "invoice_no": "INV-10001",
+    "invoice_id": "acme-corp_001",
     "vendor": "Davis and Sons",
     "po_number": "PO-4001",
     "currency": "INR",
@@ -63,6 +65,7 @@
   },
   {
     "invoice_no": "INV-10002",
+    "invoice_id": "acme-corp_002",
     "vendor": "Lawrence-Pacheco",
     "po_number": "PO-4002",
     "currency": "INR",
@@ -109,6 +112,7 @@
   },
   {
     "invoice_no": "INV-10003",
+    "invoice_id": "acme-corp_003",
     "vendor": "Garcia-James",
     "po_number": "PO-4003",
     "currency": "INR",
@@ -155,6 +159,7 @@
   },
   {
     "invoice_no": "INV-10001",
+    "invoice_id": "globex-ltd_004",
     "vendor": "Davis and Sons",
     "po_number": "PO-4004",
     "currency": "INR",
@@ -201,6 +206,7 @@
   },
   {
     "invoice_no": "INV-10005",
+    "invoice_id": "acme-corp_005",
     "vendor": "Jones, Stanley and Mejia",
     "po_number": "PO-4005",
     "currency": "INR",
@@ -223,6 +229,7 @@
   },
   {
     "invoice_no": "INV-10006",
+    "invoice_id": "globex-ltd_006",
     "vendor": "Ramirez-Reid",
     "po_number": "PO-4006",
     "currency": "INR",
@@ -251,6 +258,7 @@
   },
   {
     "invoice_no": "INV-10007",
+    "invoice_id": "globex-ltd_007",
     "vendor": "Martin Group",
     "po_number": "PO-4007",
     "currency": "INR",
@@ -315,6 +323,7 @@
   },
   {
     "invoice_no": "INV-10008",
+    "invoice_id": "globex-ltd_008",
     "vendor": "Cameron-Parsons",
     "po_number": "PO-4008",
     "currency": "INR",
@@ -349,6 +358,7 @@
   },
   {
     "invoice_no": "INV-10009",
+    "invoice_id": "globex-ltd_009",
     "vendor": "Foster-Rocha",
     "po_number": "PO-4009",
     "currency": "INR",
@@ -413,6 +423,7 @@
   },
   {
     "invoice_no": "INV-10010",
+    "invoice_id": "globex-ltd_010",
     "vendor": "Hicks Inc",
     "po_number": "PO-4010",
     "currency": "INR",
@@ -477,6 +488,7 @@
   },
   {
     "invoice_no": "INV-10011",
+    "invoice_id": "acme-corp_011",
     "vendor": "Henderson, Brown and James",
     "po_number": "PO-4011",
     "currency": "INR",
@@ -511,6 +523,7 @@
   },
   {
     "invoice_no": "INV-10012",
+    "invoice_id": "acme-corp_012",
     "vendor": "Valencia, Smith and Le",
     "po_number": "PO-4012",
     "currency": "INR",
@@ -533,6 +546,7 @@
   },
   {
     "invoice_no": "INV-10013",
+    "invoice_id": "acme-corp_013",
     "vendor": "Peterson, Carter and Moore",
     "po_number": "PO-4013",
     "currency": "INR",
@@ -555,6 +569,7 @@
   },
   {
     "invoice_no": "INV-10014",
+    "invoice_id": "acme-corp_014",
     "vendor": "Gill, Romero and Rodriguez",
     "po_number": "PO-4014",
     "currency": "INR",
@@ -583,6 +598,7 @@
   },
   {
     "invoice_no": "INV-10015",
+    "invoice_id": "acme-corp_015",
     "vendor": "Sellers, George and Burns",
     "po_number": "PO-4015",
     "currency": "INR",
@@ -629,6 +645,7 @@
   },
   {
     "invoice_no": "INV-10016",
+    "invoice_id": "globex-ltd_016",
     "vendor": "Brown PLC",
     "po_number": "PO-99016",
     "currency": "INR",
@@ -663,6 +680,7 @@
   },
   {
     "invoice_no": "INV-10017",
+    "invoice_id": "globex-ltd_017",
     "vendor": "Cabrera-Spence",
     "po_number": "PO-4017",
     "currency": "INR",
@@ -685,6 +703,7 @@
   },
   {
     "invoice_no": "INV-10018",
+    "invoice_id": "acme-corp_018",
     "vendor": "Keller PLC",
     "po_number": "PO-4018",
     "currency": "INR",
@@ -707,6 +726,7 @@
   },
   {
     "invoice_no": "INV-10019",
+    "invoice_id": "acme-corp_019",
     "vendor": "Harris, Collins and Carney",
     "po_number": "PO-4019",
     "currency": "INR",

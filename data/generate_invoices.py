@@ -36,6 +36,7 @@ class LineItem:
 @dataclass
 class Invoice:
     invoice_no: str
+    invoice_id: str
     vendor: str
     po_number: str | None
     currency: str
@@ -76,8 +77,8 @@ def build(idx, exception, tenant, prior):
 
     subtotal = round(sum(l.amount for l in lines), 2)
     tax = round(subtotal * 0.18, 2)
-
     inv = Invoice(
+        invoice_id=f"{tenant}_{idx:03d}",
         invoice_no=f"INV-{10000 + idx}", vendor=vendor, po_number=po_number,
         currency="INR", date=fake.date_this_year().isoformat(), lines=lines,
         subtotal=subtotal, tax=tax, total=round(subtotal + tax, 2),
@@ -137,7 +138,7 @@ def main(n: int = 20, seed: int = 42):
         exc = "clean" if random.random() <= 0.65 else random.choice(EXCEPTION_TYPES[1:])
         inv, refs = build(i, exc, random.choice(tenants), invoices)
         invoices.append(inv); pos.append(refs["po"]); receipts.append(refs["receipt"])
-        (OUT / f"{inv.tenant_id}_{i:03d}.txt").write_text(as_text(inv), encoding="utf-8")
+        (OUT / f"{inv.invoice_id}.txt").write_text(as_text(inv), encoding="utf-8")
 
     (OUT / "invoices.json").write_text(
         json.dumps([asdict(i) for i in invoices], indent=2, default=str), encoding="utf-8")

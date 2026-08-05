@@ -1,8 +1,10 @@
 """Assemble the graph with a context schema and a public contract."""
+from typing import Literal
 from langgraph.graph import END, START, StateGraph
 
 from config import get_model
 from graph.investigator import investigate_node_factory
+from graph.investigator_v2 import investigate_node_factory_v2
 
 from .context import LedgerContext
 from .nodes import decide, extract, intake, post, escalate, investigate
@@ -16,13 +18,16 @@ from .tools import build_invoice_index, make_tools
 # semantic one, so the DESIGNED exit fires first and the safety net never does.
 RECURSION_LIMIT = MAX_EXTRACT_ATTEMPTS * 2 + 8
 
-def build_graph(model=None, po_db=None):
+Impl = Literal["handbuilt", "harness"]
+
+def build_graph(model=None, po_db=None, investigator: Impl = "harness"):
     """model and po_db are injectable so tests can pass fakes (Day 4's payoff)."""
     from stubs.po_db import PurchaseOrderDB
 
     model = model or get_model()
     po_db = po_db or PurchaseOrderDB()
     tools = make_tools(po_db, build_invoice_index())
+    factory = (investigate_node_factory if investigator == "handbuilt" else investigate_node_factory_v2)
 
     builder = StateGraph(
         InvoiceState,                    # internal working state
@@ -34,7 +39,7 @@ def build_graph(model=None, po_db=None):
     builder.add_node("intake", intake)
     builder.add_node("extract", extract)
     builder.add_node("decide", decide)
-    builder.add_node("investigate", investigate_node_factory(model, tools))
+    builder.add_node("investigate", factory(model, tools))
     builder.add_node("escalate", escalate)
     builder.add_node("post", post)
 

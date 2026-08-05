@@ -83,3 +83,11 @@ def test_routers_do_not_mutate_state():
     snapshot = dict(s)
     route_after_extract(s)
     assert s == snapshot
+
+def test_clean_invoice_is_not_held_by_its_own_tax():
+    subtotal, tax, po_total = 2880.00, 518.40, 2880.00
+    assert ev(price_variance=(subtotal - po_total) / po_total).decision == "auto_approve"
+
+    wrong = ((subtotal + tax) - po_total) / po_total
+    assert round(wrong, 2) == 0.18                  # the bug, pinned
+    assert ev(price_variance=wrong).reason == "price_variance"    

@@ -54,6 +54,7 @@ def extract(state: InvoiceState) -> dict:
         "extract_ok": True,
         "po_number": po.group(1),
         "total": tot,
+        "subtotal": sub,
         "arithmetic_ok": abs((sub + tx) - tot) < 0.01,
         "audit": [{"node": "extract", "event": "parsed", "attempt": attempt}],
     }
@@ -66,16 +67,17 @@ def decide(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     receipt = ctx.po_db.get_receipt(state.get("po_number", ""))
 
     # Day 14 replaces this with real per-line matching; today, whole-invoice.
+    # after — net vs net
+  
     if po:
         po_total = sum(l["quantity"] * l["unit_price"] for l in po["lines"])
-        variance = (state["total"] - po_total) / po_total if po_total else 0.0
+        invoice_net = state.get("subtotal") or state.get("total", 0.0)
+        variance = (invoice_net - po_total) / po_total if po_total else 0.0
+        # variance = (state["total"] - po_total) / po_total if po_total else 0.0
         received = (sum(l["quantity_received"] for l in receipt["lines"])
                     / sum(l["quantity"] for l in po["lines"])) if receipt else 1.0
     else:
         variance, received = 0.0, 1.0
-
-    print("from invoide", state["total"])
-    print("from PO", po_total)
 
     outcome = evaluate(
         PolicyInput(

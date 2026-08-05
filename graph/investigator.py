@@ -26,7 +26,7 @@ Rules:
 - Be brief. When you have enough evidence, stop calling tools and answer with:
   ROOT CAUSE: <one line>
   EVIDENCE: <tool findings you relied on>
-  RECOMMENDATION: <hold | reject | approve> - <why>"""
+  RECOMMENDATION: <hold | reject | auto_approve> - <why>"""
 
 
 class InvestigatorState(TypedDict):
@@ -89,8 +89,7 @@ def investigate_node_factory(model, tools):
         return {
             "investigation": final.content,
             "notes": [f"{result['tool_calls_made']} tool calls"],
-            "audit": [{"node": "investigate", "event": "investigated",
-                       "tool_calls": result["tool_calls_made"]}],
+            "audit": [{"node": "investigate", "event": "investigated", "tool_calls": result["tool_calls_made"]}],
         }
 
     return investigate
