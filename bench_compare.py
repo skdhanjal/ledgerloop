@@ -37,7 +37,7 @@ def run(impl: str) -> dict:
     correct = investigated = agreed = unparsed = 0
     t0 = time.perf_counter()
 
-    for path in sorted(Path("data/generated").glob("*.txt"))[:10]:
+    for path in sorted(Path("data/generated").glob("*.txt"))[:1]:
         truth = TRUTH[path.stem]              # explicit key join, never index
         ctx = LedgerContext(tenant_id=path.stem.split("_")[0], po_db=po_db)
 

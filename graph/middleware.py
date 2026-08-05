@@ -14,7 +14,7 @@ import re
 from langchain.agents.middleware import (ModelCallLimitMiddleware, ModelRequest,
                                          dynamic_prompt, wrap_tool_call)
 
-MAX_MODEL_CALLS = 6          # free-tier quota protection; see Day 5's two brakes
+MAX_MODEL_CALLS = 8          # free-tier quota protection; see Day 5's two brakes
 
 # bank details and tax ids that must never enter the message channel
 SECRET_PATTERNS = [
