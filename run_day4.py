@@ -31,3 +31,6 @@ console.print(JSON.from_data(result))
 console.print(f"\n[dim]keys returned: {sorted(result)}[/dim]")
 console.print("[dim]raw_text present? "
               f"{'raw_text' in result}  <- output_schema keeps it internal[/dim]")
+
+graph.get_graph().draw_mermaid_png(output_file_path="graph.png")
+

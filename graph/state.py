@@ -19,6 +19,8 @@ class InvoiceState(TypedDict, total=False):
     decision: Literal["auto_approve", "hold", "reject"]
     reason: str
     posted: bool
+    extract_ok: bool
+    extract_attempts: int
 
     # ---- multi-writer channels: reducers required ------------------------
     # Day 14 fans out one matcher per line item; all land in one super-step.

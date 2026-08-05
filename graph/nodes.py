@@ -1,23 +1,19 @@
-"""Nodes. Every one takes state and returns ONLY the keys it changes.
-
-Three of the four are stubs. That is deliberate: today we are proving the wiring,
-so nothing here calls a model and nothing here can fail for an interesting reason.
-"""
-
+"""Nodes for the forked graph. New: extract retries, investigate, escalate."""
+import re
 from pathlib import Path
 
 from langgraph.runtime import Runtime
-from .state import InvoiceState
+
 from .context import LedgerContext
+from .policy import PolicyInput, evaluate
+from .state import InvoiceState
+
+MONEY = r"([\d,]+\.\d{2})"
+
 
 def intake(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
-    """Read the invoice file off disk. The one node that does real work today.
-
-    tenant_id lives in context (supplied per run) AND in state (a durable fact
-    about this invoice). A resumed thread must still know whose invoice it is.
-    """
     path = Path(state["invoice_path"])
-
+    
     if not path.exists():
         raise FileNotFoundError(f"No invoice at {path}")
 
@@ -25,43 +21,100 @@ def intake(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
         "raw_text": path.read_text(encoding="utf-8"),
         "invoice_id": path.stem,
         "tenant_id": runtime.context.tenant_id,
-        "audit": [{"node": "intake", "event": "invoice_read", "path": str(path)}]
+        "audit": [{"node": "intake", "event": "invoice_read"}],
     }
 
 
 def extract(state: InvoiceState) -> dict:
-    """STUB -> Day 8. Will parse raw_text into validated fields via structured output."""
-    assert state.get("raw_text"), "extract ran before intake wrote raw_text"
+    """Still not a model - regex today, structured output on Day 8.
+
+    Increments its own attempt counter so the router can see the loop count.
+    """
+    attempt = state.get("extract_attempts", 0) + 1
+    text = state["raw_text"]
+
+    po = re.search(r"PO Reference:\s*(\S+)", text)
+    total = re.search(rf"Total Due:\s*{MONEY}", text)
+    subtotal = re.search(rf"Subtotal:\s*{MONEY}", text)
+    tax = re.search(rf"Tax \(18%\):\s*{MONEY}", text)
+
+    ok = all([po, total, subtotal, tax])
+    if not ok:
+        return {
+            "extract_attempts": attempt,
+            "extract_ok": False,
+            "audit": [{"node": "extract", "event": "parse_failed", "attempt": attempt}],
+        }
+
+    f = lambda m: float(m.group(1).replace(",", ""))
+    sub, tx, tot = f(subtotal), f(tax), f(total)
+
     return {
-        "vendor": "PLACEHOLDER VENDOR",
-        "invoice_no": "INV-00000",
-        "po_number": "PO-0000",
-        "total": 0.0,
+        "extract_attempts": attempt,
+        "extract_ok": True,
+        "po_number": po.group(1),
+        "total": tot,
+        "arithmetic_ok": abs((sub + tx) - tot) < 0.01,
+        "audit": [{"node": "extract", "event": "parsed", "attempt": attempt}],
     }
 
 
 def decide(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
-    """STUB -> Day 5, but the policy inputs are already injected, not hardcoded."""
+    """Gather the facts, hand them to the pure policy function, record the result."""
     ctx = runtime.context
     po = ctx.po_db.get_po(state.get("po_number", ""))
+    receipt = ctx.po_db.get_receipt(state.get("po_number", ""))
 
-    if po is None:
-        return {
-            "decision": "hold",
-            "reason": "missing_po",
-            "exceptions": [{"code": "missing_po", "severity": "high", "detail": state.get("po_number")}],
-            "audit": [{"node": "decide", "event": "po_lookup_failed"}],
-        }
+    # Day 14 replaces this with real per-line matching; today, whole-invoice.
+    if po:
+        po_total = sum(l["quantity"] * l["unit_price"] for l in po["lines"])
+        variance = (state["total"] - po_total) / po_total if po_total else 0.0
+        received = (sum(l["quantity_received"] for l in receipt["lines"])
+                    / sum(l["quantity"] for l in po["lines"])) if receipt else 1.0
+    else:
+        variance, received = 0.0, 1.0
 
-    # Day 5 turns this into a real variance comparison using ctx.variance_tolerance
+    outcome = evaluate(
+        PolicyInput(
+            total=state.get("total", 0.0),
+            po_exists=po is not None,
+            price_variance=max(variance, 0.0),
+            qty_received_ratio=received,
+            is_duplicate=False,               # Day 6 adds the duplicate tool
+            arithmetic_ok=state.get("arithmetic_ok", True),
+        ),
+        tolerance=ctx.variance_tolerance,
+        max_auto_approve=ctx.max_auto_approve,
+    )
+
+    return {
+        "decision": outcome.decision,
+        "reason": outcome.reason,
+        "exceptions": outcome.exceptions,
+        "audit": [{"node": "decide", "event": "policy_evaluated", "decision": outcome.decision, "reason": outcome.reason}],
+    }
+
+
+def investigate(state: InvoiceState) -> dict:
+    """STUB -> Day 6, where this becomes a hand-built ReAct agent."""
+    codes = [e["code"] for e in state.get("exceptions", [])]
+    return {
+        "notes": [f"investigation stub: {', '.join(codes) or 'no exceptions'}"],
+        "audit": [{"node": "investigate", "event": "stub"}],
+    }
+
+
+def escalate(state: InvoiceState) -> dict:
+    """The designed exit when the semantic brake fires. Never a crash."""
     return {
         "decision": "hold",
-        "reason": "stub_always_holds",
-        "audit": [{"node": "decide", "event": "policy_stub", "tolerance": ctx.variance_tolerance}],
+        "reason": "escalated_extraction_failed",
+        "exceptions": [{"code": "extraction_failed", "severity": "high",
+                        "detail": f"gave up after {state.get('extract_attempts')} attempts"}],
+        "audit": [{"node": "escalate", "event": "handed_to_human"}],
     }
 
 
 def post(state: InvoiceState) -> dict:
-    """STUB -> Day 19. Will post to the ERP behind an idempotency key."""
     print(f"[post] {state.get('invoice_id')} -> {state.get('decision')}")
-    return {"posted": True}
+    return {"posted": True, "audit": [{"node": "post", "event": "posted"}]}
