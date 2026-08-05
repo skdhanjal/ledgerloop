@@ -68,7 +68,7 @@ def decide(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
 
     # Day 14 replaces this with real per-line matching; today, whole-invoice.
     # after — net vs net
-  
+    
     if po:
         po_total = sum(l["quantity"] * l["unit_price"] for l in po["lines"])
         invoice_net = state.get("subtotal") or state.get("total", 0.0)
