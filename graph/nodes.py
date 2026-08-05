@@ -74,6 +74,9 @@ def decide(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     else:
         variance, received = 0.0, 1.0
 
+    print("from invoide", state["total"])
+    print("from PO", po_total)
+
     outcome = evaluate(
         PolicyInput(
             total=state.get("total", 0.0),
@@ -86,7 +89,6 @@ def decide(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
         tolerance=ctx.variance_tolerance,
         max_auto_approve=ctx.max_auto_approve,
     )
-
     return {
         "decision": outcome.decision,
         "reason": outcome.reason,

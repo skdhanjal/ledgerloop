@@ -6,7 +6,7 @@ Cheap and side-effect free, because LangGraph may re-execute them.
 from typing import Literal
 from .state import InvoiceState
 
-MAX_EXTRACT_ATTEMPTS = 3
+MAX_EXTRACT_ATTEMPTS = 10
 
 def route_after_extract(state: InvoiceState) -> Literal["decide", "extract", "escalate"]:
     """Retry loop with both brakes visible in one place."""

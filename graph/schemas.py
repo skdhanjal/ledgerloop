@@ -20,4 +20,5 @@ class DecisionResult(BaseModel):
     decision: Literal["auto_approve", "hold", "reject"]
     reason: str
     total: float
-    exceptions: list[dict] = []
+    exceptions: list[dict] = [],
+    investigation: str

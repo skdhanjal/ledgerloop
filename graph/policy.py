@@ -34,7 +34,6 @@ def _exc(code: str, severity: str, detail: str) -> dict:
 def evaluate(p: PolicyInput, tolerance: float,
              max_auto_approve: float) -> PolicyOutcome:
     """Order matters: the first matching rule wins, most severe first."""
-
     # 1. Never pay the same invoice twice. Not a hold - a reject.
     if p.is_duplicate:
         return PolicyOutcome("reject", "duplicate",
