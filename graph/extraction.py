@@ -71,4 +71,4 @@ class ExceptionVerdict(BaseModel):
         description="Tool findings relied on, one per item. Do not include "
                     "anything you did not verify with a tool.")
     recommendation: str = Field(description="One of: hold, reject, approve")
-    confidence: float = Field(ge=0, le=1)
+    confidence: float = Field(ge=0, le=1, default=1.0, description="REQUIRED: A confidence score between 0.0 and 1.0 representing certainty.")

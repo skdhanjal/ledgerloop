@@ -1,20 +1,32 @@
-"""LedgerLoop middleware.
+"""Middleware stack, now with summarization.
 
-ORDERING (outermost first) - do not shuffle without reading this:
-  1. redact_tool_output   guardrail: secrets must never reach the model, so it
-                          wraps everything inside it
-  2. model_call_limit     budget: counts real model calls, and must not count
-                          retries performed by layers beneath it
-  3. tenant_policy_prompt context: injects per-tenant rules closest to the call
+ORDERING (outermost first) - unchanged reasoning from Day 7:
+  1. redact_tool_output      guardrail: nothing inside it may leak
+  2. model_call_limit        budget: must not count retries below it
+  3. summarize_history       context management: closest to the model
+  4. tenant_policy_prompt    prompt assembly, innermost
 
-Rule of thumb: guardrails outermost, context management innermost.
+Summarization sits INSIDE redaction deliberately. Reverse them and you
+summarise unredacted tool output, then store the secrets inside the summary -
+where they are no longer pattern-matchable and will be re-sent forever.
 """
-import re
 
-from langchain.agents.middleware import (ModelCallLimitMiddleware, ModelRequest,
+import re
+from langchain.agents.middleware import (ModelCallLimitMiddleware, ModelRequest, SummarizationMiddleware,
                                          dynamic_prompt, wrap_tool_call)
 
 MAX_MODEL_CALLS = 8          # free-tier quota protection; see Day 5's two brakes
+
+SUMMARY_THRESHOLD_TOKENS = 12_000
+
+SUMMARY_INSTRUCTION = """Summarise the investigation so far for an
+accounts-payable reviewer.
+
+PRESERVE EXACTLY: every figure (prices, quantities, totals), every PO and
+invoice number, and which tool produced each finding. A summary that says
+"a price discrepancy was found" without the two numbers is useless here.
+
+Drop: reasoning that led nowhere, repeated lookups, pleasantries."""
 
 # bank details and tax ids that must never enter the message channel
 SECRET_PATTERNS = [
@@ -64,10 +76,15 @@ def tenant_policy_prompt(request: ModelRequest) -> str:
     return f"{SYSTEM}\n\nTENANT POLICY ({tenant}):\n{policy}"
 
 
-def ledgerloop_middleware():
+def ledgerloop_middleware(model):
     """The stack, in order. Index 0 is outermost."""
     return [
         redact_tool_output,
         ModelCallLimitMiddleware(thread_limit=MAX_MODEL_CALLS),
+        SummarizationMiddleware(
+            model=model,
+            max_tokens_before_summary=SUMMARY_THRESHOLD_TOKENS,
+            summary_prompt=SUMMARY_INSTRUCTION,
+        ),
         tenant_policy_prompt,
     ]

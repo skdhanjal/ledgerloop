@@ -22,7 +22,7 @@ RECURSION_LIMIT = MAX_EXTRACT_ATTEMPTS * 2 + 8
 
 Impl = Literal["handbuilt", "harness"]
 
-def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpointer = None):
+def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpointer = None, store= None):
     """model and po_db are injectable so tests can pass fakes (Day 4's payoff)."""
     from stubs.po_db import PurchaseOrderDB
 
@@ -64,7 +64,7 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
     builder.add_edge("escalate", END)
     builder.add_edge("investigate", END)
 
-    return builder.compile(checkpointer=checkpointer)
+    return builder.compile(checkpointer=checkpointer, store=store)
 
 
 graph = build_graph()

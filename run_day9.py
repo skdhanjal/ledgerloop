@@ -7,13 +7,15 @@ from rich.json import JSON
 from graph.build import RECURSION_LIMIT, build_graph
 from graph.checkpointing import get_checkpointer, thread_id_for
 from graph.context import LedgerContext
+from graph.store import get_store
 from stubs.po_db import PurchaseOrderDB
 
 console = Console()
 checkpointer = get_checkpointer("postgres")
-graph = build_graph(checkpointer=checkpointer)
+store = get_store("memory")
+graph = build_graph(checkpointer=checkpointer, store=store)
 
-invoice = sorted(Path("data/generated").glob("acme-corp_*.txt"))[0]
+invoice = sorted(Path("data/generated").glob("acme-corp_*.txt"))[4]
 thread = thread_id_for("acme-corp", invoice.stem)
 config = {"configurable": {"thread_id": thread}, "recursion_limit": RECURSION_LIMIT}
 ctx = LedgerContext(tenant_id="acme-corp", po_db=PurchaseOrderDB())

@@ -4,6 +4,7 @@ from pathlib import Path
 
 from langgraph.runtime import Runtime
 
+from .memory import (format_for_prompt, recall_vendor, remember_resolution)
 from .context import LedgerContext
 from .policy import PolicyInput, evaluate
 from .state import InvoiceState
@@ -122,3 +123,57 @@ def escalate(state: InvoiceState) -> dict:
 def post(state: InvoiceState) -> dict:
     print(f"[post] {state.get('invoice_id')} -> {state.get('decision')}")
     return {"posted": True, "audit": [{"node": "post", "event": "posted"}]}
+
+
+"""Investigator wiring, now with recall before and a write after."""
+def investigate_with_memory_factory(agent):
+    """agent is the create_agent instance from Day 8."""
+
+    def investigate(state, runtime: Runtime[LedgerContext]) -> dict:
+        tenant = runtime.context.tenant_id
+        vendor = state.get("vendor", "")
+
+        # --- recall: what do we already know about this vendor? ---
+        memories = recall_vendor(
+            runtime.store, tenant, vendor,
+            query=state.get("reason", "exception"), limit=3)
+
+        opening = (
+            f"Invoice {state.get('invoice_id')} was flagged: "
+            f"{', '.join(e['code'] for e in state.get('exceptions', []))}.\n"
+            f"Vendor: {vendor}\nPO reference: {state.get('po_number')}\n"
+            f"Invoice total: {state.get('total')}\n\n"
+            f"{format_for_prompt(memories)}\n\nInvestigate and report."
+        )
+
+        print("opening", opening)
+
+        result = agent.invoke({"messages": [{"role": "user", "content": opening}]})
+        verdict = result.get("structured_response")
+
+        if verdict is None:
+            return {"investigation": "no structured verdict", "audit": [{"node": "investigate", "event": "no_verdict"}]}
+
+        # --- write: only a RESOLUTION, and only once we have one ---
+        # From Day 11 this moves behind the human approval gate: a memory
+        # written from an unreviewed verdict is a confident guess that every
+        # future invoice from this vendor will inherit.
+        if verdict.confidence >= 0.7 and state.get("exceptions"):
+            remember_resolution(
+                runtime.store, tenant, vendor,
+                exception_code=state["exceptions"][0]["code"],
+                root_cause=verdict.root_cause,
+                resolution=verdict.recommendation,
+                invoice_id=state.get("invoice_id", ""),
+            )
+
+        return {
+            "investigation": verdict.root_cause,
+            "verdict": verdict.model_dump(),
+            "notes": [f"{len(memories)} memories recalled"],
+            "audit": [{"node": "investigate", "event": "verdict", "memories_used": len(memories), "confidence": verdict.confidence}],
+        }
+
+    return investigate
+
+
