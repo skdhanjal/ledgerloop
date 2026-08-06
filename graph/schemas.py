@@ -3,6 +3,8 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
+from graph.extraction import ExceptionVerdict
+
 class InvoiceRequest(BaseModel):
     """What a caller may send. Anything else is rejected."""
     invoice_path: str = Field(description="Path to the invoice text file")
@@ -20,5 +22,7 @@ class DecisionResult(BaseModel):
     decision: Literal["auto_approve", "hold", "reject"]
     reason: str
     total: float
-    exceptions: list[dict] = [],
+    exceptions: list[dict] = []
     investigation: str
+    verdict: ExceptionVerdict
+    notes: list[str]

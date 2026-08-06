@@ -73,7 +73,7 @@ def decide(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     if po:
         po_total = sum(l["quantity"] * l["unit_price"] for l in po["lines"])
         invoice_net = state.get("subtotal") or state.get("total", 0.0)
-        variance = (invoice_net - po_total) / po_total if po_total else 0.0
+        variance = (float(invoice_net) - po_total) / po_total if po_total else 0.0
         # variance = (state["total"] - po_total) / po_total if po_total else 0.0
         received = (sum(l["quantity_received"] for l in receipt["lines"])
                     / sum(l["quantity"] for l in po["lines"])) if receipt else 1.0
@@ -136,7 +136,7 @@ def investigate_with_memory_factory(agent):
         # --- recall: what do we already know about this vendor? ---
         memories = recall_vendor(
             runtime.store, tenant, vendor,
-            query=state.get("reason", "exception"), limit=3)
+            query=state.get("reason", "exception"), limit=3) if  runtime.store else []
 
         opening = (
             f"Invoice {state.get('invoice_id')} was flagged: "
@@ -146,26 +146,13 @@ def investigate_with_memory_factory(agent):
             f"{format_for_prompt(memories)}\n\nInvestigate and report."
         )
 
-        print("opening", opening)
-
         result = agent.invoke({"messages": [{"role": "user", "content": opening}]})
         verdict = result.get("structured_response")
 
+        print("verdict", verdict)
+
         if verdict is None:
             return {"investigation": "no structured verdict", "audit": [{"node": "investigate", "event": "no_verdict"}]}
-
-        # --- write: only a RESOLUTION, and only once we have one ---
-        # From Day 11 this moves behind the human approval gate: a memory
-        # written from an unreviewed verdict is a confident guess that every
-        # future invoice from this vendor will inherit.
-        if verdict.confidence >= 0.7 and state.get("exceptions"):
-            remember_resolution(
-                runtime.store, tenant, vendor,
-                exception_code=state["exceptions"][0]["code"],
-                root_cause=verdict.root_cause,
-                resolution=verdict.recommendation,
-                invoice_id=state.get("invoice_id", ""),
-            )
 
         return {
             "investigation": verdict.root_cause,

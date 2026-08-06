@@ -2,6 +2,8 @@
 import operator
 from typing import Annotated, Literal, TypedDict
 
+from graph.extraction import ExceptionVerdict
+
 from .reducers import bounded_audit, dedupe_exceptions, merge_line_matches
 
 class InvoiceState(TypedDict, total=False):
@@ -22,6 +24,8 @@ class InvoiceState(TypedDict, total=False):
     posted: bool
     extract_ok: bool
     extract_attempts: int
+    investigation: str
+    verdict: dict
 
     # ---- multi-writer channels: reducers required ------------------------
     # Day 14 fans out one matcher per line item; all land in one super-step.

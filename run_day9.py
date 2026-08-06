@@ -12,8 +12,8 @@ from stubs.po_db import PurchaseOrderDB
 
 console = Console()
 checkpointer = get_checkpointer("postgres")
-store = get_store("memory")
-graph = build_graph(checkpointer=checkpointer, store=store)
+store = get_store("postgres")
+graph = build_graph(checkpointer=checkpointer)
 
 invoice = sorted(Path("data/generated").glob("acme-corp_*.txt"))[4]
 thread = thread_id_for("acme-corp", invoice.stem)
@@ -22,7 +22,7 @@ ctx = LedgerContext(tenant_id="acme-corp", po_db=PurchaseOrderDB())
 
 console.rule(f"[bold]run - thread {thread}")
 result = graph.invoke({"invoice_path": str(invoice)}, context=ctx, config=config)
-console.print(JSON.from_data(result))
+# console.print(JSON.from_data(result))
 
 console.rule("[bold]the checkpoint that survived")
 snapshot = graph.get_state(config)

@@ -23,7 +23,7 @@ def embed_texts(texts: list[str]) -> list[list[float]]:
     return [list(v) for v in _embedder().embed(texts)]
 
 
-def get_store(kind: str | None = None, semantic: bool = True):
+def get_store(kind: str | None = None, semantic: bool = False):
     kind = kind or os.getenv("LEDGERLOOP_STORE", "memory")
 
     index = ({"embed": embed_texts, "dims": EMBED_DIMS, "fields": ["text"]}
