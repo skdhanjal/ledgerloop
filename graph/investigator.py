@@ -23,11 +23,8 @@ Rules:
 - Verify claims with tools. Do not assume what a purchase order says.
 - A quantity mismatch may be a unit-of-measure difference (cases vs units).
   Check the amounts before concluding a shortfall.
-- Be brief. When you have enough evidence, stop calling tools and answer with:
-  ROOT CAUSE: <one line>
-  EVIDENCE: <tool findings you relied on>
-  RECOMMENDATION: <hold | reject | auto_approve> - <why>"""
-
+- When you have enough evidence, stop calling tools and answer with structured output only.
+  """
 
 class InvestigatorState(TypedDict):
     messages: Annotated[list, add_messages]

@@ -23,6 +23,4 @@ class DecisionResult(BaseModel):
     reason: str
     total: float
     exceptions: list[dict] = []
-    investigation: str
-    verdict: ExceptionVerdict
     notes: list[str]

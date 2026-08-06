@@ -59,12 +59,12 @@ def approval_gate(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     note = decision.get("note", "")
 
     if action == "approve":
-        if runtime.store and verdict.confidence >= 0.7 and state.get("exceptions"):
+        if runtime.store and verdict.get("confidence", 0) >= 0.7 and state.get("exceptions"):
             remember_resolution(
                 runtime.store, tenant, vendor,
                 exception_code=state["exceptions"][0]["code"],
-                root_cause=verdict.root_cause,
-                resolution=verdict.recommendation,
+                root_cause=verdict.get("root_cause"),
+                resolution=verdict.get("recommendation"),
                 invoice_id=state.get("invoice_id", ""),
             )
 

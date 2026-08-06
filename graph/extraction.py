@@ -61,14 +61,8 @@ class InvoiceFields(BaseModel):
 
 
 class ExceptionVerdict(BaseModel):
-    """The investigator's output. Replaces Day 6's free-text block.
-
-    A router can branch on this and a Day 22 judge can grade it field by field,
-    neither of which is true of prose.
-    """
+    """The investigator's output."""
     root_cause: str = Field(description="One sentence. What actually happened.")
-    evidence: list[str] = Field(
-        description="Tool findings relied on, one per item. Do not include "
-                    "anything you did not verify with a tool.")
-    recommendation: str = Field(description="One of: hold, reject, approve")
-    confidence: float = Field(ge=0, le=1, default=1.0, description="REQUIRED: A confidence score between 0.0 and 1.0 representing certainty.")
+    evidence: list[str] = Field(description="Tool findings relied on, one per item. Do not include anything you did not verify with a tool.")
+    recommendation: str = Field(description="One of these values: hold, reject, approve")
+    confidence: float = Field(ge=0, le=1, default=1.0, description="A confidence score between 0.0 and 1.0 representing certainty.")

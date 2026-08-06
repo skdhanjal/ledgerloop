@@ -149,8 +149,6 @@ def investigate_with_memory_factory(agent):
         result = agent.invoke({"messages": [{"role": "user", "content": opening}]})
         verdict = result.get("structured_response")
 
-        print("verdict", verdict)
-
         if verdict is None:
             return {"investigation": "no structured verdict", "audit": [{"node": "investigate", "event": "no_verdict"}]}
 
