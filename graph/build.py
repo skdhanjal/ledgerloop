@@ -5,9 +5,6 @@ from langgraph.graph import END, START, StateGraph
 from config import get_model
 from graph.approval import approval_gate, needs_human
 from graph.extract_node import make_extract
-from graph.investigator import investigate_node_factory
-from graph.investigator_v2 import investigate_node_factory_v2
-from graph.investigator_v3 import investigate_node_factory_v3
 
 from .context import LedgerContext
 from .nodes import decide, extract, intake, post, escalate, investigate
@@ -15,6 +12,9 @@ from .schemas import DecisionResult, InvoiceRequest
 from .state import InvoiceState
 from .routers import route_after_approval_gate, route_after_decide, MAX_EXTRACT_ATTEMPTS, route_after_extract, route_after_investigate
 from .tools import build_invoice_index, make_tools
+
+from .investigation.graph import build_investigation_graph
+from .investigation.wrapper import make_investigate_node
 
 # The loop body is one node (extract), so each retry costs one super-step.
 # Straight-line path is ~5 steps. Give the hard brake headroom over the
@@ -30,7 +30,7 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
     model = model or get_model()
     po_db = po_db or PurchaseOrderDB()
     tools = make_tools(po_db, build_invoice_index())
-    factory = (investigate_node_factory if investigator == "handbuilt" else investigate_node_factory_v3)
+    investigation = build_investigation_graph(model, tools)
 
     builder = StateGraph(
         InvoiceState,                    # internal working state
@@ -42,7 +42,7 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
     builder.add_node("intake", intake)
     builder.add_node("extract", make_extract(model))
     builder.add_node("decide", decide)
-    builder.add_node("investigate", factory(model, tools))
+    builder.add_node("investigate", make_investigate_node(investigation))
     builder.add_node("escalate", escalate)
     builder.add_node("post", post)
     builder.add_node("approval_gate", approval_gate)
@@ -72,8 +72,6 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
 
     builder.add_edge("post", END)
     builder.add_edge("escalate", END)
-    # builder.add_edge("investigate", END)
-    # builder.add_edge("approval_gate", END)
 
     return builder.compile(checkpointer=checkpointer, store=store)
 
