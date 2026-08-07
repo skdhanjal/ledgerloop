@@ -13,16 +13,13 @@ MAX_REMATCH = 1
 
 def route_after_extract(state: InvoiceState) -> Literal["decide", "extract", "escalate"]:
     """Retry loop with both brakes visible in one place."""
-    # print("extract_ok", state.get("extract_ok"))
-    if state.get("extract_ok"):
-        return "decide"
 
     attempts = state.get("extract_attempts", 0)
 
     if attempts >= MAX_EXTRACT_ATTEMPTS:
         return "escalate"
                 # designed exit, not a crash
-    # print("Goto-> extract")            
+                
     return "extract"               # the backward edge
 
 def route_after_decide(state: InvoiceState) -> Literal["post", "investigate"]:
@@ -33,4 +30,4 @@ def route_after_investigate(state: InvoiceState) -> Literal["post", "approval_ga
     return "approval_gate" if needs_human(state) else "post"
 
 def route_after_approval_gate(state: InvoiceState) -> Literal["post", "done"]:
-    return "post" if state.get("decision") == "auto_Approve" else "done"    
+    return "post" if state.get("decision") == "auto_Approve" else "reject"    

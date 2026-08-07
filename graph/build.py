@@ -5,6 +5,8 @@ from langgraph.graph import END, START, StateGraph
 from config import get_model
 from graph.approval import approval_gate, needs_human
 from graph.extract_node import make_extract
+from graph.fanout import fan_out_lines, reconcile
+from graph.matching import match_line
 
 from .context import LedgerContext
 from .nodes import decide, extract, intake, post, escalate, investigate
@@ -23,7 +25,13 @@ RECURSION_LIMIT = MAX_EXTRACT_ATTEMPTS * 2 + 8
 
 Impl = Literal["handbuilt", "harness"]
 
-def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpointer = None, store= None):
+def build_graph(
+        model=None, 
+        po_db=None, 
+        checkpointer = None, 
+        store= None, 
+        tolerance=0.05
+    ):
     """model and po_db are injectable so tests can pass fakes (Day 4's payoff)."""
     from stubs.po_db import PurchaseOrderDB
 
@@ -41,6 +49,8 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
 
     builder.add_node("intake", intake)
     builder.add_node("extract", make_extract(model))
+    builder.add_node("match_line", match_line)
+    builder.add_node("reconcile", reconcile, defer=True)
     builder.add_node("decide", decide)
     builder.add_node("investigate", make_investigate_node(investigation))
     builder.add_node("escalate", escalate)
@@ -51,12 +61,17 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
     builder.add_edge(START, "intake")
     builder.add_edge("intake", "extract")
 
-    # retry loop: extract -> extract (backward edge) until ok or attempts spent
-    builder.add_conditional_edges("extract", route_after_extract, {
-        "extract": "extract",
-        "decide": "decide",
-        "escalate": "escalate"
-    })
+    # extract -> either retry/escalate, or fan out one worker per line
+    def after_extract(state: InvoiceState):
+        if not state.get("extract_ok"):
+             return route_after_extract(state)
+
+        return fan_out_lines(state, po_db, tolerance)
+
+    builder.add_conditional_edges("extract", after_extract, ["extract", "escalate", "match_line"])
+
+    builder.add_edge("match_line", "reconcile")
+    builder.add_edge("reconcile", "decide")
 
     builder.add_conditional_edges("decide", route_after_decide, {
         "post": "post",
@@ -67,7 +82,7 @@ def build_graph(model=None, po_db=None, investigator: Impl = "harness", checkpoi
 
     builder.add_conditional_edges("approval_gate", route_after_approval_gate, {
         "post": "post",
-        "done": END
+        "reject": END
     })
 
     builder.add_edge("post", END)
