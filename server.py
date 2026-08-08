@@ -29,6 +29,7 @@ from graph.app import build_app, context_for
 from graph.checkpointing import get_checkpointer
 from graph.erp import get_erp_client
 from graph.events import ApprovalEvent, DecisionEvent
+from graph.tracing import run_config
 
 DATA = Path("data/generated")
 
@@ -167,7 +168,7 @@ async def start(thread_id: str, body: dict):
     double payment (Day 19), so this is a rejection rather than a queue. The
     client already has a thread_id it can attach a stream to.
     """
-    cfg = config_for(thread_id)
+    cfg = run_config(thread_id=thread_id)
     snapshot = await graph.aget_state(cfg)
     parked = await pending_interrupt(cfg)
 
@@ -179,9 +180,10 @@ async def start(thread_id: str, body: dict):
 
 @app.get("/invoices/{thread_id}/stream")
 async def stream_invoice(thread_id: str, invoice: str):
-    cfg = config_for(thread_id)
+    invoice_path = resolve_invoice(invoice)
+    cfg = run_config(thread_id=thread_id, invoice_id=invoice)
     stream = graph.astream(
-        {"invoice_path": resolve_invoice(invoice)},
+        {"invoice_path": invoice_path},
         context=context_for(tenant_of(thread_id)),
         config=cfg, 
         stream_mode=["custom", "updates"],
@@ -198,7 +200,7 @@ async def resume(thread_id: str, decision: dict):
     posting is a network call with retries, and Day 11's back-edge can
     re-enter the graph at `decide`.
     """
-    cfg = config_for(thread_id)
+    cfg = run_config(thread_id=thread_id)
 
     if await pending_interrupt(cfg) is None:
         raise HTTPException(409, "thread is not awaiting approval")
@@ -231,7 +233,7 @@ async def edit(thread_id: str, body: dict):
     second time, and that is the correct outcome: the human supplied better
     INPUT, not a better DECISION.
     """
-    cfg = config_for(thread_id)
+    cfg = run_config(thread_id=thread_id)
     if await pending_interrupt(cfg) is None:
         raise HTTPException(409, "thread is not awaiting approval")
 

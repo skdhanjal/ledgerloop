@@ -4,10 +4,12 @@ from langgraph.graph import END, START, StateGraph
 
 from config import get_model
 from graph.approval import approval_gate, needs_human
+from graph.caching import wire_cache
 from graph.extract_node import make_extract
 from graph.fanout import fan_out_lines, reconcile
 from graph.matching import match_line
 from graph.posting import post_to_erp
+from langgraph.cache.memory import InMemoryCache
 
 from .context import LedgerContext
 from .nodes import decide, extract, intake, post, escalate, investigate
@@ -29,17 +31,22 @@ Impl = Literal["handbuilt", "harness"]
 def build_graph(
         model=None, 
         po_db=None, 
-        checkpointer = None, 
+        checkpointer=None, 
         store= None, 
-        tolerance=0.05
+        tolerance=0.05,
+        cache=None,
+        dev=False,
+        router_model=None
     ):
     """model and po_db are injectable so tests can pass fakes (Day 4's payoff)."""
     from stubs.po_db import PurchaseOrderDB
 
     model = model or get_model()
     po_db = po_db or PurchaseOrderDB()
+
     tools = make_tools(po_db, build_invoice_index())
     investigation = build_investigation_graph(model, tools)
+    cache = cache if dev else InMemoryCache()
 
     builder = StateGraph(
         InvoiceState,                    # internal working state
@@ -89,7 +96,7 @@ def build_graph(
     builder.add_edge("post", END)
     builder.add_edge("escalate", END)
 
-    return builder.compile(checkpointer=checkpointer, store=store)
+    return wire_cache(builder, dev=dev).compile(checkpointer=checkpointer, store=store, cache=cache)
 
 
 graph = build_graph()

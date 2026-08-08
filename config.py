@@ -8,7 +8,7 @@ load_dotenv()
 # "provider:model" form - init_chat_model splits on the colon.
 # Equivalent: init_chat_model("<model>", model_provider="google_genai")
 PRIMARY_MODEL = os.getenv("LEDGERLOOP_MODEL")
-LOCAL_MODEL   = os.getenv("LEDGERLOOP_LOCAL_MODEL", "ollama:qwen3:8b")
+LOCAL_MODEL   = os.getenv("LEDGERLOOP_LOCAL_MODEL", "groq:gpt-oss-20b")
 
 if not PRIMARY_MODEL or "<paste" in PRIMARY_MODEL:
     raise RuntimeError(
@@ -18,10 +18,16 @@ if not PRIMARY_MODEL or "<paste" in PRIMARY_MODEL:
     )
 
 
-def get_model(name: str | None = None, **kwargs):
+TIERS = {
+    "strong": PRIMARY_MODEL,  # extraction, investigation
+    "local":  LOCAL_MODEL,    # routing, judging, summarising
+}
+
+def get_model(tier: str = "strong", **kwargs):
     """One place that knows how to build a model.
 
     init_chat_model accepts 'provider:model' strings, so swapping providers or
     surviving a model deprecation never requires touching a call site.
     """
+    name = TIERS.get(tier) or TIERS["strong"]
     return init_chat_model(name or PRIMARY_MODEL, temperature=0, **kwargs)

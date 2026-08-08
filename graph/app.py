@@ -6,18 +6,38 @@ from graph.context import LedgerContext
 from graph.erp import get_erp_client
 from graph.store import get_store
 from stubs.po_db import PurchaseOrderDB
+from langgraph.cache.sqlite import SqliteCache
 
-
-def build_app(*, checkpointer=None, checkpointer_kind="postgres", store_kind="postgres", model=None):
+def build_app(*, 
+        checkpointer=None, 
+        checkpointer_kind="postgres", 
+        store_kind="postgres", 
+        model=None,
+        cache: bool = False, 
+        router_model=None, 
+        tolerance=0.05,
+        tiering: bool = True
+    ):
     """The single place that knows how LedgerLoop is wired.
 
     Tests override every argument; run scripts and the CLI call it with none.
     """
+    router = router_model or get_model("local" if tiering else "strong")
+
+    graph_cache = None
+
+    if cache:
+        graph_cache = SqliteCache(path=".cache/ledgerloop.sqlite")
+
     return build_graph(
         model=model or get_model(),
+        router_model=router,
         po_db=PurchaseOrderDB(),
         checkpointer= checkpointer,
-        store=get_store(store_kind)
+        store=get_store(store_kind),
+        tolerance=tolerance,
+        cache=graph_cache,
+        dev=cache, 
     )
 
 
