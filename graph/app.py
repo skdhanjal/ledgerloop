@@ -16,8 +16,7 @@ def build_app(*, checkpointer_kind="postgres", store_kind="postgres", model=None
         model=model or get_model(),
         po_db=PurchaseOrderDB(),
         checkpointer=get_checkpointer(checkpointer_kind),
-        store=get_store(store_kind),
-        investigator="harness",
+        store=get_store(store_kind)
     )
 
 
