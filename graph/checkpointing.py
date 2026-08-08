@@ -2,16 +2,17 @@
 is a config change rather than an edit in five files.
 """
 import os
+import aiosqlite
 import sqlite3
 from pathlib import Path
 import psycopg
 from langgraph.checkpoint.memory import InMemorySaver
-from langgraph.checkpoint.sqlite import SqliteSaver
+from langgraph.checkpoint.sqlite.aio import AsyncSqliteSaver
 
 DB_PATH = Path("ledgerloop.sqlite")
 
 
-def get_checkpointer(kind: str | None = None):
+async def get_checkpointer(kind: str | None = None):
     """kind: 'memory' | 'sqlite' | 'postgres'."""
     kind = kind or os.getenv("LEDGERLOOP_CHECKPOINTER", "sqlite")
 
@@ -19,13 +20,10 @@ def get_checkpointer(kind: str | None = None):
         return InMemorySaver()
 
     if kind == "sqlite":
-        # NOTE: SqliteSaver.from_conn_string() is a CONTEXT MANAGER. Using it as
-        # `saver = SqliteSaver.from_conn_string(path)` gives you a context
-        # manager object, not a saver, and fails confusingly at first use.
-        # For a long-lived process, own the connection yourself:
-        conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-        saver = SqliteSaver(conn)
-        saver.setup()                     # idempotent - creates tables if absent
+        # Create an aiosqlite connection (not sqlite3)
+        conn = await aiosqlite.connect(DB_PATH)
+        saver = AsyncSqliteSaver(conn)
+        await saver.setup()  # Async setup is required
         return saver
 
     if kind == "postgres":

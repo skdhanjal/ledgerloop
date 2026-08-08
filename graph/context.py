@@ -2,6 +2,8 @@
 from dataclasses import dataclass, field
 from typing import TYPE_CHECKING
 
+from graph.erp import ErpClient
+
 if TYPE_CHECKING:                       # avoid an import cycle at runtime
     from stubs.po_db import PurchaseOrderDB
 
@@ -15,6 +17,7 @@ class LedgerContext:
     """
     tenant_id: str
     po_db: "PurchaseOrderDB"
+    erp: ErpClient  
 
     # policy knobs - these are exactly what a finance lead will want to tune
     # per client without a deploy, which is why they are context and not

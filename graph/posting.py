@@ -7,6 +7,8 @@ import hashlib
 
 from langgraph.runtime import Runtime
 
+from graph.events import ProgressEvent
+
 from .context import LedgerContext
 from .state import InvoiceState
 
@@ -40,6 +42,7 @@ def idempotency_key(state: InvoiceState, tenant_id: str) -> str:
 def post_to_erp(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     key = idempotency_key(state, runtime.context.tenant_id)
     erp = runtime.context.erp
+    print(f"Creating payment for key {key}")
 
     # 1. CHECK REALITY. A previous attempt may have landed before we died.
     #    Cheap, and it returns the original payment_id rather than an error.
@@ -61,6 +64,9 @@ def post_to_erp(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
         invoice_no=state.get("invoice_no", ""),
         amount=state.get("total", 0.0),
     )
+
+    runtime.stream_writer(ProgressEvent(stage="post", 
+        label=f"Posting payment for {state.get("invoice_no", "")} with payment id {result["payment_id"]}").model_dump())
 
     # 3. RECORD before returning, so the audit trail survives a crash here.
     return {

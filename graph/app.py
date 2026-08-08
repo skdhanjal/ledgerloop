@@ -3,11 +3,12 @@ from config import get_model
 from graph.build import build_graph
 from graph.checkpointing import get_checkpointer
 from graph.context import LedgerContext
+from graph.erp import get_erp_client
 from graph.store import get_store
 from stubs.po_db import PurchaseOrderDB
 
 
-def build_app(*, checkpointer_kind="postgres", store_kind="postgres", model=None):
+def build_app(*, checkpointer=None, checkpointer_kind="postgres", store_kind="postgres", model=None):
     """The single place that knows how LedgerLoop is wired.
 
     Tests override every argument; run scripts and the CLI call it with none.
@@ -15,7 +16,7 @@ def build_app(*, checkpointer_kind="postgres", store_kind="postgres", model=None
     return build_graph(
         model=model or get_model(),
         po_db=PurchaseOrderDB(),
-        checkpointer=get_checkpointer(checkpointer_kind),
+        checkpointer= checkpointer,
         store=get_store(store_kind)
     )
 
@@ -29,4 +30,4 @@ def context_for(tenant_id: str, **overrides) -> LedgerContext:
     }
     cfg = {**defaults.get(tenant_id, dict(variance_tolerance=0.05,
                                           max_auto_approve=10_000)), **overrides}
-    return LedgerContext(tenant_id=tenant_id, po_db=PurchaseOrderDB(), **cfg)
+    return LedgerContext(tenant_id=tenant_id, po_db=PurchaseOrderDB(), erp=get_erp_client() ,**cfg)

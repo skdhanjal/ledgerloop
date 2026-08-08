@@ -26,6 +26,7 @@ class InvoiceState(TypedDict, total=False):
     extract_attempts: int
     investigation: str
     verdict: dict
+    fields: dict
 
     # ---- multi-writer channels: reducers required ------------------------
     # Day 14 fans out one matcher per line item; all land in one super-step.

@@ -7,6 +7,7 @@ from graph.approval import approval_gate, needs_human
 from graph.extract_node import make_extract
 from graph.fanout import fan_out_lines, reconcile
 from graph.matching import match_line
+from graph.posting import post_to_erp
 
 from .context import LedgerContext
 from .nodes import decide, extract, intake, post, escalate, investigate
@@ -54,7 +55,7 @@ def build_graph(
     builder.add_node("decide", decide)
     builder.add_node("investigate", make_investigate_node(investigation))
     builder.add_node("escalate", escalate)
-    builder.add_node("post", post)
+    builder.add_node("post", post_to_erp)
     builder.add_node("approval_gate", approval_gate)
 
 

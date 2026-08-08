@@ -30,4 +30,4 @@ def route_after_investigate(state: InvoiceState) -> Literal["post", "approval_ga
     return "approval_gate" if needs_human(state) else "post"
 
 def route_after_approval_gate(state: InvoiceState) -> Literal["post", "done"]:
-    return "post" if state.get("decision") == "auto_Approve" else "reject"    
+    return "post" if state.get("decision") == "auto_approve" else "reject"    

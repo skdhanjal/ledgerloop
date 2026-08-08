@@ -24,3 +24,5 @@ class DecisionResult(BaseModel):
     total: float
     exceptions: list[dict] = []
     notes: list[str]
+    payment_id:str
+

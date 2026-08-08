@@ -6,6 +6,11 @@ forty cheap workers cost nothing, forty model calls would be a rate-limit event.
 """
 from typing import TypedDict
 
+from langgraph.runtime import Runtime
+
+from graph.events import ProgressEvent
+from graph.state import InvoiceState
+
 MAX_PARALLEL_LINES = 40
 
 class LineMatchInput(TypedDict):
@@ -15,13 +20,18 @@ class LineMatchInput(TypedDict):
     po_line: dict | None
     receipt_qty: float | None
     tolerance: float
+    total_lines: int
 
 
-def match_line(state: LineMatchInput) -> dict:
+def match_line(state: LineMatchInput, runtime: Runtime[InvoiceState]) -> dict:
     """Compare one invoice line against its PO line and goods receipt."""
     line = state["line"]
     po_line = state.get("po_line")
     idx = state["line_index"]
+    lines = state["total_lines"]
+
+    runtime.stream_writer(ProgressEvent(stage="match", 
+        label=f"Matching line {idx+1} of {lines}", done=idx+1, total=lines).model_dump())
 
     if po_line is None:
         return {"line_matches": [{
