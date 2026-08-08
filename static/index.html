@@ -4,30 +4,35 @@
 <meta charset="utf-8">
 <title>LedgerLoop &mdash; approval queue</title>
 <style>
-  :root { --teal:#14666b; --line:#e1dcce; --ink:#242b27; --muted:#6e7370; }
-  body   { font: 15px/1.55 system-ui, -apple-system, sans-serif; max-width: 660px;
+  :root { --teal:#14666b; --line:#e1dcce; --ink:#242b27; --muted:#6e7370;
+          --amber:#9a6a1e; --red:#9c4a33; }
+  body   { font: 15px/1.55 system-ui, -apple-system, sans-serif; max-width: 680px;
            margin: 40px auto; padding: 0 16px; color: var(--ink); }
   h2     { font-weight: 600; margin-bottom: 4px; }
   .sub   { color: var(--muted); font-size: 13px; margin-top: 0; }
-  select, button { font: inherit; padding: 7px 12px; border-radius: 8px; }
-  select { border: 1px solid var(--line); background: #fff; }
-  button { cursor: pointer; background: var(--teal); color: #fff; border: none; }
+  select, button, input { font: inherit; border-radius: 8px; }
+  select, input { border: 1px solid var(--line); background: #fff; padding: 7px 10px; }
+  button { cursor: pointer; background: var(--teal); color: #fff; border: none;
+           padding: 7px 14px; }
+  button.ghost { background: #fff; color: var(--ink); border: 1px solid var(--line); }
   button:disabled { background: #bbb; cursor: default; }
 
-  /* --- stage log: every stage persists, so an instant stage is still visible --- */
+  /* stage log: every stage persists, so an instant stage is still visible */
   .stages { margin: 22px 0; }
   .stage  { display: flex; align-items: baseline; gap: 8px; margin-bottom: 3px; }
-  .stage .mark { flex: none; width: 14px; font-family: ui-monospace, monospace;
-                 font-size: 12px; color: var(--teal); }
+  .stage .mark  { flex: none; width: 14px; font-family: ui-monospace, monospace;
+                  font-size: 12px; color: var(--teal); }
   .stage .label { font-family: ui-monospace, monospace; font-size: 12.5px; }
-  .stage .ms   { margin-left: auto; font-family: ui-monospace, monospace;
-                 font-size: 11px; color: var(--muted); }
-  .stage.done  { color: var(--muted); }
+  .stage .ms    { margin-left: auto; font-family: ui-monospace, monospace;
+                  font-size: 11px; color: var(--muted); }
+  .stage.done   { color: var(--muted); }
   .stage.active .label { color: var(--ink); font-weight: 500; }
   .bar   { height: 6px; background: #eee; border-radius: 99px; margin: 2px 0 12px; }
   .bar > div { height: 100%; background: var(--teal); border-radius: 99px;
                width: 0; transition: width .25s; }
   .bar.done > div { background: #b8cfcb; }
+  .pass  { color: var(--amber); font-family: ui-monospace, monospace;
+           font-size: 12px; margin: 14px 0 4px; }
 
   .card  { border: 1px solid #c4d6d3; background: #f0f6f5; border-radius: 12px;
            padding: 16px 18px; margin-top: 20px; }
@@ -35,11 +40,19 @@
   .amount { font-size: 17px; }
   .rc    { margin: 10px 0 6px; }
   .ev    { margin: 0 0 10px 18px; padding: 0; font-size: 13.5px; color: #3b423e; }
-  .none  { color: #8a6d3b; font-style: italic; margin: 10px 0; }
+  .none  { color: var(--amber); font-style: italic; margin: 10px 0; }
   .conf  { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); }
   .actions { display: flex; gap: 8px; margin-top: 12px; }
   .done-msg { font-weight: 600; margin-top: 18px; }
-  .warn  { color: #9c4a33; font-size: 13px; }
+  .warn  { color: var(--red); font-size: 13px; }
+
+  /* edit form */
+  .edit  { margin-top: 14px; padding-top: 14px; border-top: 1px dashed #c4d6d3; }
+  .field { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .field label { flex: none; width: 96px; font-family: ui-monospace, monospace;
+                 font-size: 12px; color: var(--muted); }
+  .field input { flex: 1; }
+  .hint  { font-size: 12.5px; color: var(--muted); margin: 10px 0 0; }
 </style>
 </head>
 <body>
@@ -57,11 +70,11 @@
 
 <script>
 let es = null;
-let startedAt = 0;
+let currentPayload = null;          // the interrupt payload currently shown
 
-// A stage persists once seen. Without this, a fan-out that completes in 300ms
-// paints 30 times inside two frames and you see only the stage that follows it.
-const stages = new Map();   // stage -> {label, done, total, firstSeen, lastSeen}
+// A stage persists once seen. Without this, a fan-out that finishes in 300ms
+// paints 30 times inside two frames and you only ever see the stage after it.
+const stages = new Map();
 
 // ---------------------------------------------------------------- bootstrap
 fetch("/invoices")
@@ -78,14 +91,11 @@ document.getElementById("run").onclick = async () => {
   const invoice  = document.getElementById("picker").value;
   const threadId = `ui:${invoice}`;
 
-  stages.clear();
-  startedAt = performance.now();
-  document.getElementById("approval").innerHTML = "";
-  document.getElementById("stages").innerHTML = "";
+  reset();
   setRunning(true);
 
   // Day 20's double-texting policy is REJECT: 409 means this invoice is
-  // already in flight, so attach to the existing run instead of starting one.
+  // already in flight, so attach to the live stream instead of starting one.
   const res = await fetch(`/invoices/${threadId}/start`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -96,31 +106,12 @@ document.getElementById("run").onclick = async () => {
   connect(threadId, invoice);
 };
 
-// ------------------------------------------------------------------ stream
+// ------------------------------------------------------- GET stream (start)
 function connect(threadId, invoice) {
   es = new EventSource(
     `/invoices/${threadId}/stream?invoice=${encodeURIComponent(invoice)}`);
 
-  es.onmessage = (e) => {
-    const ev = JSON.parse(e.data);
-
-    if (ev.type === "progress")  onProgress(ev);
-
-    if (ev.type === "approval_required") {
-      es.close();                         // the stream ends here BY DESIGN:
-      markAllDone();                      // the pause may last two days
-      renderApproval(ev.thread_id, ev.payload);
-      setRunning(false);
-    }
-
-    if (ev.type === "decision") {
-      es.close();
-      markAllDone();
-      document.getElementById("approval").innerHTML =
-        `<div class="done-msg">${ev.decision}: ${ev.reason}</div>`;
-      setRunning(false);
-    }
-  };
+  es.onmessage = (e) => handleEvent(threadId, JSON.parse(e.data), () => es.close());
 
   // A dropped connection is not a failed run. State is durable, so reconnect
   // rather than restart - the graph kept going while we were away.
@@ -131,16 +122,63 @@ function connect(threadId, invoice) {
   };
 }
 
+// ------------------------------------------- SSE over POST (resume and edit)
+// EventSource is GET-only, and both resume and edit must be POSTs. Read the
+// streaming body directly instead - same wire format, same handler.
+async function readSSE(res, onEvent) {
+  const reader  = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+
+    // Frames are separated by a blank line. A frame CAN arrive split across
+    // two chunks, so buffer and scan rather than parsing each chunk alone.
+    let i;
+    while ((i = buffer.indexOf("\n\n")) >= 0) {
+      const frame = buffer.slice(0, i);
+      buffer = buffer.slice(i + 2);
+      const line = frame.split("\n").find(l => l.startsWith("data: "));
+      if (line) onEvent(JSON.parse(line.slice(6)));
+    }
+  }
+}
+
+// ------------------------------------------------------------ event handler
+function handleEvent(threadId, ev, close) {
+  if (ev.type === "progress") return onProgress(ev);
+
+  if (ev.type === "approval_required") {
+    close && close();               // the stream ends here BY DESIGN
+    markAllDone();
+    renderApproval(threadId, ev.payload);
+    setRunning(false);
+  }
+
+  if (ev.type === "decision") {
+    close && close();
+    markAllDone();
+    document.getElementById("approval").innerHTML =
+      `<div class="done-msg">${ev.decision}: ${ev.reason}</div>`;
+    setRunning(false);
+  }
+}
+
 // ---------------------------------------------------------------- progress
 function onProgress(ev) {
-  const prev = stages.get(ev.stage);
+  // Key by depth+stage. Without this, an "investigate" event from inside the
+  // subgraph overwrites the parent's "investigate" row and you lose one of them.
+  const key  = `${ev.depth || 0}:${ev.stage}`;
+  const prev = stages.get(key);
   const now  = performance.now();
 
-  // Events from ONE super-step arrive unordered: a 30-way fan-out can deliver
-  // "line 17 of 30" before "line 3 of 30". Keep the furthest progress seen,
-  // never the most recent, or the bar walks backwards.
-  stages.set(ev.stage, {
+  stages.set(key, {
     label:     (!prev || (ev.done || 0) >= prev.done) ? ev.label : prev.label,
+    depth:     ev.depth || 0,
+    source:    ev.source,
     done:      Math.max(prev ? prev.done : 0, ev.done || 0),
     total:     ev.total || (prev ? prev.total : 0),
     firstSeen: prev ? prev.firstSeen : now,
@@ -153,15 +191,15 @@ function onProgress(ev) {
 
 function render() {
   const entries = [...stages.entries()];
-  document.getElementById("stages").innerHTML = entries.map(([name, s], i) => {
+  document.getElementById("stages").innerHTML = entries.map(([, s], i) => {
     const isLast = i === entries.length - 1;
     const pct    = s.total ? Math.round(s.done / s.total * 100) : 100;
     const ms     = Math.round(s.lastSeen - s.firstSeen);
-    // A stage that emitted many events in a few ms was a fan-out, not a stall.
+    // Many events in a few ms was a fan-out, not a stall - worth showing.
     const detail = s.count > 1 ? `${ms}ms · ${s.count} events` : `${ms}ms`;
     return `
       <div class="stage ${isLast ? "active" : "done"}">
-        <span class="mark">${isLast ? "▸" : "✓"}</span>
+        <span class="mark">${isLast ? "&#9656;" : "&#10003;"}</span>
         <span class="label">${s.label}</span>
         <span class="ms">${detail}</span>
       </div>
@@ -173,31 +211,29 @@ function markAllDone() {
   const el = document.getElementById("stages");
   el.querySelectorAll(".stage.active").forEach(s => {
     s.classList.replace("active", "done");
-    s.querySelector(".mark").textContent = "✓";
+    s.querySelector(".mark").innerHTML = "&#10003;";
   });
   el.querySelectorAll(".bar:not(.done)").forEach(b => b.classList.add("done"));
-  if (stages.size) {
-    el.insertAdjacentHTML("beforeend",
-      `<div class="stage done"><span class="mark"></span>
-         <span class="label">total</span>
-         <span class="ms">${Math.round(performance.now() - startedAt)}ms</span></div>`);
-  }
 }
 
 // ---------------------------------------------------------------- approval
 function renderApproval(threadId, p) {
-  const buttons = p.allowed_actions
-    .map(a => `<button onclick="decide('${threadId}','${a}')">${a}</button>`)
-    .join("");
+  currentPayload = p;
 
-  // The payload states explicitly whether an investigation exists. Never
+  const buttons = p.allowed_actions.map(a =>
+    a === "edit"
+      ? `<button class="ghost" onclick="showEdit('${threadId}')">edit</button>`
+      : `<button onclick="decide('${threadId}','${a}')">${a}</button>`
+  ).join("");
+
+  // The payload states EXPLICITLY whether an investigation exists. Never
   // render a blank panel: a controller cannot tell "found nothing" from
   // "never ran" from "tried and failed", and all three look identical empty.
-  const investigation = p.root_cause && p.evidence
+  const investigation = p.root_cause
     ? `<p class="rc">${p.root_cause}</p>
        <ul class="ev">${(p.evidence || [])
             .map(e => `<li>${e}</li>`).join("")}</ul>
-       <p class="conf">confidence ${p.confidence ?? "—"}</p>`
+       <p class="conf">confidence ${p.confidence ?? "&mdash;"}</p>`
     : `<p class="none">No investigation &mdash; ${p.no_investigation_reason}</p>`;
 
   document.getElementById("approval").innerHTML = `
@@ -207,32 +243,105 @@ function renderApproval(threadId, p) {
          &mdash; ${p.decision} <span class="conf">(${p.reason})</span></p>
       ${investigation}
       <div class="actions">${buttons}</div>
+      <div id="editform"></div>
     </div>`;
 }
 
-async function decide(threadId, action) {
-  document.querySelectorAll(".actions button").forEach(b => b.disabled = true);
+// -------------------------------------------------------------------- edit
+function showEdit(threadId) {
+  const p = currentPayload;
 
-  const res = await fetch(`/invoices/${threadId}/resume`, {
+  // The server tells us which fields are editable. It also ENFORCES the same
+  // list - this is a rendering hint, not the authority.
+  const rows = (p.editable_fields || []).map(f => `
+    <div class="field">
+      <label>${f}</label>
+      <input id="f-${f}" value="${p[f] ?? ""}">
+    </div>`).join("");
+
+  document.getElementById("editform").innerHTML = `
+    <div class="edit">
+      ${rows}
+      <button onclick="submitEdit('${threadId}')">Submit correction</button>
+      <button class="ghost"
+              onclick="document.getElementById('editform').innerHTML=''">cancel</button>
+      <p class="hint">A correction re-enters at <code>extract</code>, so matching
+        and the policy run again. If the corrected figure still breaches the
+        tolerance this invoice comes straight back here &mdash; you are supplying
+        better <b>input</b>, not a better <b>decision</b>.</p>
+    </div>`;
+}
+
+async function submitEdit(threadId) {
+  const p = currentPayload;
+  const fields = {};
+
+  for (const f of p.editable_fields || []) {
+    const el = document.getElementById(`f-${f}`);
+    if (el && el.value !== "" && String(el.value) !== String(p[f] ?? "")) {
+      fields[f] = el.value;                  // server coerces and allowlists
+    }
+  }
+
+  if (!Object.keys(fields).length) {
+    document.getElementById("editform").insertAdjacentHTML("beforeend",
+      `<p class="warn">nothing changed</p>`);
+    return;
+  }
+
+  await drivePost(threadId, `/invoices/${threadId}/edit`, { fields },
+                  "re-running matching and policy with the correction");
+}
+
+// ---------------------------------------------------------- approve / reject
+async function decide(threadId, action) {
+  await drivePost(threadId, `/invoices/${threadId}/resume`,
+                  { action, approver: "clerk@acme" },
+                  action === "approve" ? "posting" : "recording rejection");
+}
+
+async function drivePost(threadId, url, body, passLabel) {
+  document.querySelectorAll(".actions button, .edit button")
+          .forEach(b => b.disabled = true);
+  setRunning(true);
+
+  const res = await fetch(url, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ action, approver: "clerk@acme" }),
+    body: JSON.stringify(body),
   });
 
   if (!res.ok) {
-    document.getElementById("approval").innerHTML +=
-      `<p class="warn">resume failed (${res.status}) &mdash; thread may already be complete</p>`;
+    let detail = `error ${res.status}`;
+    try { detail = (await res.json()).detail ?? detail; } catch (e) {}
+    document.getElementById("approval").insertAdjacentHTML("beforeend",
+      `<p class="warn">${detail}</p>`);
+    document.querySelectorAll(".actions button, .edit button")
+            .forEach(b => b.disabled = false);
     setRunning(false);
     return;
   }
 
-  const out = await res.json();
-  document.getElementById("approval").innerHTML =
-    `<div class="done-msg">${out.decision} &mdash; payment ${out.payment_id ?? "n/a"}</div>`;
-  setRunning(false);
+  // The card is spent. Start a fresh stage pass so the second trip through
+  // the pipeline is visibly distinct from the first.
+  document.getElementById("approval").innerHTML = "";
+  stages.clear();
+  document.getElementById("stages").insertAdjacentHTML("beforeend",
+    `<p class="pass">&mdash; ${passLabel} &mdash;</p>`);
+
+  // An edited invoice that STILL breaches tolerance pauses again, and
+  // handleEvent re-renders the approval card. That is the correct outcome.
+  await readSSE(res, ev => handleEvent(threadId, ev, null));
 }
 
 // ------------------------------------------------------------------ helpers
+function reset() {
+  stages.clear();
+  currentPayload = null;
+  document.getElementById("approval").innerHTML = "";
+  document.getElementById("stages").innerHTML = "";
+}
+
 function setRunning(running) {
   document.getElementById("run").disabled = running;
 }

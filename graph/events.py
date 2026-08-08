@@ -1,17 +1,20 @@
 from typing import Literal
 from pydantic import BaseModel
 
-
 class ProgressEvent(BaseModel):
-    """The ONLY thing the browser receives. Adding a field here is a
-    deliberate API change; adding one to InvoiceState is not."""
     type: Literal["progress"] = "progress"
-    stage: Literal["intake", "extract", "match", "reconcile",
-                   "decide", "investigate", "post"]
-    label: str                    # human text: "matching line 7 of 30"
+    stage: Literal["intake", "extract", "match", "reconcile", "decide", "investigate", "post"]
+    label: str
     done: int = 0
     total: int = 0
 
+    # Set by the SERVER from the checkpoint namespace, never by a node.
+    # depth 0 = the top-level graph, 1 = a subgraph, 2 = a subgraph of one.
+    depth: int = 0
+    # The node that owns the subgraph ("investigate"), NOT the raw namespace.
+    # A namespace is "investigate:8f2c-4d1a" - the UUID is an internal id and
+    # has no business in a browser.
+    source: str | None = None
 
 class DecisionEvent(BaseModel):
     type: Literal["decision"] = "decision"

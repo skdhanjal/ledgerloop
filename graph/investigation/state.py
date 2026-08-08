@@ -18,6 +18,7 @@ class InvestigationState(TypedDict, total=False):
     exception_codes: list[str]
     vendor: str
     po_number: str | None
+    invoice_no: str | None
     total: float
     prior_knowledge: list[str]
 

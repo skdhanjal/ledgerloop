@@ -67,7 +67,7 @@ def make_tools(po_db, invoice_index: dict[str, list[dict]]):
         get_stream_writer()(ProgressEvent(stage="investigate", label=f"checking duplicate invoice({invoice_number}) for {vendor}..").model_dump())
 
         for prior in invoice_index.get(vendor, []):
-            if prior["invoice_number"] == invoice_number:
+            if prior.get("invoice_number") == invoice_number:
                 return (f"DUPLICATE: {vendor} already submitted {invoice_number} "
                         f"on {prior['date']}")
         return f"UNIQUE: no earlier invoice {invoice_number} from {vendor}"

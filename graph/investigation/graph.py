@@ -13,6 +13,7 @@ def _opening(state: InvestigationState) -> str:
     return (
         f"Flagged: {', '.join(state.get('exception_codes', [])) or 'unknown'}\n"
         f"Vendor: {state.get('vendor')}\n"
+        f"Invoice Number: {state.get('invoice_no')}\n"
         f"PO reference: {state.get('po_number')}\n"
         f"Invoice total: {state.get('total')}\n\n"
         f"What we know about this vendor:\n{known}\n\nInvestigate and report."
@@ -38,8 +39,7 @@ def build_investigation_graph(model, tools):
     def investigate(state: InvestigationState) -> dict:
         result = agent.invoke({"messages": [{"role": "user", "content": _opening(state)}]})
         verdict = result.get("structured_response")
-        calls = sum(len(getattr(m, "tool_calls", []) or [])
-                    for m in result["messages"])
+        calls = sum(len(getattr(m, "tool_calls", []) or []) for m in result["messages"])
         return {
             "messages": result["messages"],
             "verdict": verdict.model_dump() if verdict else None,
