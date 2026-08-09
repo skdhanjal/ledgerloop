@@ -1,4 +1,13 @@
-"""Assemble the whole application. Everything before this file is parts."""
+"""Module-level export for the runtime.
+
+The runtime IMPORTS this at build time, before your environment is fully
+configured - so construction here must be cheap and side-effect free.
+
+Do NOT open a Postgres connection, download a model, or read a secret at
+import. The platform supplies the checkpointer and store; a local run uses
+build_app() instead.
+"""
+
 from config import get_model
 from graph.build import build_graph
 from graph.checkpointing import get_checkpointer
@@ -7,10 +16,10 @@ from graph.erp import get_erp_client
 from graph.store import get_store
 from stubs.po_db import PurchaseOrderDB
 from langgraph.cache.sqlite import SqliteCache
+from graph.investigation.graph import build_investigation_graph
 
 def build_app(*, 
         checkpointer=None, 
-        checkpointer_kind="postgres", 
         store_kind="postgres", 
         model=None,
         cache: bool = False, 
@@ -51,3 +60,18 @@ def context_for(tenant_id: str, **overrides) -> LedgerContext:
     cfg = {**defaults.get(tenant_id, dict(variance_tolerance=0.05,
                                           max_auto_approve=10_000)), **overrides}
     return LedgerContext(tenant_id=tenant_id, po_db=PurchaseOrderDB(), erp=get_erp_client() ,**cfg)
+
+
+def _graph():
+    """Assembled without a checkpointer or store - the runtime injects both."""
+
+    model = get_model("strong")
+
+    return build_graph(
+        model=model,
+        po_db=PurchaseOrderDB(),      # reads a committed JSON file, no network
+        checkpointer=None,            # <- supplied by the platform
+        store=None,                   # <- supplied by the platform
+    )
+
+graph = _graph()          # the variable langgraph.json points a

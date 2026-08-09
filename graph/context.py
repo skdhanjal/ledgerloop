@@ -1,30 +1,26 @@
 """Per-run dependencies. Never serialized, never in state, re-supplied every run."""
 from dataclasses import dataclass, field
-from typing import TYPE_CHECKING
+from typing import TYPE_CHECKING, Any, Optional
 
-from graph.erp import ErpClient
+from pydantic import BaseModel, ConfigDict, Field
 
-if TYPE_CHECKING:                       # avoid an import cycle at runtime
-    from stubs.po_db import PurchaseOrderDB
+from graph.erp import ErpClient, get_erp_client
+
+from stubs.po_db import PurchaseOrderDB
+
+class LedgerContext(BaseModel):
+    tenant_id: str = "acme-corp"  # Default fallback or required string
+    variance_tolerance: float = 0.05
+    max_auto_approve: float = 50000.0
+    investigator_tier: str = "strong"
+    
+    # Do not require non-serializable objects at instantiation
+    # Provide defaults or instantiate them inside your node execution
+   # Non-serializable runtime objects with default factories
+    po_db: Any = Field(default_factory=PurchaseOrderDB)
+    erp: Any = Field(default_factory=get_erp_client)
+    
+    class Config:
+        arbitrary_types_allowed = True    
 
 
-@dataclass
-class LedgerContext:
-    """Everything a run needs that is NOT a fact the run produced.
-
-    Rule of thumb: if a resumed thread should get this value back from disk,
-    it belongs in state. If the caller should supply it fresh, it belongs here.
-    """
-    tenant_id: str
-    po_db: "PurchaseOrderDB"
-    erp: ErpClient  
-
-    # policy knobs - these are exactly what a finance lead will want to tune
-    # per client without a deploy, which is why they are context and not
-    # constants. On Day 25 each becomes an "assistant" configuration.
-    variance_tolerance: float = 0.05        # 5% price variance auto-approves
-    max_auto_approve: float = 50_000.0      # anything above always sees a human
-
-    # model id comes from config.py, but lives here so a node never reaches
-    # for a global and so tests can inject a fake
-    model: str | None = None

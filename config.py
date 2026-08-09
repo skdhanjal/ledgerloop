@@ -30,4 +30,4 @@ def get_model(tier: str = "strong", **kwargs):
     surviving a model deprecation never requires touching a call site.
     """
     name = TIERS.get(tier) or TIERS["strong"]
-    return init_chat_model(name or PRIMARY_MODEL, temperature=0, **kwargs)
+    return init_chat_model(name, temperature=0, **kwargs)

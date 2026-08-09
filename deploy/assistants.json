@@ -1,0 +1,24 @@
+{
+    "acme-ap": {
+      "tenant_id": "acme-corp",
+      "variance_tolerance": 0.05,
+      "max_auto_approve": 50000,
+      "investigator_tier": "strong",
+      "require_human_above": 25000
+    },
+    "globex-ap": {
+      "tenant_id": "globex-ltd",
+      "variance_tolerance": 0.0,
+      "max_auto_approve": 1000,
+      "investigator_tier": "strong",
+      "require_human_above": 0
+    },
+    "acme-ap-monthend": {
+      "tenant_id": "acme-corp",
+      "variance_tolerance": 0.02,
+      "max_auto_approve": 10000,
+      "investigator_tier": "strong",
+      "require_human_above": 5000
+    }
+  }
+  
