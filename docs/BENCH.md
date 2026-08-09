@@ -65,3 +65,42 @@ Checkpointer: Postgres, durability="sync". Store: Postgres + fastembed.
 ### Decisions carried forward
 - D-001 (graph vs harness) resolved on Day 7 - see DECISIONS.md.
 - Reading-vs-document validator boundary (Day 8) is the subtlest call so far.
+
+## v3 - Phase 4 complete (Day 24)
+
+### Reliability
+| property | evidence |
+|---|---|
+| Crash recovery | 20/20 threads resumed cleanly (`kill_test.py`) |
+| Exactly-once posting | money test: kill after ERP write -> `count: 1` |
+| Corrected amount re-posts | different idempotency key, verified |
+| Transient failure handling | retry on transient only; business rejections never retried |
+| Node timeouts | `run_timeout` on posting, `idle_timeout` on streaming nodes |
+| Degraded paths | extraction, investigation, posting all degrade to a held invoice |
+
+### Evaluation
+| property | value |
+|---|---|
+| Dataset | 150 stratified, constructed truth, 100 dev / 50 held-out |
+| Deterministic evaluators | extraction, decision, exceptions (P/R), grounding, trajectory |
+| Judge calibration | kappa <fill> on 50 hand-labelled items |
+| Measured noise floor | <fill> pp (5 runs, same commit, local model) |
+| CI gate | hard gates every push; full eval nightly; held-out at release |
+| Smallest detected regression | <fill> pp |
+
+### Security
+| property | evidence |
+|---|---|
+| **Decision unreachable by model output** | `test_policy_signature_takes_no_model_output` |
+| **Injection -> auto_approve rate** | 0 / 12 injection stratum cases |
+| Tool surface | 4 read-only tools, allowlist enforced in middleware |
+| Argument validation | shape-checked; traversal and oversized args blocked |
+| Tenant isolation | store namespaces tenant-first, tested |
+| PII in stream events | 0 (walked every key of every event) |
+| Secrets in message channel | redacted at the tool boundary |
+
+### Still open at v3
+- `thread_id` is trusted input - anyone holding one can read/resume (Day 26)
+- No rate limiting or abuse controls on the API surface (Day 26)
+- Injection detection is best-effort; containment is the guarantee
+

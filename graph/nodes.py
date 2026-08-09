@@ -8,9 +8,11 @@ from .memory import (format_for_prompt, recall_vendor, remember_resolution)
 from .context import LedgerContext
 from .policy import PolicyInput, evaluate
 from .state import InvoiceState
+from .guardrails import make_injection_classifier
 
 MONEY = r"([\d,]+\.\d{2})"
 
+classify = make_injection_classifier()
 
 def intake(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     path = Path(state["invoice_path"])
@@ -18,12 +20,27 @@ def intake(state: InvoiceState, runtime: Runtime[LedgerContext]) -> dict:
     if not path.exists():
         raise FileNotFoundError(f"No invoice at {path}")
 
-    return {
-        "raw_text": path.read_text(encoding="utf-8"),
+    raw_text = path.read_text(encoding="utf-8") 
+    assessment = classify(raw_text)
+
+    out = {
+        "raw_text": raw_text,
         "invoice_id": path.stem,
         "tenant_id": runtime.context.tenant_id,
         "audit": [{"node": "intake", "event": "invoice_read"}],
     }
+
+    if assessment.contains_instructions:
+        # Routing to a human is already the right answer for a suspicious doc.
+        out["exceptions"] = [{
+            "code": "suspicious_content",
+            "severity": assessment.severity,
+            "detail": f"document contains instruction-like text: {assessment.quoted[:200]}",
+        }]
+        out["requires_human"] = True
+        out["audit"].append({"node": "intake", "event": "injection_flagged", "severity": assessment.severity})
+
+    return out
 
 
 def extract(state: InvoiceState) -> dict:

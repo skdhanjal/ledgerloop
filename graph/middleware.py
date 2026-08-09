@@ -12,8 +12,10 @@ where they are no longer pattern-matchable and will be re-sent forever.
 """
 
 import re
-from langchain.agents.middleware import (ModelCallLimitMiddleware, ModelRequest, SummarizationMiddleware,
+from langchain.agents.middleware import (ModelCallLimitMiddleware, ModelRequest, PIIMiddleware, SummarizationMiddleware,
                                          dynamic_prompt, wrap_tool_call)
+
+from .guardrails import enforce_tool_policy                                         
 
 MAX_MODEL_CALLS = 8          # free-tier quota protection; see Day 5's two brakes
 
@@ -79,7 +81,10 @@ def tenant_policy_prompt(request: ModelRequest) -> str:
 def ledgerloop_middleware(model):
     """The stack, in order. Index 0 is outermost."""
     return [
+        enforce_tool_policy,
         redact_tool_output,
+        PIIMiddleware("email", strategy="redact"),
+        PIIMiddleware("credit_card", strategy="block"),
         ModelCallLimitMiddleware(thread_limit=MAX_MODEL_CALLS),
         SummarizationMiddleware(
             model=model,
