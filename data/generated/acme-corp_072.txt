@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Young, Wilson and Hansen
+Invoice No: INV-10072
+Date: 2026-06-09
+PO Reference: PO-4072
+Currency: INR
+
+Line Items:
+  SKU-3277   Certainly use                  40 EA  x     375.17 =     15006.80
+  SKU-7923   Center artist                  12 EA  x     234.93 =      2819.16
+  SKU-6962   Address style                  16 EA  x     183.77 =      2940.32
+  SKU-3999   Suffer college                 28 EA  x      35.43 =       992.04
+  SKU-7038   Three accept                   42 EA  x     413.16 =     17352.72
+  SKU-7334   Per indicate                   40 EA  x     274.16 =     10966.40
+  SKU-3175   Common house                   31 EA  x     110.84 =      3436.04
+  SKU-9534   May environment                16 EA  x      91.85 =      1469.60
+
+Subtotal: 54983.08
+Tax (18%): 9896.95
+Total Due: 64880.03

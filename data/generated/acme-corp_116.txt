@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Coleman, Lowery and Lopez
+Invoice No: INV-10116
+Date: 2026-05-25
+PO Reference: PO-4116
+Currency: INR
+
+Line Items:
+  SKU-5383   Nature structure               46 EA  x     359.70 =     16546.20
+  SKU-5667   Strategy painting              26 EA  x     209.64 =      5450.64
+  SKU-8132   Memory lawyer                   3 EA  x      45.94 =       137.82
+  SKU-9659   Record teacher                 19 EA  x     285.85 =      5431.15
+  SKU-8951   Effect stand                   24 EA  x     414.41 =      9945.84
+  SKU-2528   Them good                       7 EA  x     287.89 =      2015.23
+  SKU-6204   Tonight chance                 25 EA  x     248.89 =      6222.25
+  SKU-4593   Natural its                     9 EA  x     206.61 =      1859.49
+
+Subtotal: 47608.62
+Tax (18%): 8569.55
+Total Due: 56178.17

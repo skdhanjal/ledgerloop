@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Rodriguez and Sons
+Invoice No: INV-10053
+Date: 2026-07-17
+PO Reference: PO-4053
+Currency: INR
+
+Line Items:
+  SKU-7212   Home book                      34 EA  x     245.90 =      8360.60
+  SKU-9030   Specific many                  20 EA  x     441.49 =      8829.80
+  SKU-4180   Them ok                        25 EA  x     317.48 =      7937.00
+
+Subtotal: 25127.40
+Tax (18%): 4522.93
+Total Due: 29650.33

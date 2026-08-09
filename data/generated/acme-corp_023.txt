@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Myers, Morris and Lopez
+Invoice No: INV-10000
+Date: 2026-04-08
+PO Reference: PO-4023
+Currency: INR
+
+Line Items:
+  SKU-4593   Morning act                     8 EA  x     210.85 =      1686.80
+  SKU-3826   Edge explain                   16 EA  x     465.77 =      7452.32
+  SKU-2699   Least read                     29 EA  x     462.26 =     13405.54
+  SKU-7334   Campaign particular            22 EA  x     214.15 =      4711.30
+  SKU-9951   Many report                    45 EA  x      99.48 =      4476.60
+
+Subtotal: 31732.56
+Tax (18%): 5711.86
+Total Due: 37444.42

@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Lowery, Cox and Ward
+Invoice No: INV-10118
+Date: 2026-04-17
+PO Reference: PO-4118
+Currency: INR
+
+Line Items:
+  SKU-6480   Charge return                  34 EA  x      22.23 =       755.82
+  SKU-8890   During leave                   43 EA  x     131.87 =      5670.41
+  SKU-5057   Though strategy                 9 EA  x     384.42 =      3459.78
+  SKU-6652   Go without                     32 EA  x     233.06 =      7457.92
+  SKU-1697   Indeed six                     11 EA  x     315.02 =      3465.22
+
+Subtotal: 20809.15
+Tax (18%): 3745.65
+Total Due: 24554.80

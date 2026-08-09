@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Burns, Williams and Benton
+Invoice No: INV-10076
+Date: 2026-02-25
+PO Reference: PO-4087
+Currency: INR
+
+Line Items:
+  SKU-2154   Doctor identify                11 EA  x     450.44 =      4954.84
+  SKU-3062   Arrive message                  7 EA  x     468.16 =      3277.12
+  SKU-9170   Consider five                   7 EA  x     217.52 =      1522.64
+  SKU-1297   Meet may                       36 EA  x     136.68 =      4920.48
+  SKU-6168   Son painting                   36 EA  x     124.57 =      4484.52
+
+Subtotal: 19159.60
+Tax (18%): 3448.73
+Total Due: 22608.33

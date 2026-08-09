@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Scott, Hardy and Simon
+Invoice No: INV-10090
+Date: 2026-01-11
+PO Reference: PO-4090
+Currency: INR
+
+Line Items:
+  SKU-3434   Item party                     30 EA  x      96.98 =      2909.40
+  SKU-6051   Happen black                    7 EA  x      32.96 =       230.72
+  SKU-5044   Themselves before              47 EA  x     322.10 =     15138.70
+
+Subtotal: 18278.82
+Tax (18%): 3290.19
+Total Due: 21584.01

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Ward PLC
+Invoice No: INV-10132
+Date: 2026-05-29
+PO Reference: PO-4132
+Currency: INR
+
+Line Items:
+  SKU-9257   Small continue                  1 EA  x     623.65 =       623.65
+  SKU-6935   Admit forward                  29 EA  x      48.51 =      1406.79
+
+Subtotal: 2030.44
+Tax (18%): 365.48
+Total Due: 2395.92

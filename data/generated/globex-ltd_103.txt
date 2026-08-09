@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Spencer, Gonzales and Cordova
+Invoice No: INV-10103
+Date: 2026-05-12
+PO Reference: PO-4103
+Currency: INR
+
+Line Items:
+  SKU-6059   Actually accept                37 EA  x      68.73 =      2543.01
+  SKU-5867   Within either                   1 EA  x     467.92 =       467.92
+  SKU-3228   Easy likely                     4 EA  x     162.69 =       650.76
+  SKU-8411   Industry music                 20 EA  x     301.84 =      6036.80
+  SKU-5133   Why rock                       18 EA  x     280.66 =      5051.88
+
+Subtotal: 14750.37
+Tax (18%): 2655.07
+Total Due: 17405.44

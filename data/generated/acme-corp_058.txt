@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Sparks, Chen and Bruce
+Invoice No: INV-10058
+Date: 2026-01-28
+PO Reference: PO-99058
+Currency: INR
+
+Line Items:
+  SKU-9126   Their age                      18 EA  x     237.70 =      4278.60
+  SKU-3742   Present capital                 7 EA  x     409.19 =      2864.33
+
+Subtotal: 7142.93
+Tax (18%): 1285.73
+Total Due: 8428.66

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Gonzalez, Calderon and Buck
+Invoice No: INV-10029
+Date: 2026-04-06
+PO Reference: PO-4029
+Currency: INR
+
+Line Items:
+  SKU-5734   Indicate fish                   3 EA  x      27.65 =        82.95
+  SKU-6133   Quite attack                   19 EA  x     331.12 =      6291.28
+
+Subtotal: 6374.23
+Tax (18%): 1147.36
+Total Due: 7521.59

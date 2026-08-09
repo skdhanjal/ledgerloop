@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Black-Anderson
+Invoice No: INV-10093
+Date: 2026-05-02
+PO Reference: PO-4093
+Currency: INR
+
+Line Items:
+  SKU-7178   Drug play                      33 EA  x     299.44 =      9881.52
+  SKU-1683   Century over                   27 EA  x     257.19 =      6944.13
+  SKU-6808   Arrive loss                    21 EA  x     128.10 =      2690.10
+  SKU-1088   Why debate                     10 EA  x      35.12 =       351.20
+  SKU-8677   Together five                   7 EA  x     439.65 =      3077.55
+  SKU-6400   Local seem                     21 EA  x     248.34 =      5215.14
+  SKU-5070   Include that                    3 EA  x     418.87 =      1256.61
+  SKU-2143   State consumer                 34 EA  x     125.81 =      4277.54
+
+Subtotal: 33693.79
+Tax (18%): 6064.88
+Total Due: 39758.67

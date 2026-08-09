@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Harris Ltd
+Invoice No: INV-10098
+Date: 2026-03-11
+PO Reference: PO-4098
+Currency: INR
+
+Line Items:
+  SKU-6404   Point smile                    15 EA  x      22.94 =       344.10
+  SKU-5646   Plant share                    10 EA  x     421.12 =      4211.20
+  SKU-9079   Pressure letter                29 EA  x     361.01 =     10469.29
+
+Subtotal: 15024.59
+Tax (18%): 2704.43
+Total Due: 17729.02

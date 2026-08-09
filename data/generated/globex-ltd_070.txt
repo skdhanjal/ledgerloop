@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Cobb, Stevens and Medina
+Invoice No: INV-10070
+Date: 2026-05-30
+PO Reference: PO-4070
+Currency: INR
+
+Line Items:
+  SKU-9462   Tell husband                    2 EA  x     524.46 =      1048.92
+  SKU-4627   Sort bill                      25 EA  x     156.48 =      3912.00
+  SKU-1877   Of night                        6 EA  x     410.91 =      2465.46
+  SKU-7123   Us pick                         4 EA  x     141.39 =       565.56
+  SKU-4556   Low attention                   4 EA  x     286.05 =      1144.20
+
+Subtotal: 9136.14
+Tax (18%): 1644.51
+Total Due: 10795.65

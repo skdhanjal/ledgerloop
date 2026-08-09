@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Harris-Kim
+Invoice No: INV-10022
+Date: 2026-05-01
+PO Reference: PO-4022
+Currency: INR
+
+Line Items:
+  SKU-7731   Major use                      22 EA  x     442.88 =      9743.36
+  SKU-7421   Behavior amount                49 EA  x      21.50 =      1053.50
+  SKU-8436   Time church                    24 EA  x     311.55 =      7477.20
+  SKU-1017   Machine deep                   38 EA  x      53.44 =      2030.72
+  SKU-1007   Foot ever                       1 EA  x      27.36 =        27.36
+
+Subtotal: 20332.14
+Tax (18%): 3659.79
+Total Due: 23991.93

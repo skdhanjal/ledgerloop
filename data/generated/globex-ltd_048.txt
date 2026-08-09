@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Kim Ltd
+Invoice No: INV-10048
+Date: 2026-05-31
+PO Reference: PO-4048
+Currency: INR
+
+Line Items:
+  SKU-7021   Activity answer                 2 EA  x      35.84 =        71.68
+  SKU-6663   Experience brother              5 EA  x      43.24 =       216.20
+  SKU-8066   Enter training                 11 EA  x     362.12 =      3983.32
+  SKU-4155   Three discuss                   7 EA  x     462.96 =      3240.72
+  SKU-5325   But just                       17 EA  x     309.40 =      5259.80
+  SKU-2233   Machine consider               13 EA  x     140.79 =      1830.27
+  SKU-6427   Eat word                       26 EA  x     188.56 =      4902.56
+  SKU-5101   Side series                    36 EA  x     336.91 =     12128.76
+
+Subtotal: 31633.31
+Tax (18%): 5694.00
+Total Due: 37327.31

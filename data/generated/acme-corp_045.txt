@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Zhang-Kane
+Invoice No: INV-10045
+Date: 2026-01-07
+PO Reference: PO-4045
+Currency: INR
+
+Line Items:
+  SKU-9390   Once then                      23 EA  x     295.66 =      6800.18
+  SKU-3475   Person usually                 45 EA  x     449.52 =     20228.40
+
+Subtotal: 27028.58
+Tax (18%): 4865.14
+Total Due: 31893.72

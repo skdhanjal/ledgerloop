@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Washington-Jimenez
+Invoice No: INV-10024
+Date: 2026-02-23
+PO Reference: PO-4024
+Currency: INR
+
+Line Items:
+  SKU-3179   Expect economy                 40 EA  x     276.11 =     11044.40
+  SKU-6629   Home leg                       43 EA  x     243.76 =     10481.68
+  SKU-9543   Line argue                     22 EA  x     269.74 =      5934.28
+
+Subtotal: 27460.36
+Tax (18%): 4942.86
+Total Due: 32403.22

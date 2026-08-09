@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Tucker-Clark
+Invoice No: INV-10096
+Date: 2026-02-10
+PO Reference: PO-99096
+Currency: INR
+
+Line Items:
+  SKU-8668   Continue identify               5 EA  x       8.81 =        44.05
+  SKU-4974   Write woman                    26 EA  x     249.94 =      6498.44
+  SKU-4147   Outside us                     26 EA  x     107.53 =      2795.78
+  SKU-2772   Do thousand                     9 EA  x     182.86 =      1645.74
+  SKU-1782   Issue court                    39 EA  x     494.99 =     19304.61
+
+Subtotal: 30288.62
+Tax (18%): 5451.95
+Total Due: 35740.57

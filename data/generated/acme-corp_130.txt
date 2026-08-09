@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Schmitt-Flores
+Invoice No: INV-10130
+Date: 2026-04-19
+PO Reference: PO-4130
+Currency: INR
+
+Line Items:
+  SKU-7874   Receive car                    39 EA  x       6.82 =       265.98
+  SKU-9130   Site kid                       25 EA  x     225.34 =      5633.50
+
+Subtotal: 5899.48
+Tax (18%): 1061.91
+Total Due: 6961.39

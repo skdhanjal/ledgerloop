@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Craig, Knight and Turner
+Invoice No: INV-10025
+Date: 2026-01-10
+PO Reference: PO-4025
+Currency: INR
+
+Line Items:
+  SKU-5839   Control wait                   41 EA  x     310.96 =     12749.36
+  SKU-2636   Relate behind                   7 EA  x      12.78 =        89.46
+
+Subtotal: 12838.82
+Tax (18%): 2310.99
+Total Due: 15149.81

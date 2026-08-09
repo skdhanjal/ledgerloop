@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Adkins-Thomas
+Invoice No: INV-10050
+Date: 2026-07-11
+PO Reference: PO-4050
+Currency: INR
+
+Line Items:
+  SKU-1919   Center and                     32 EA  x      90.37 =      2891.84
+  SKU-8889   Find project                   31 EA  x     380.17 =     11785.27
+  SKU-3248   Prepare show                   16 EA  x     151.74 =      2427.84
+  SKU-3331   Black body                     43 EA  x      93.00 =      3999.00
+  SKU-9785   Admit charge                   26 EA  x     458.93 =     11932.18
+  SKU-1800   Exactly even                   25 EA  x     172.88 =      4322.00
+  SKU-4971   Conference left                 8 EA  x     486.72 =      3893.76
+  SKU-9477   Life reality                    4 EA  x     228.72 =       914.88
+
+Subtotal: 42166.77
+Tax (18%): 7590.02
+Total Due: 49871.73

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Jones-Adkins
+Invoice No: INV-10082
+Date: 2026-06-17
+PO Reference: PO-4082
+Currency: INR
+
+Line Items:
+  SKU-9905   Ago animal                      1 EA  x     140.87 =       140.87
+  SKU-9689   Board point                     8 EA  x     349.84 =      2798.72
+
+Subtotal: 2939.59
+Tax (18%): 529.13
+Total Due: 3468.72

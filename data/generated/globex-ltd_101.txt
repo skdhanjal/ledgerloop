@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Alvarez, Weber and Freeman
+Invoice No: INV-10101
+Date: 2026-03-02
+PO Reference: PO-4101
+Currency: INR
+
+Line Items:
+  SKU-1950   Respond major                  14 EA  x     293.64 =      4110.96
+  SKU-8895   Through beyond                  1 EA  x     187.11 =       187.11
+  SKU-9944   Scene professor                39 EA  x      14.55 =       567.45
+  SKU-7315   Why choice                     43 EA  x     426.19 =     18326.17
+  SKU-2893   Low deep                       39 EA  x      40.32 =      1572.48
+
+Subtotal: 24764.17
+Tax (18%): 4457.55
+Total Due: 29588.27

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Clayton, Vazquez and Nelson
+Invoice No: INV-10057
+Date: 2026-01-26
+PO Reference: PO-4057
+Currency: INR
+
+Line Items:
+  SKU-8318   Information though             26 EA  x     310.02 =      8060.52
+  SKU-9676   Parent smile                   29 EA  x     212.08 =      6150.32
+  SKU-6561   Language include                5 EA  x     412.55 =      2062.75
+
+Subtotal: 16273.59
+Tax (18%): 2929.25
+Total Due: 19217.84

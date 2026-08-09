@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Schroeder, Williams and Andrews
+Invoice No: INV-10044
+Date: 2026-01-21
+PO Reference: PO-4044
+Currency: INR
+
+Line Items:
+  SKU-7389   Well clear                     48 EA  x     379.59 =     18220.32
+  SKU-2533   Themselves present             15 EA  x     302.50 =      4537.50
+  SKU-6381   Wish back                      17 EA  x     225.60 =      3835.20
+  SKU-9188   South quite                    36 EA  x     237.08 =      8534.88
+  SKU-9010   Million consider               40 EA  x      29.48 =      1179.20
+
+Subtotal: 36307.10
+Tax (18%): 6535.28
+Total Due: 43321.20

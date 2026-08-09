@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Sosa, Tucker and Douglas
+Invoice No: INV-10034
+Date: 2026-07-16
+PO Reference: PO-4034
+Currency: INR
+
+Line Items:
+  SKU-8435   Shoulder ten                   16 EA  x     330.81 =      5292.96
+  SKU-8778   Rather learn                    3 EA  x     359.33 =      1077.99
+  SKU-5037   Look ball                      36 EA  x     357.31 =     12863.16
+  SKU-3333   So feeling                     10 EA  x     166.45 =      1664.50
+  SKU-2218   Rise western                   35 EA  x     103.33 =      3616.55
+  SKU-9221   Trip beautiful                  6 EA  x     427.60 =      2565.60
+  SKU-5695   Quickly throw                  20 EA  x     294.02 =      5880.40
+  SKU-4994   Computer window                15 EA  x       8.41 =       126.15
+
+Subtotal: 33087.31
+Tax (18%): 5955.72
+Total Due: 39043.03

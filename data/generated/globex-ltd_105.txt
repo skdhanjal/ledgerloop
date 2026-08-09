@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Brown-Lee
+Invoice No: INV-10105
+Date: 2026-06-23
+PO Reference: PO-99105
+Currency: INR
+
+Line Items:
+  SKU-9329   Finally me                     22 EA  x     117.96 =      2595.12
+  SKU-3943   Child throughout                5 EA  x     248.21 =      1241.05
+  SKU-2492   Firm town                      26 EA  x      46.85 =      1218.10
+  SKU-5169   System also                    43 EA  x      57.80 =      2485.40
+  SKU-4181   Already four                   17 EA  x     170.73 =      2902.41
+  SKU-3223   Cost win                       23 EA  x     413.28 =      9505.44
+  SKU-5532   Pay behavior                   23 EA  x     138.24 =      3179.52
+  SKU-3589   Wait nature                    17 EA  x     388.96 =      6612.32
+
+Subtotal: 29739.36
+Tax (18%): 5353.08
+Total Due: 35092.44

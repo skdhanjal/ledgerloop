@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Alvarez, Johnson and Wagner
+Invoice No: INV-10001
+Date: 2026-04-01
+PO Reference: PO-4035
+Currency: INR
+
+Line Items:
+  SKU-2139   Step environmental             49 EA  x     368.93 =     18077.57
+  SKU-2256   People system                  24 EA  x     427.84 =     10268.16
+  SKU-2468   Artist heart                    8 EA  x     375.38 =      3003.04
+
+Subtotal: 31348.77
+Tax (18%): 5642.78
+Total Due: 36991.55

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Smith-Cohen
+Invoice No: INV-10117
+Date: 2026-08-04
+PO Reference: PO-4117
+Currency: INR
+
+Line Items:
+  SKU-6514   Project affect                  5 BOX x    1838.80 =      9194.00
+  SKU-4305   Yet everything                 22 EA  x      90.21 =      1984.62
+
+Subtotal: 11178.62
+Tax (18%): 2012.15
+Total Due: 13190.77

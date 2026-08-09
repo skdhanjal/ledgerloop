@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Moore, Solis and Collins
+Invoice No: INV-10092
+Date: 2026-06-30
+PO Reference: PO-4144
+Currency: INR
+
+Line Items:
+  SKU-6480   Then middle                    44 EA  x     314.90 =     13855.60
+  SKU-2377   Wind cup                       41 EA  x     371.59 =     15235.19
+  SKU-6869   Perhaps near                   21 EA  x     471.90 =      9909.90
+  SKU-5147   Care agreement                 30 EA  x     496.64 =     14899.20
+  SKU-6176   North poor                      8 EA  x     175.53 =      1404.24
+  SKU-3989   Family clearly                  7 EA  x     354.25 =      2479.75
+  SKU-4755   Serious increase               43 EA  x     102.11 =      4390.73
+  SKU-3104   Near foot                      49 EA  x      21.65 =      1060.85
+
+Subtotal: 63235.46
+Tax (18%): 11382.38
+Total Due: 74617.84

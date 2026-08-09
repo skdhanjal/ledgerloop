@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Fischer-Banks
+Invoice No: INV-10046
+Date: 2026-05-21
+PO Reference: PO-4046
+Currency: INR
+
+Line Items:
+  SKU-9469   List throw                     21 EA  x     426.06 =      8947.26
+  SKU-2969   Notice sell                    35 EA  x      85.57 =      2994.95
+  SKU-6403   Gun exactly                     9 EA  x     300.92 =      2708.28
+  SKU-3415   Can enough                     12 EA  x     270.36 =      3244.32
+  SKU-2833   People close                   18 EA  x     215.47 =      3878.46
+  SKU-1518   Father item                    42 EA  x     130.11 =      5464.62
+  SKU-5163   Government usually             42 EA  x     134.86 =      5664.12
+  SKU-8270   Million side                   49 EA  x     462.81 =     22677.69
+
+Subtotal: 55579.70
+Tax (18%): 10004.35
+Total Due: 65584.05

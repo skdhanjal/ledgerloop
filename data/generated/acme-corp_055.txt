@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Ramsey, Leon and Baker
+Invoice No: INV-10055
+Date: 2026-01-23
+PO Reference: PO-4055
+Currency: INR
+
+Line Items:
+  SKU-1311   Stock whom                     14 BOX x     516.40 =      7229.60
+  SKU-3921   Significant think              14 EA  x     116.19 =      1626.66
+  SKU-9267   Want pick                       3 EA  x     174.76 =       524.28
+  SKU-9360   Boy wide                       24 EA  x     290.93 =      6982.32
+  SKU-8832   Fight answer                   44 EA  x     319.02 =     14036.88
+  SKU-4432   Almost wonder                  27 EA  x     494.61 =     13354.47
+  SKU-3216   Form finally                   10 EA  x     131.17 =      1311.70
+  SKU-8592   Reason Congress                 7 EA  x     351.50 =      2460.50
+
+Subtotal: 47526.41
+Tax (18%): 8554.75
+Total Due: 56081.16

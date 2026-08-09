@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Vaughn, Collins and Harrison
+Invoice No: INV-10097
+Date: 2026-02-10
+PO Reference: PO-99097
+Currency: INR
+
+Line Items:
+  SKU-7939   Themselves white               27 EA  x     436.82 =     11794.14
+  SKU-6572   Break threat                   22 EA  x     271.34 =      5969.48
+
+Subtotal: 17763.62
+Tax (18%): 3197.45
+Total Due: 20961.07

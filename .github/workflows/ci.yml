@@ -1,0 +1,36 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    env:
+      LANGGRAPH_STRICT_MSGPACK: "true"
+      LEDGERLOOP_CHECKPOINTER: memory
+      LEDGERLOOP_STORE: memory
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+
+      # --- hard gates first: fastest, and failing here means stop ---
+      - name: Hard gates
+        run: uv run pytest -q -m "not requires_model" --tb=short
+
+      # --- the money test: real process kill, real resume ---
+      - name: Idempotent posting drill
+        run: |
+          uv run uvicorn stubs.erp:app --port 8000 &
+          sleep 2
+          uv run python money_test.py --phase crash || true
+          uv run python money_test.py --phase resume
+          uv run python -c "
+          import httpx, sys
+          n = httpx.get('http://localhost:8000/_debug/payments').json()['count']
+          sys.exit(0 if n == 1 else f'DOUBLE PAY: {n} payments')"
+
+      # --- eval smoke: 20 stratified cases on the local model ---
+      - name: Eval smoke
+        run: uv run python -m evals.run_eval --split smoke --model local

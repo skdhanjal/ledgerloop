@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Harrison Ltd
+Invoice No: INV-10043
+Date: 2026-01-23
+PO Reference: PO-4043
+Currency: INR
+
+Line Items:
+  SKU-1533   Return whom                    18 EA  x     545.89 =      9826.02
+  SKU-5492   Lot especially                 31 EA  x     157.38 =      4878.78
+
+Subtotal: 14704.80
+Tax (18%): 2646.86
+Total Due: 17366.66

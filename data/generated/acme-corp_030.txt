@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Green, White and Olson
+Invoice No: INV-10030
+Date: 2026-03-08
+PO Reference: PO-4030
+Currency: INR
+
+Line Items:
+  SKU-6027   Low where                      48 EA  x     462.77 =     22212.96
+  SKU-9156   Dark claim                     26 EA  x     346.37 =      9005.62
+  SKU-6193   Send help                      45 EA  x     377.02 =     16965.90
+  SKU-4573   Dinner history                 22 EA  x     313.52 =      6897.44
+  SKU-5674   Ground above                   36 EA  x     405.35 =     14592.60
+
+Subtotal: 69674.52
+Tax (18%): 12541.41
+Total Due: 82215.93

@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Hodges-Smith
+Invoice No: INV-10015
+Date: 2026-07-13
+PO Reference: PO-4015
+Currency: INR
+
+Line Items:
+  SKU-9304   Month instead                  17 EA  x     486.34 =      8267.78
+  SKU-1964   Score stay                     23 EA  x     300.18 =      6904.14
+  SKU-3232   As star                        24 EA  x     392.50 =      9420.00
+  SKU-4824   Food water                     50 EA  x     302.77 =     15138.50
+  SKU-5516   Improve popular                27 EA  x     249.72 =      6742.44
+  SKU-2615   Yes upon                       43 EA  x     349.26 =     15018.18
+  SKU-1494   Large create                   20 EA  x     270.37 =      5407.40
+  SKU-7889   Treatment soldier              50 EA  x     139.65 =      6982.50
+
+Subtotal: 73880.94
+Tax (18%): 13298.57
+Total Due: 87179.51

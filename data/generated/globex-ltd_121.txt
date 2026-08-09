@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Reyes-Gordon
+Invoice No: INV-10121
+Date: 2026-07-10
+PO Reference: PO-99121
+Currency: INR
+
+Line Items:
+  SKU-9642   Arm out                        40 EA  x     314.77 =     12590.80
+  SKU-9402   Market of                      22 EA  x     207.93 =      4574.46
+  SKU-9441   About ten                      22 EA  x     273.18 =      6009.96
+
+Subtotal: 23175.22
+Tax (18%): 4171.54
+Total Due: 27346.76

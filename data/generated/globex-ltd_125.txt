@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Reyes-Gordon
+Invoice No: INV-10121
+Date: 2026-07-07
+PO Reference: PO-4125
+Currency: INR
+
+Line Items:
+  SKU-8102   Meeting different              32 EA  x     448.96 =     14366.72
+  SKU-7602   Loss near                       8 EA  x     153.25 =      1226.00
+  SKU-6350   Employee continue              35 EA  x     134.95 =      4723.25
+  SKU-7085   Heart industry                 50 EA  x      32.69 =      1634.50
+  SKU-5852   System image                   46 EA  x     449.48 =     20676.08
+
+Subtotal: 42626.55
+Tax (18%): 7672.78
+Total Due: 50299.33

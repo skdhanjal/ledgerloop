@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Adams, Stewart and Huff
+Invoice No: INV-10147
+Date: 2026-04-04
+PO Reference: PO-4147
+Currency: INR
+
+Line Items:
+  SKU-7464   Prove worry                    41 EA  x     304.82 =     12497.62
+  SKU-2924   Five avoid                      8 EA  x     338.05 =      2704.40
+  SKU-6258   Common we                       6 EA  x     172.98 =      1037.88
+  SKU-1916   Must car                       41 EA  x     336.80 =     13808.80
+  SKU-2049   Blood would                    16 EA  x     233.19 =      3731.04
+  SKU-3266   Doctor moment                  38 EA  x     121.53 =      4618.14
+  SKU-4344   Bill laugh                     38 EA  x      33.11 =      1258.18
+  SKU-3085   Within affect                  25 EA  x      51.72 =      1293.00
+
+Subtotal: 40949.06
+Tax (18%): 7370.83
+Total Due: 48319.89

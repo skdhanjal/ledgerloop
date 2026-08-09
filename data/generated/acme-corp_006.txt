@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Diaz and Sons
+Invoice No: INV-10006
+Date: 2026-07-25
+PO Reference: PO-4006
+Currency: INR
+
+Line Items:
+  SKU-9120   Miss door                       2 EA  x     207.08 =       414.16
+  SKU-3376   Book pressure                  43 EA  x     411.74 =     17704.82
+  SKU-9739   Likely join                    17 EA  x     266.86 =      4536.62
+  SKU-8279   Off trial                      44 EA  x     256.89 =     11303.16
+  SKU-2442   Know do                         3 EA  x     425.56 =      1276.68
+
+Subtotal: 35235.44
+Tax (18%): 6342.38
+Total Due: 41834.62

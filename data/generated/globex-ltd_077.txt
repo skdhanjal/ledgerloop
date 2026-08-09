@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Ward, Patton and Barker
+Invoice No: INV-10077
+Date: 2026-04-09
+PO Reference: PO-4077
+Currency: INR
+
+Line Items:
+  SKU-3730   Use agree                      37 EA  x     130.23 =      4818.51
+  SKU-7292   Body music                     24 EA  x     274.83 =      6595.92
+  SKU-7115   Upon happen                    10 EA  x     116.85 =      1168.50
+
+Subtotal: 12582.93
+Tax (18%): 2264.93
+Total Due: 14847.86

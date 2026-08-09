@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Harvey-Wall
+Invoice No: INV-10140
+Date: 2026-04-06
+PO Reference: PO-4140
+Currency: INR
+
+Line Items:
+  SKU-7413   Technology able                34 EA  x     303.38 =     10314.92
+  SKU-8059   Face media                     23 EA  x      49.37 =      1135.51
+  SKU-9304   Nice candidate                 28 EA  x     415.00 =     11620.00
+  SKU-7484   Same woman                     15 EA  x     490.93 =      7363.95
+  SKU-9303   Recently Republican            33 EA  x     272.46 =      8991.18
+  SKU-6820   Grow space                     49 EA  x     454.35 =     22263.15
+  SKU-3571   We baby                        34 EA  x     455.42 =     15484.28
+  SKU-4390   Type night                      2 EA  x     320.07 =       640.14
+
+Subtotal: 77813.13
+Tax (18%): 14006.36
+Total Due: 91819.49

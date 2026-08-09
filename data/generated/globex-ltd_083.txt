@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Buckley LLC
+Invoice No: INV-10083
+Date: 2026-04-08
+PO Reference: PO-4083
+Currency: INR
+
+Line Items:
+  SKU-9717   Common set                     27 EA  x     311.72 =      8416.44
+  SKU-7102   Memory data                    16 EA  x     269.84 =      4317.44
+
+Subtotal: 12733.88
+Tax (18%): 2292.10
+Total Due: 15405.36

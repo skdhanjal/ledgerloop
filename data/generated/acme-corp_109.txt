@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Stone, Bell and Garcia
+Invoice No: INV-10109
+Date: 2026-03-19
+PO Reference: PO-99109
+Currency: INR
+
+Line Items:
+  SKU-2730   State create                   35 EA  x      86.60 =      3031.00
+  SKU-4835   Building fill                  16 EA  x     327.97 =      5247.52
+  SKU-9709   End understand                 14 EA  x     375.90 =      5262.60
+  SKU-6964   Money will                     26 EA  x     171.70 =      4464.20
+  SKU-4567   Piece sound                    10 EA  x     234.06 =      2340.60
+  SKU-1885   Run commercial                  2 EA  x     465.65 =       931.30
+  SKU-4142   Opportunity few                10 EA  x     471.06 =      4710.60
+  SKU-3541   Down through                   46 EA  x     318.40 =     14646.40
+
+Subtotal: 40634.22
+Tax (18%): 7314.16
+Total Due: 47948.38

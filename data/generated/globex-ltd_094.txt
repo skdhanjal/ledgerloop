@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Hamilton, Morales and Rodriguez
+Invoice No: INV-10094
+Date: 2026-04-16
+PO Reference: PO-4094
+Currency: INR
+
+Line Items:
+  SKU-1953   Upon new                       29 EA  x      46.56 =      1350.24
+  SKU-8374   Daughter with                  33 EA  x     135.52 =      4472.16
+  SKU-1557   I program                      28 EA  x     267.28 =      7483.84
+
+Subtotal: 13306.24
+Tax (18%): 2395.12
+Total Due: 15701.36

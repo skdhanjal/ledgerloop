@@ -1,0 +1,20 @@
+INVOICE
+Vendor: White-Alvarez
+Invoice No: INV-10123
+Date: 2026-02-22
+PO Reference: PO-4123
+Currency: INR
+
+Line Items:
+  SKU-6780   Rich north                     50 BOX x    2165.50 =    108275.00
+  SKU-5577   Would after                    46 EA  x     292.43 =     13451.78
+  SKU-5606   Fine camera                     9 EA  x     197.16 =      1774.44
+  SKU-7553   Local simple                   43 EA  x     416.58 =     17912.94
+  SKU-9082   Art girl                       31 EA  x     130.57 =      4047.67
+  SKU-4030   News speak                     46 EA  x     312.78 =     14387.88
+  SKU-6441   Tonight focus                  26 EA  x     192.36 =      5001.36
+  SKU-8535   Within father                  27 EA  x     305.61 =      8251.47
+
+Subtotal: 173102.54
+Tax (18%): 31158.46
+Total Due: 204261.00

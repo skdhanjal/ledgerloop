@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Cherry-Rojas
+Invoice No: INV-10042
+Date: 2026-03-22
+PO Reference: PO-99042
+Currency: INR
+
+Line Items:
+  SKU-7453   Great son                      38 EA  x      26.45 =      1005.10
+  SKU-5073   Agency black                   23 EA  x     326.16 =      7501.68
+  SKU-7039   Woman south                    14 EA  x     495.00 =      6930.00
+
+Subtotal: 15436.78
+Tax (18%): 2778.62
+Total Due: 18215.40

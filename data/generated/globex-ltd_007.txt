@@ -1,20 +1,17 @@
 INVOICE
-Vendor: Martin Group
+Vendor: Smith-Johnson
 Invoice No: INV-10007
-Date: 2026-04-15
+Date: 2026-08-04
 PO Reference: PO-4007
 Currency: INR
 
 Line Items:
-  SKU-8019   Commercial hospital            38 x     202.70 =      7702.60
-  SKU-4593   Hear determine                  9 x     257.22 =      2314.98
-  SKU-2489   Religious example              49 x      28.32 =      1387.68
-  SKU-2796   Science write                  10 x     315.59 =      3155.90
-  SKU-7916   Result raise                   39 x      36.45 =      1421.55
-  SKU-7252   Away politics                  39 x     498.08 =     19425.12
-  SKU-9669   Prove Congress                 17 x     485.68 =      8256.56
-  SKU-1188   None shoulder                  44 x     361.76 =     15917.44
+  SKU-5397   Idea become                    14 EA  x     341.29 =      4778.06
+  SKU-8113   Where for                      20 EA  x     253.74 =      5074.80
+  SKU-4914   Vote store                     18 EA  x     220.65 =      3971.70
+  SKU-2984   As nor                         38 EA  x     237.81 =      9036.78
+  SKU-8319   Direction blood                 2 EA  x     173.16 =       346.32
 
-Subtotal: 59581.83
-Tax (18%): 10724.73
-Total Due: 70306.56
+Subtotal: 23207.66
+Tax (18%): 4177.38
+Total Due: 27730.37

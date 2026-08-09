@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Perry, Wells and Salinas
+Invoice No: INV-10146
+Date: 2026-05-16
+PO Reference: PO-4146
+Currency: INR
+
+Line Items:
+  SKU-1249   Economic evidence              36 EA  x     349.38 =     12577.68
+  SKU-3635   Win culture                     8 EA  x     312.70 =      2501.60
+  SKU-7960   Sing movement                  27 EA  x     244.51 =      6601.77
+
+Subtotal: 21681.05
+Tax (18%): 3902.59
+Total Due: 25959.59

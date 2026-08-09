@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Sutton-Brown
+Invoice No: INV-10018
+Date: 2026-03-10
+PO Reference: PO-4018
+Currency: INR
+
+Line Items:
+  SKU-5580   Sport voice                    31 EA  x     115.31 =      3574.61
+  SKU-7827   Director sing                   4 EA  x     494.97 =      1979.88
+
+Subtotal: 5554.49
+Tax (18%): 999.81
+Total Due: 6554.30

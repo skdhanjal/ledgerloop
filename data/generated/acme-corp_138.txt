@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Smith-Mitchell
+Invoice No: INV-10138
+Date: 2026-04-21
+PO Reference: PO-4138
+Currency: INR
+
+Line Items:
+  SKU-9294   End light                      27 EA  x     268.33 =      7244.91
+  SKU-8798   Indeed around                  30 EA  x     426.92 =     12807.60
+
+Subtotal: 20052.51
+Tax (18%): 3609.45
+Total Due: 23661.96

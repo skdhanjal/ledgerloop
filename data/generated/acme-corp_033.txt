@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Owens-Burns
+Invoice No: INV-10033
+Date: 2026-05-02
+PO Reference: PO-4033
+Currency: INR
+
+Line Items:
+  SKU-1027   Term trouble                   10 EA  x      17.12 =       171.20
+  SKU-3428   Unit event                     35 EA  x       7.39 =       258.65
+  SKU-5995   Project language               20 EA  x     245.11 =      4902.20
+  SKU-7268   Story east                     13 EA  x      15.20 =       197.60
+  SKU-6030   Long test                      28 EA  x     331.95 =      9294.60
+  SKU-8751   Brother power                  17 EA  x     145.41 =      2471.97
+  SKU-9396   Visit want                     21 EA  x     247.91 =      5206.11
+  SKU-9904   Television career              16 EA  x       5.20 =        83.20
+
+Subtotal: 22585.53
+Tax (18%): 4065.40
+Total Due: 26965.83

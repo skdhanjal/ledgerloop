@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Mathews PLC
+Invoice No: INV-10071
+Date: 2026-07-16
+PO Reference: PO-99071
+Currency: INR
+
+Line Items:
+  SKU-7289   Real score                     33 EA  x     421.81 =     13919.73
+  SKU-5637   Service news                    6 EA  x     188.13 =      1128.78
+  SKU-2442   Population manager             41 EA  x     304.07 =     12466.87
+  SKU-3954   Meet cause                     29 EA  x     465.81 =     13508.49
+  SKU-1043   Process wrong                  44 EA  x     270.28 =     11892.32
+  SKU-1310   Right data                     19 EA  x      64.57 =      1226.83
+  SKU-1943   Rock simple                    22 EA  x     266.44 =      5861.68
+  SKU-6005   Article present                19 EA  x     207.86 =      3949.34
+
+Subtotal: 63954.04
+Tax (18%): 11511.73
+Total Due: 75465.77

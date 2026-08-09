@@ -1,0 +1,2176 @@
+[
+  {
+    "invoice_id": "globex-ltd_092",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_092.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Moore, Solis and Collins",
+      "invoice_no": "INV-10092",
+      "po_number": "PO-4092",
+      "total": 7814.38,
+      "subtotal": 6622.36,
+      "tax": 1192.02
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_147",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_147.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Adams, Stewart and Huff",
+      "invoice_no": "INV-10147",
+      "po_number": "PO-4147",
+      "total": 48319.89,
+      "subtotal": 40949.06,
+      "tax": 7370.83
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_020",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_020.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Thomas-Underwood",
+      "invoice_no": "INV-10020",
+      "po_number": "PO-4020",
+      "total": 98601.12,
+      "subtotal": 83560.27,
+      "tax": 15040.85
+    }
+  },
+  {
+    "invoice_id": "acme-corp_012",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_012.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Parks, Anderson and Sutton",
+      "invoice_no": "INV-10012",
+      "po_number": "PO-4012",
+      "total": 23184.52,
+      "subtotal": 19647.9,
+      "tax": 3536.62
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_066",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_066.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Moss Inc",
+      "invoice_no": "INV-10066",
+      "po_number": "PO-4066",
+      "total": 21891.04,
+      "subtotal": 18551.73,
+      "tax": 3339.31
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_060",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_060.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Guerrero-Church",
+      "invoice_no": "INV-10060",
+      "po_number": "PO-4060",
+      "total": 95867.11,
+      "subtotal": 81243.31,
+      "tax": 14623.8
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_000",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_000.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Myers, Morris and Lopez",
+      "invoice_no": "INV-10000",
+      "po_number": "PO-4000",
+      "total": 6175.99,
+      "subtotal": 5233.89,
+      "tax": 942.1
+    }
+  },
+  {
+    "invoice_id": "acme-corp_010",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_010.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Payne, Hernandez and Johnson",
+      "invoice_no": "INV-10010",
+      "po_number": "PO-4010",
+      "total": 36945.49,
+      "subtotal": 31309.74,
+      "tax": 5635.75
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_018",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_018.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Sutton-Brown",
+      "invoice_no": "INV-10018",
+      "po_number": "PO-4018",
+      "total": 6554.3,
+      "subtotal": 5554.49,
+      "tax": 999.81
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_038",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_038.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Johnson, Warner and Beard",
+      "invoice_no": "INV-10038",
+      "po_number": "PO-4038",
+      "total": 31310.59,
+      "subtotal": 26534.4,
+      "tax": 4776.19
+    }
+  },
+  {
+    "invoice_id": "acme-corp_013",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_013.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Ortiz-Neal",
+      "invoice_no": "INV-10013",
+      "po_number": "PO-4013",
+      "total": 46545.48,
+      "subtotal": 39445.32,
+      "tax": 7100.16
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_053",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_053.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Rodriguez and Sons",
+      "invoice_no": "INV-10053",
+      "po_number": "PO-4053",
+      "total": 29650.33,
+      "subtotal": 25127.4,
+      "tax": 4522.93
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_024",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_024.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Washington-Jimenez",
+      "invoice_no": "INV-10024",
+      "po_number": "PO-4024",
+      "total": 32403.22,
+      "subtotal": 27460.36,
+      "tax": 4942.86
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_139",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_139.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Ortega-Burton",
+      "invoice_no": "INV-10139",
+      "po_number": "PO-4139",
+      "total": 64926.74,
+      "subtotal": 55022.66,
+      "tax": 9904.08
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_126",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_126.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Douglas Ltd",
+      "invoice_no": "INV-10126",
+      "po_number": "PO-4126",
+      "total": 48744.49,
+      "subtotal": 41308.89,
+      "tax": 7435.6
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_032",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_032.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Stafford, Johnson and Walker",
+      "invoice_no": "INV-10032",
+      "po_number": "PO-4032",
+      "total": 41251.64,
+      "subtotal": 34959.02,
+      "tax": 6292.62
+    }
+  },
+  {
+    "invoice_id": "acme-corp_022",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_022.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Harris-Kim",
+      "invoice_no": "INV-10022",
+      "po_number": "PO-4022",
+      "total": 23991.93,
+      "subtotal": 20332.14,
+      "tax": 3659.79
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_112",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_112.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Kane-Hernandez",
+      "invoice_no": "INV-10112",
+      "po_number": "PO-4112",
+      "total": 14895.6,
+      "subtotal": 12623.39,
+      "tax": 2272.21
+    }
+  },
+  {
+    "invoice_id": "acme-corp_075",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_075.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Wright, Mills and Price",
+      "invoice_no": "INV-10075",
+      "po_number": "PO-4075",
+      "total": 76920.98,
+      "subtotal": 65187.27,
+      "tax": 11733.71
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_015",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_015.txt",
+    "seeded_exception": "clean",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Hodges-Smith",
+      "invoice_no": "INV-10015",
+      "po_number": "PO-4015",
+      "total": 87179.51,
+      "subtotal": 73880.94,
+      "tax": 13298.57
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_089",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_089.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Webster-Nash",
+      "invoice_no": "INV-10089",
+      "po_number": "PO-4089",
+      "total": 28709.55,
+      "subtotal": 24330.13,
+      "tax": 4379.42
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_054",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_054.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Dunlap, Flores and Ortiz",
+      "invoice_no": "INV-10054",
+      "po_number": "PO-4054",
+      "total": 25929.12,
+      "subtotal": 21973.83,
+      "tax": 3955.29
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_110",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_110.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Davis Ltd",
+      "invoice_no": "INV-10110",
+      "po_number": "PO-4110",
+      "total": 44557.7,
+      "subtotal": 37760.76,
+      "tax": 6796.94
+    }
+  },
+  {
+    "invoice_id": "acme-corp_002",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_002.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Kerr Inc",
+      "invoice_no": "INV-10002",
+      "po_number": "PO-4002",
+      "total": 41600.64,
+      "subtotal": 35254.78,
+      "tax": 6345.86
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_004",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_004.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Kirk, Scott and Cantrell",
+      "invoice_no": "INV-10004",
+      "po_number": "PO-4004",
+      "total": 45936.53,
+      "subtotal": 38929.26,
+      "tax": 7007.27
+    }
+  },
+  {
+    "invoice_id": "acme-corp_115",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_115.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Navarro-Payne",
+      "invoice_no": "INV-10115",
+      "po_number": "PO-4115",
+      "total": 25633.9,
+      "subtotal": 21723.64,
+      "tax": 3910.26
+    }
+  },
+  {
+    "invoice_id": "acme-corp_001",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_001.txt",
+    "seeded_exception": "extraction_hostile",
+    "expected_decision": "auto_approve",
+    "expected_exceptions": [
+      "extraction_hostile"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Alvarez, Johnson and Wagner",
+      "invoice_no": "INV-10001",
+      "po_number": "PO-4001",
+      "total": 11277.13,
+      "subtotal": 9556.89,
+      "tax": 1720.24
+    }
+  },
+  {
+    "invoice_id": "acme-corp_059",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_059.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Woods and Sons",
+      "invoice_no": "INV-10059",
+      "po_number": "PO-4059",
+      "total": 32701.68,
+      "subtotal": 27611.75,
+      "tax": 4970.11
+    }
+  },
+  {
+    "invoice_id": "acme-corp_033",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_033.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Owens-Burns",
+      "invoice_no": "INV-10033",
+      "po_number": "PO-4033",
+      "total": 26965.83,
+      "subtotal": 22585.53,
+      "tax": 4065.4
+    }
+  },
+  {
+    "invoice_id": "acme-corp_050",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_050.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Adkins-Thomas",
+      "invoice_no": "INV-10050",
+      "po_number": "PO-4050",
+      "total": 49871.73,
+      "subtotal": 42166.77,
+      "tax": 7590.02
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_146",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_146.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Perry, Wells and Salinas",
+      "invoice_no": "INV-10146",
+      "po_number": "PO-4146",
+      "total": 25959.59,
+      "subtotal": 21681.05,
+      "tax": 3902.59
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_007",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_007.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Smith-Johnson",
+      "invoice_no": "INV-10007",
+      "po_number": "PO-4007",
+      "total": 27730.37,
+      "subtotal": 23207.66,
+      "tax": 4177.38
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_145",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_145.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Stephens-Barton",
+      "invoice_no": "INV-10145",
+      "po_number": "PO-4145",
+      "total": 31156.86,
+      "subtotal": 26188.64,
+      "tax": 4713.96
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_083",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_083.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Buckley LLC",
+      "invoice_no": "INV-10083",
+      "po_number": "PO-4083",
+      "total": 15405.36,
+      "subtotal": 12733.88,
+      "tax": 2292.1
+    }
+  },
+  {
+    "invoice_id": "acme-corp_044",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_044.txt",
+    "seeded_exception": "tax_error",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Schroeder, Williams and Andrews",
+      "invoice_no": "INV-10044",
+      "po_number": "PO-4044",
+      "total": 43321.2,
+      "subtotal": 36307.1,
+      "tax": 6535.28
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_084",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_084.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Smith LLC",
+      "invoice_no": "INV-10084",
+      "po_number": "PO-4084",
+      "total": 87164.56,
+      "subtotal": 73868.27,
+      "tax": 13296.29
+    }
+  },
+  {
+    "invoice_id": "acme-corp_055",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_055.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Ramsey, Leon and Baker",
+      "invoice_no": "INV-10055",
+      "po_number": "PO-4055",
+      "total": 56081.16,
+      "subtotal": 47526.41,
+      "tax": 8554.75
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_008",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_008.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Park-Patterson",
+      "invoice_no": "INV-10008",
+      "po_number": "PO-4008",
+      "total": 85705.96,
+      "subtotal": 72632.17,
+      "tax": 13073.79
+    }
+  },
+  {
+    "invoice_id": "acme-corp_117",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_117.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Smith-Cohen",
+      "invoice_no": "INV-10117",
+      "po_number": "PO-4117",
+      "total": 13190.77,
+      "subtotal": 11178.62,
+      "tax": 2012.15
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_061",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_061.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Arroyo, Sanchez and Wright",
+      "invoice_no": "INV-10061",
+      "po_number": "PO-4061",
+      "total": 82605.84,
+      "subtotal": 70004.95,
+      "tax": 12600.89
+    }
+  },
+  {
+    "invoice_id": "acme-corp_056",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_056.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Gibson, Jones and Larson",
+      "invoice_no": "INV-10056",
+      "po_number": "PO-4056",
+      "total": 149451.0,
+      "subtotal": 126653.39,
+      "tax": 22797.61
+    }
+  },
+  {
+    "invoice_id": "acme-corp_047",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_047.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Silva Inc",
+      "invoice_no": "INV-10047",
+      "po_number": "PO-4047",
+      "total": 168055.66,
+      "subtotal": 142420.05,
+      "tax": 25635.61
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_108",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_108.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Suarez, Ortiz and Gonzalez",
+      "invoice_no": "INV-10108",
+      "po_number": "PO-4108",
+      "total": 110956.52,
+      "subtotal": 94030.95,
+      "tax": 16925.57
+    }
+  },
+  {
+    "invoice_id": "acme-corp_149",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_149.txt",
+    "seeded_exception": "uom_mismatch",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "uom_mismatch"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Shaffer, Baker and Weber",
+      "invoice_no": "INV-10149",
+      "po_number": "PO-4149",
+      "total": 92427.63,
+      "subtotal": 78328.5,
+      "tax": 14099.13
+    }
+  },
+  {
+    "invoice_id": "acme-corp_098",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_098.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Harris Ltd",
+      "invoice_no": "INV-10098",
+      "po_number": "PO-4098",
+      "total": 17729.02,
+      "subtotal": 15024.59,
+      "tax": 2704.43
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_137",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_137.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Richard-Thompson",
+      "invoice_no": "INV-10137",
+      "po_number": "PO-4137",
+      "total": 70196.68,
+      "subtotal": 59488.71,
+      "tax": 10707.97
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_081",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_081.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Fields-Wall",
+      "invoice_no": "INV-10081",
+      "po_number": "PO-4081",
+      "total": 26529.18,
+      "subtotal": 22482.36,
+      "tax": 4046.82
+    }
+  },
+  {
+    "invoice_id": "acme-corp_114",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_114.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Thomas, Lee and Valdez",
+      "invoice_no": "INV-10114",
+      "po_number": "PO-4114",
+      "total": 35264.1,
+      "subtotal": 29884.83,
+      "tax": 5379.27
+    }
+  },
+  {
+    "invoice_id": "acme-corp_009",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_009.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Galloway, Wagner and Gray",
+      "invoice_no": "INV-10009",
+      "po_number": "PO-4009",
+      "total": 14071.87,
+      "subtotal": 11925.31,
+      "tax": 2146.56
+    }
+  },
+  {
+    "invoice_id": "acme-corp_130",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_130.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Schmitt-Flores",
+      "invoice_no": "INV-10130",
+      "po_number": "PO-4130",
+      "total": 6961.39,
+      "subtotal": 5899.48,
+      "tax": 1061.91
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_127",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_127.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Boyle, Valenzuela and White",
+      "invoice_no": "INV-10127",
+      "po_number": "PO-4127",
+      "total": 7904.25,
+      "subtotal": 6698.52,
+      "tax": 1205.73
+    }
+  },
+  {
+    "invoice_id": "acme-corp_132",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_132.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Ward PLC",
+      "invoice_no": "INV-10132",
+      "po_number": "PO-4132",
+      "total": 2395.92,
+      "subtotal": 2030.44,
+      "tax": 365.48
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_029",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_029.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Gonzalez, Calderon and Buck",
+      "invoice_no": "INV-10029",
+      "po_number": "PO-4029",
+      "total": 7521.59,
+      "subtotal": 6374.23,
+      "tax": 1147.36
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_048",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_048.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Kim Ltd",
+      "invoice_no": "INV-10048",
+      "po_number": "PO-4048",
+      "total": 37327.31,
+      "subtotal": 31633.31,
+      "tax": 5694.0
+    }
+  },
+  {
+    "invoice_id": "acme-corp_129",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_129.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Moon and Sons",
+      "invoice_no": "INV-10129",
+      "po_number": "PO-4129",
+      "total": 51188.64,
+      "subtotal": 43380.2,
+      "tax": 7808.44
+    }
+  },
+  {
+    "invoice_id": "acme-corp_142",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_142.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Sullivan-Martin",
+      "invoice_no": "INV-10142",
+      "po_number": "PO-4142",
+      "total": 56701.37,
+      "subtotal": 48052.01,
+      "tax": 8649.36
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_094",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_094.txt",
+    "seeded_exception": "price_variance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Hamilton, Morales and Rodriguez",
+      "invoice_no": "INV-10094",
+      "po_number": "PO-4094",
+      "total": 15701.36,
+      "subtotal": 13306.24,
+      "tax": 2395.12
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_021",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_021.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Ray Ltd",
+      "invoice_no": "INV-10021",
+      "po_number": "PO-4021",
+      "total": 16709.28,
+      "subtotal": 14160.41,
+      "tax": 2548.87
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_077",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_077.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Ward, Patton and Barker",
+      "invoice_no": "INV-10077",
+      "po_number": "PO-4077",
+      "total": 14847.86,
+      "subtotal": 12582.93,
+      "tax": 2264.93
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_140",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_140.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Harvey-Wall",
+      "invoice_no": "INV-10140",
+      "po_number": "PO-4140",
+      "total": 91819.49,
+      "subtotal": 77813.13,
+      "tax": 14006.36
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_016",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_016.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Velez-Hatfield",
+      "invoice_no": "INV-10016",
+      "po_number": "PO-4016",
+      "total": 47033.54,
+      "subtotal": 39858.93,
+      "tax": 7174.61
+    }
+  },
+  {
+    "invoice_id": "acme-corp_131",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_131.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Lane, Wong and Williams",
+      "invoice_no": "INV-10131",
+      "po_number": "PO-4131",
+      "total": 25584.34,
+      "subtotal": 21681.64,
+      "tax": 3902.7
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_107",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_107.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Carr-Hayes",
+      "invoice_no": "INV-10107",
+      "po_number": "PO-4107",
+      "total": 37945.04,
+      "subtotal": 32156.81,
+      "tax": 5788.23
+    }
+  },
+  {
+    "invoice_id": "acme-corp_138",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_138.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Smith-Mitchell",
+      "invoice_no": "INV-10138",
+      "po_number": "PO-4138",
+      "total": 23661.96,
+      "subtotal": 20052.51,
+      "tax": 3609.45
+    }
+  },
+  {
+    "invoice_id": "acme-corp_068",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_068.txt",
+    "seeded_exception": "near_tolerance",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "near_tolerance"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Carter LLC",
+      "invoice_no": "INV-10068",
+      "po_number": "PO-4068",
+      "total": 61485.45,
+      "subtotal": 52106.31,
+      "tax": 9379.14
+    }
+  },
+  {
+    "invoice_id": "acme-corp_069",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_069.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Tyler-Lewis",
+      "invoice_no": "INV-10069",
+      "po_number": "PO-99069",
+      "total": 32767.89,
+      "subtotal": 27769.4,
+      "tax": 4998.49
+    }
+  },
+  {
+    "invoice_id": "acme-corp_088",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_088.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Sanchez, Mcpherson and Cameron",
+      "invoice_no": "INV-10088",
+      "po_number": "PO-99088",
+      "total": 33830.26,
+      "subtotal": 28669.71,
+      "tax": 5160.55
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_041",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_041.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Boyd Group",
+      "invoice_no": "INV-10041",
+      "po_number": "PO-99041",
+      "total": 22920.51,
+      "subtotal": 19424.16,
+      "tax": 3496.35
+    }
+  },
+  {
+    "invoice_id": "acme-corp_071",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_071.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Mathews PLC",
+      "invoice_no": "INV-10071",
+      "po_number": "PO-99071",
+      "total": 75465.77,
+      "subtotal": 63954.04,
+      "tax": 11511.73
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_105",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_105.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Brown-Lee",
+      "invoice_no": "INV-10105",
+      "po_number": "PO-99105",
+      "total": 35092.44,
+      "subtotal": 29739.36,
+      "tax": 5353.08
+    }
+  },
+  {
+    "invoice_id": "acme-corp_096",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_096.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Tucker-Clark",
+      "invoice_no": "INV-10096",
+      "po_number": "PO-99096",
+      "total": 35740.57,
+      "subtotal": 30288.62,
+      "tax": 5451.95
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_026",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_026.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Nelson PLC",
+      "invoice_no": "INV-10026",
+      "po_number": "PO-99026",
+      "total": 26052.44,
+      "subtotal": 22078.34,
+      "tax": 3974.1
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_121",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_121.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Reyes-Gordon",
+      "invoice_no": "INV-10121",
+      "po_number": "PO-99121",
+      "total": 27346.76,
+      "subtotal": 23175.22,
+      "tax": 4171.54
+    }
+  },
+  {
+    "invoice_id": "acme-corp_109",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_109.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Stone, Bell and Garcia",
+      "invoice_no": "INV-10109",
+      "po_number": "PO-99109",
+      "total": 47948.38,
+      "subtotal": 40634.22,
+      "tax": 7314.16
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_143",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_143.txt",
+    "seeded_exception": "missing_po",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "missing_po"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Gonzalez-Leblanc",
+      "invoice_no": "INV-10143",
+      "po_number": "PO-99143",
+      "total": 9956.18,
+      "subtotal": 8437.44,
+      "tax": 1518.74
+    }
+  },
+  {
+    "invoice_id": "acme-corp_064",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_064.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Owens-Burns",
+      "invoice_no": "INV-10033",
+      "po_number": "PO-4064",
+      "total": 16883.24,
+      "subtotal": 14307.83,
+      "tax": 2575.41
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_087",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_087.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Burns, Williams and Benton",
+      "invoice_no": "INV-10076",
+      "po_number": "PO-4087",
+      "total": 22608.33,
+      "subtotal": 19159.6,
+      "tax": 3448.73
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_125",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_125.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Reyes-Gordon",
+      "invoice_no": "INV-10121",
+      "po_number": "PO-4125",
+      "total": 50299.33,
+      "subtotal": 42626.55,
+      "tax": 7672.78
+    }
+  },
+  {
+    "invoice_id": "acme-corp_122",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_122.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Woods and Sons",
+      "invoice_no": "INV-10059",
+      "po_number": "PO-4122",
+      "total": 35116.42,
+      "subtotal": 29759.68,
+      "tax": 5356.74
+    }
+  },
+  {
+    "invoice_id": "acme-corp_023",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_023.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Myers, Morris and Lopez",
+      "invoice_no": "INV-10000",
+      "po_number": "PO-4023",
+      "total": 37444.42,
+      "subtotal": 31732.56,
+      "tax": 5711.86
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_065",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_065.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Thomas-Underwood",
+      "invoice_no": "INV-10020",
+      "po_number": "PO-4065",
+      "total": 35213.47,
+      "subtotal": 29841.92,
+      "tax": 5371.55
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_119",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_119.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Harrison Ltd",
+      "invoice_no": "INV-10043",
+      "po_number": "PO-4119",
+      "total": 24098.41,
+      "subtotal": 20422.38,
+      "tax": 3676.03
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_051",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_051.txt",
+    "seeded_exception": "duplicate",
+    "expected_decision": "reject",
+    "expected_exceptions": [
+      "duplicate"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Johnson, Warner and Beard",
+      "invoice_no": "INV-10038",
+      "po_number": "PO-4051",
+      "total": 32058.98,
+      "subtotal": 27168.63,
+      "tax": 4890.35
+    }
+  },
+  {
+    "invoice_id": "acme-corp_079",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_079.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Mckinney-Johnson",
+      "invoice_no": "INV-10079",
+      "po_number": "PO-4079",
+      "total": 39908.54,
+      "subtotal": 33820.8,
+      "tax": 6087.74
+    }
+  },
+  {
+    "invoice_id": "acme-corp_116",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_116.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Coleman, Lowery and Lopez",
+      "invoice_no": "INV-10116",
+      "po_number": "PO-4116",
+      "total": 56178.17,
+      "subtotal": 47608.62,
+      "tax": 8569.55
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_078",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_078.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Rivera-Harper",
+      "invoice_no": "INV-10078",
+      "po_number": "PO-4078",
+      "total": 56616.32,
+      "subtotal": 47979.93,
+      "tax": 8636.39
+    }
+  },
+  {
+    "invoice_id": "acme-corp_072",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_072.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Young, Wilson and Hansen",
+      "invoice_no": "INV-10072",
+      "po_number": "PO-4072",
+      "total": 64880.03,
+      "subtotal": 54983.08,
+      "tax": 9896.95
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_076",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_076.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Burns, Williams and Benton",
+      "invoice_no": "INV-10076",
+      "po_number": "PO-4076",
+      "total": 36784.47,
+      "subtotal": 31173.28,
+      "tax": 5611.19
+    }
+  },
+  {
+    "invoice_id": "acme-corp_095",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_095.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Smith-Russell",
+      "invoice_no": "INV-10095",
+      "po_number": "PO-4095",
+      "total": 17882.73,
+      "subtotal": 15154.86,
+      "tax": 2727.87
+    }
+  },
+  {
+    "invoice_id": "acme-corp_030",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_030.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Green, White and Olson",
+      "invoice_no": "INV-10030",
+      "po_number": "PO-4030",
+      "total": 82215.93,
+      "subtotal": 69674.52,
+      "tax": 12541.41
+    }
+  },
+  {
+    "invoice_id": "acme-corp_052",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_052.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Powers-Graham",
+      "invoice_no": "INV-10052",
+      "po_number": "PO-4052",
+      "total": 32418.84,
+      "subtotal": 27473.59,
+      "tax": 4945.25
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_104",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_104.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Paul Inc",
+      "invoice_no": "INV-10104",
+      "po_number": "PO-4104",
+      "total": 89609.79,
+      "subtotal": 75940.5,
+      "tax": 13669.29
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_046",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_046.txt",
+    "seeded_exception": "short_shipment",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "short_shipment"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Fischer-Banks",
+      "invoice_no": "INV-10046",
+      "po_number": "PO-4046",
+      "total": 65584.05,
+      "subtotal": 55579.7,
+      "tax": 10004.35
+    }
+  },
+  {
+    "invoice_id": "acme-corp_057",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_057.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Clayton, Vazquez and Nelson",
+      "invoice_no": "INV-10057",
+      "po_number": "PO-4057",
+      "total": 19217.84,
+      "subtotal": 16273.59,
+      "tax": 2929.25
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_070",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_070.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Cobb, Stevens and Medina",
+      "invoice_no": "INV-10070",
+      "po_number": "PO-4070",
+      "total": 10795.65,
+      "subtotal": 9136.14,
+      "tax": 1644.51
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_043",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_043.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Harrison Ltd",
+      "invoice_no": "INV-10043",
+      "po_number": "PO-4043",
+      "total": 17366.66,
+      "subtotal": 14704.8,
+      "tax": 2646.86
+    }
+  },
+  {
+    "invoice_id": "acme-corp_090",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_090.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Scott, Hardy and Simon",
+      "invoice_no": "INV-10090",
+      "po_number": "PO-4090",
+      "total": 21584.01,
+      "subtotal": 18278.82,
+      "tax": 3290.19
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_141",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_141.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Hardin-Blankenship",
+      "invoice_no": "INV-10141",
+      "po_number": "PO-4141",
+      "total": 47645.31,
+      "subtotal": 40364.67,
+      "tax": 7265.64
+    }
+  },
+  {
+    "invoice_id": "globex-ltd_111",
+    "tenant_id": "globex-ltd",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\globex-ltd_111.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Mullins, West and White",
+      "invoice_no": "INV-10111",
+      "po_number": "PO-4111",
+      "total": 40102.6,
+      "subtotal": 33972.54,
+      "tax": 6115.06
+    }
+  },
+  {
+    "invoice_id": "acme-corp_086",
+    "tenant_id": "acme-corp",
+    "path": "D:\\ai-transition-track\\lang-graph\\ledgerloop\\data\\generated\\acme-corp_086.txt",
+    "seeded_exception": "multi_exception",
+    "expected_decision": "hold",
+    "expected_exceptions": [
+      "price_variance",
+      "short_shipment",
+      "tax_error"
+    ],
+    "expected_tools": [
+      "lookup_po",
+      "lookup_receipt"
+    ],
+    "truth_fields": {
+      "vendor": "Wall Inc",
+      "invoice_no": "INV-10086",
+      "po_number": "PO-4086",
+      "total": 29240.2,
+      "subtotal": 24767.12,
+      "tax": 4458.08
+    }
+  }
+]

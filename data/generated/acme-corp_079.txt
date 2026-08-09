@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Mckinney-Johnson
+Invoice No: INV-10079
+Date: 2026-04-09
+PO Reference: PO-4079
+Currency: INR
+
+Line Items:
+  SKU-7474   Court north                    44 EA  x     258.90 =     11391.60
+  SKU-3232   Above scientist                12 EA  x      97.93 =      1175.16
+  SKU-5914   Brother exist                  43 EA  x     494.28 =     21254.04
+
+Subtotal: 33820.80
+Tax (18%): 6087.74
+Total Due: 39908.54

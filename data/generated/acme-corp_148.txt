@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Peterson and Sons
+Invoice No: INV-10148
+Date: 2026-05-04
+PO Reference: PO-4148
+Currency: INR
+
+Line Items:
+  SKU-5059   Name simply                    49 EA  x      40.93 =      2005.57
+  SKU-8158   Stand picture                  14 EA  x     227.94 =      3191.16
+
+Subtotal: 5196.73
+Tax (18%): 935.41
+Total Due: 6132.14

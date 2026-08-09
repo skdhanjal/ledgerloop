@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Harris-Kim
+Invoice No: INV-10022
+Date: 2026-03-26
+PO Reference: PO-4120
+Currency: INR
+
+Line Items:
+  SKU-5500   Follow because                 45 EA  x      75.18 =      3383.10
+  SKU-6305   Argue beat                     35 EA  x     448.99 =     15714.65
+
+Subtotal: 19097.75
+Tax (18%): 3437.59
+Total Due: 22535.34

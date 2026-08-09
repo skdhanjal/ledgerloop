@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Sanchez, Mcpherson and Cameron
+Invoice No: INV-10088
+Date: 2026-07-20
+PO Reference: PO-99088
+Currency: INR
+
+Line Items:
+  SKU-4461   Realize could                  21 EA  x     160.16 =      3363.36
+  SKU-6985   Lawyer not                     27 EA  x     458.37 =     12375.99
+  SKU-6486   Include whose                   7 EA  x     479.28 =      3354.96
+  SKU-9926   Purpose appear                 17 EA  x     248.44 =      4223.48
+  SKU-8488   Identify group                 19 EA  x     281.68 =      5351.92
+
+Subtotal: 28669.71
+Tax (18%): 5160.55
+Total Due: 33830.26

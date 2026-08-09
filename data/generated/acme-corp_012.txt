@@ -1,13 +1,17 @@
 INVOICE
-Vendor: Valencia, Smith and Le
+Vendor: Parks, Anderson and Sutton
 Invoice No: INV-10012
-Date: 2026-07-28
+Date: 2026-03-01
 PO Reference: PO-4012
 Currency: INR
 
 Line Items:
-  SKU-8062   Newspaper enter                23 x     214.67 =      4937.41
+  SKU-4077   Weight few                     12 EA  x     223.82 =      2685.84
+  SKU-3816   Explain employee               22 EA  x     447.21 =      9838.62
+  SKU-6146   Rule he                         7 EA  x     433.19 =      3032.33
+  SKU-9900   Big though                      1 EA  x     227.35 =       227.35
+  SKU-8386   Relate cultural                 8 EA  x     482.97 =      3863.76
 
-Subtotal: 4937.41
-Tax (18%): 888.73
-Total Due: 5826.14
+Subtotal: 19647.90
+Tax (18%): 3536.62
+Total Due: 23184.52

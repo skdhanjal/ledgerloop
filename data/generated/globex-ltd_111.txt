@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Mullins, West and White
+Invoice No: INV-10111
+Date: 2026-04-11
+PO Reference: PO-4111
+Currency: INR
+
+Line Items:
+  SKU-7992   Defense enjoy                  35 EA  x     156.62 =      5481.70
+  SKU-2951   Suddenly couple                 7 EA  x     477.14 =      3339.98
+  SKU-4071   Mind machine                   17 EA  x     393.93 =      6696.81
+  SKU-4339   Walk floor                     14 EA  x     352.43 =      4934.02
+  SKU-2864   Knowledge everybody            31 EA  x     436.13 =     13520.03
+
+Subtotal: 33972.54
+Tax (18%): 6115.06
+Total Due: 40102.60

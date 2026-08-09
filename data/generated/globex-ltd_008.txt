@@ -1,15 +1,15 @@
 INVOICE
-Vendor: Cameron-Parsons
+Vendor: Park-Patterson
 Invoice No: INV-10008
-Date: 2026-03-30
+Date: 2026-03-26
 PO Reference: PO-4008
 Currency: INR
 
 Line Items:
-  SKU-2827   Wish push                      19 x     220.21 =      4183.99
-  SKU-8433   Rise onto                       1 x     477.14 =       477.14
-  SKU-5315   Discuss reveal                 33 x     382.17 =     12611.61
+  SKU-7045   Laugh picture                  29 BOX x    2266.70 =     65734.30
+  SKU-6172   Reduce participant             32 EA  x     189.63 =      6068.16
+  SKU-6589   Democratic student              9 EA  x      92.19 =       829.71
 
-Subtotal: 17272.74
-Tax (18%): 3109.09
-Total Due: 20660.29
+Subtotal: 72632.17
+Tax (18%): 13073.79
+Total Due: 85705.96

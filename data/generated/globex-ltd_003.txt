@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Cooper PLC
+Invoice No: INV-10003
+Date: 2026-07-08
+PO Reference: PO-4003
+Currency: INR
+
+Line Items:
+  SKU-1986   Great above                    50 EA  x     156.97 =      7848.50
+  SKU-7381   From vote                      40 EA  x     471.62 =     18864.80
+  SKU-7974   Concern nation                 12 EA  x     433.18 =      5198.16
+  SKU-5139   Great remember                 49 EA  x      69.25 =      3393.25
+  SKU-9157   Heart policy                    3 EA  x     169.35 =       508.05
+  SKU-8594   Indeed international           36 EA  x     203.31 =      7319.16
+  SKU-3158   Full sing                      10 EA  x     165.17 =      1651.70
+  SKU-8042   Food stop                      44 EA  x     113.94 =      5013.36
+
+Subtotal: 49796.98
+Tax (18%): 8963.46
+Total Due: 58909.84

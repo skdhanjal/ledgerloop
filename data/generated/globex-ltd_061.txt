@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Arroyo, Sanchez and Wright
+Invoice No: INV-10061
+Date: 2026-05-24
+PO Reference: PO-4061
+Currency: INR
+
+Line Items:
+  SKU-6599   Federal tree                   50 BOX x     961.30 =     48065.00
+  SKU-5763   Music gas                      16 EA  x     439.22 =      7027.52
+  SKU-9189   Military piece                 39 EA  x     382.37 =     14912.43
+
+Subtotal: 70004.95
+Tax (18%): 12600.89
+Total Due: 82605.84

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Moss Inc
+Invoice No: INV-10066
+Date: 2026-05-02
+PO Reference: PO-4066
+Currency: INR
+
+Line Items:
+  SKU-4921   Create thing                   48 EA  x     250.47 =     12022.56
+  SKU-6340   Involve time                   30 EA  x      61.27 =      1838.10
+  SKU-3383   Forward benefit                47 EA  x      99.81 =      4691.07
+
+Subtotal: 18551.73
+Tax (18%): 3339.31
+Total Due: 21891.04

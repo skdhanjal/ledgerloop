@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Owens-Burns
+Invoice No: INV-10033
+Date: 2026-03-11
+PO Reference: PO-4064
+Currency: INR
+
+Line Items:
+  SKU-3951   Few fly                        32 EA  x     232.34 =      7434.88
+  SKU-5972   Past pass                      28 EA  x     134.83 =      3775.24
+  SKU-8349   Station either                 33 EA  x      93.87 =      3097.71
+
+Subtotal: 14307.83
+Tax (18%): 2575.41
+Total Due: 16883.24

@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Moore, Solis and Collins
+Invoice No: INV-10092
+Date: 2026-05-27
+PO Reference: PO-4128
+Currency: INR
+
+Line Items:
+  SKU-3347   Visit program                  21 EA  x     150.30 =      3156.30
+  SKU-1844   Despite democratic             44 EA  x     350.06 =     15402.64
+  SKU-8104   Skin exist                     24 EA  x      79.02 =      1896.48
+  SKU-9868   He writer                       7 EA  x     337.97 =      2365.79
+  SKU-1895   Actually former                 1 EA  x     343.97 =       343.97
+  SKU-7161   Life general                   28 EA  x     497.10 =     13918.80
+  SKU-7723   Write case                     34 EA  x     433.22 =     14729.48
+  SKU-8368   Apply society                  49 EA  x     269.45 =     13203.05
+
+Subtotal: 65016.51
+Tax (18%): 11702.97
+Total Due: 76719.48

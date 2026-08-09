@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Harrison Ltd
+Invoice No: INV-10043
+Date: 2026-05-28
+PO Reference: PO-4119
+Currency: INR
+
+Line Items:
+  SKU-1109   Peace where                     3 EA  x      96.69 =       290.07
+  SKU-3892   Water level                     5 EA  x     310.66 =      1553.30
+  SKU-2666   Health name                    43 EA  x     432.07 =     18579.01
+
+Subtotal: 20422.38
+Tax (18%): 3676.03
+Total Due: 24098.41

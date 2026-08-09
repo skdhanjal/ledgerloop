@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Patton, Moore and Moyer
+Invoice No: INV-10073
+Date: 2026-03-31
+PO Reference: PO-4073
+Currency: INR
+
+Line Items:
+  SKU-1011   Manager word                   44 BOX x     884.20 =     38904.80
+  SKU-8905   Allow not                      48 EA  x     396.33 =     19023.84
+  SKU-2001   Force game                     11 EA  x     459.32 =      5052.52
+  SKU-6410   Close item                     15 EA  x     329.71 =      4945.65
+  SKU-8317   Movie drive                    28 EA  x     109.52 =      3066.56
+  SKU-9255   Stage black                    34 EA  x     468.31 =     15922.54
+  SKU-5302   Citizen else                   12 EA  x     410.25 =      4923.00
+  SKU-4392   Need glass                     14 EA  x     374.41 =      5241.74
+
+Subtotal: 97080.65
+Tax (18%): 17474.52
+Total Due: 114555.17

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Davis-Perez
+Invoice No: INV-10031
+Date: 2026-01-06
+PO Reference: PO-4031
+Currency: INR
+
+Line Items:
+  SKU-5449   Get walk                       39 BOX x    1822.60 =     71081.40
+  SKU-7518   Partner tonight                37 EA  x     375.61 =     13897.57
+
+Subtotal: 84978.97
+Tax (18%): 15296.21
+Total Due: 100275.18

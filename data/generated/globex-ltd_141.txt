@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Hardin-Blankenship
+Invoice No: INV-10141
+Date: 2026-05-08
+PO Reference: PO-4141
+Currency: INR
+
+Line Items:
+  SKU-4973   Nor yeah                       39 EA  x     576.53 =     22484.67
+  SKU-2444   Sign sound                     46 EA  x     105.11 =      4835.06
+  SKU-2335   Feeling lawyer                 35 EA  x     241.13 =      8439.55
+  SKU-3610   Sing century                    3 EA  x      55.61 =       166.83
+  SKU-9491   Food campaign                  16 EA  x     135.60 =      2169.60
+  SKU-9223   Try activity                    1 EA  x     194.56 =       194.56
+  SKU-7285   Lose sometimes                 30 EA  x      31.43 =       942.90
+  SKU-1850   Father among                    5 EA  x     226.30 =      1131.50
+
+Subtotal: 40364.67
+Tax (18%): 7265.64
+Total Due: 47645.31

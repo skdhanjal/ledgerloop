@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Banks-Nguyen
+Invoice No: INV-10080
+Date: 2026-06-22
+PO Reference: PO-4080
+Currency: INR
+
+Line Items:
+  SKU-3694   Away space                     19 EA  x     120.59 =      2291.21
+  SKU-8279   Return some                    50 EA  x     441.83 =     22091.50
+
+Subtotal: 24382.71
+Tax (18%): 4388.89
+Total Due: 28771.60

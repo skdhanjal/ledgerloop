@@ -1,17 +1,15 @@
-INVOICE
-Vendor: Lawrence-Pacheco
-Invoice No: INV-10002
-Date: 2026-01-03
-PO Reference: PO-4002
-Currency: INR
+*** INVOICE DETAILS ***
+Vendor: KERR INC | Date: 2026-04-17
+Ref PO: PO-4002
 
-Line Items:
-  SKU-5557   Play agreement                  1 x     380.61 =       380.61
-  SKU-3615   Option decide                  45 x     214.19 =      9638.55
-  SKU-5552   Sense rate                     10 x     111.58 =      1115.80
-  SKU-6514   Science offer                   7 x      50.91 =       356.37
-  SKU-2584   Kind discussion                23 x     424.51 =      9763.73
+ITEM> SKU-7689 | QTY: 13 EA @ 348.97 USD -> TOTAL: 4536.61
+ITEM> SKU-3795 | QTY: 13 EA @ 417.81 USD -> TOTAL: 5431.53
+ITEM> SKU-9826 | QTY: 37 EA @ 491.11 USD -> TOTAL: 18171.07
+ITEM> SKU-7604 | QTY: 9 EA @ 428.21 USD -> TOTAL: 3853.89
+ITEM> SKU-2650 | QTY: 8 EA @ 407.71 USD -> TOTAL: 3261.68
 
-Subtotal: 21255.06
-Tax (18%): 3825.91
-Total Due: 25080.97
+[SUMMARY]
+SUB-TTL: 35254.78
+TAX: 6345.86
+AMOUNT DUE: 41600.64
+--- PAGE 1 OF 1 ---

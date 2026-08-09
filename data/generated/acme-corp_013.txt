@@ -1,13 +1,17 @@
 INVOICE
-Vendor: Peterson, Carter and Moore
+Vendor: Ortiz-Neal
 Invoice No: INV-10013
-Date: 2026-01-02
+Date: 2026-03-08
 PO Reference: PO-4013
 Currency: INR
 
 Line Items:
-  SKU-1993   Social example                 26 x     365.47 =      9502.22
+  SKU-7936   Ball painting                  23 EA  x     277.45 =      6381.35
+  SKU-1472   Hour than                      30 EA  x     114.15 =      3424.50
+  SKU-6703   Blood agree                    17 EA  x     493.61 =      8391.37
+  SKU-7948   So left                        15 EA  x     229.42 =      3441.30
+  SKU-2836   Training cultural              40 EA  x     445.17 =     17806.80
 
-Subtotal: 9502.22
-Tax (18%): 1710.40
-Total Due: 11212.62
+Subtotal: 39445.32
+Tax (18%): 7100.16
+Total Due: 46545.48

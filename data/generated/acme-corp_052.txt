@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Powers-Graham
+Invoice No: INV-10052
+Date: 2026-01-08
+PO Reference: PO-4052
+Currency: INR
+
+Line Items:
+  SKU-8483   Experience window              13 EA  x     426.71 =      5547.23
+  SKU-8422   Machine them                   46 EA  x     476.66 =     21926.36
+
+Subtotal: 27473.59
+Tax (18%): 4945.25
+Total Due: 32418.84

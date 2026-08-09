@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Smith-Russell
+Invoice No: INV-10095
+Date: 2026-05-30
+PO Reference: PO-4095
+Currency: INR
+
+Line Items:
+  SKU-6362   Letter quite                   46 EA  x     297.61 =     13690.06
+  SKU-7601   Form lead                       5 EA  x     292.96 =      1464.80
+
+Subtotal: 15154.86
+Tax (18%): 2727.87
+Total Due: 17882.73

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Boyle, Valenzuela and White
+Invoice No: INV-10127
+Date: 2026-02-10
+PO Reference: PO-4127
+Currency: INR
+
+Line Items:
+  SKU-4749   Likely them                    29 EA  x      24.87 =       721.23
+  SKU-9642   Work land                      33 EA  x     136.45 =      4502.85
+  SKU-3495   Development most               11 EA  x     134.04 =      1474.44
+
+Subtotal: 6698.52
+Tax (18%): 1205.73
+Total Due: 7904.25

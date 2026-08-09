@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Ray Ltd
+Invoice No: INV-10021
+Date: 2026-07-17
+PO Reference: PO-4021
+Currency: INR
+
+Line Items:
+  SKU-1278   Voice travel                   29 EA  x     447.43 =     12975.47
+  SKU-6621   Everyone newspaper             18 EA  x      65.83 =      1184.94
+
+Subtotal: 14160.41
+Tax (18%): 2548.87
+Total Due: 16709.28

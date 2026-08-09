@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Johnson, Warner and Beard
+Invoice No: INV-10038
+Date: 2026-03-30
+PO Reference: PO-4038
+Currency: INR
+
+Line Items:
+  SKU-7616   Individual region              25 EA  x     381.80 =      9545.00
+  SKU-9898   Suddenly above                 35 EA  x     441.97 =     15468.95
+  SKU-8506   Become senior                   5 EA  x     304.09 =      1520.45
+
+Subtotal: 26534.40
+Tax (18%): 4776.19
+Total Due: 31310.59

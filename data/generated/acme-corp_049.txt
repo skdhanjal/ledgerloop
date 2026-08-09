@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Olson, Houston and Rivera
+Invoice No: INV-10049
+Date: 2026-03-27
+PO Reference: PO-4049
+Currency: INR
+
+Line Items:
+  SKU-5261   Grow knowledge                 38 EA  x      35.05 =      1331.90
+  SKU-2860   Above office                   33 EA  x     241.43 =      7967.19
+  SKU-8049   School cut                     11 EA  x     348.58 =      3834.38
+  SKU-1667   Hotel admit                    44 EA  x     214.23 =      9426.12
+  SKU-4845   Trouble find                   16 EA  x     193.80 =      3100.80
+  SKU-7606   Door cell                      46 EA  x     492.66 =     22662.36
+  SKU-1144   Probably officer               34 EA  x     452.42 =     15382.28
+  SKU-2233   Traditional gun                39 EA  x      64.61 =      2519.79
+
+Subtotal: 66224.82
+Tax (18%): 11920.47
+Total Due: 78145.29

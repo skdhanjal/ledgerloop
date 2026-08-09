@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Smith LLC
+Invoice No: INV-10084
+Date: 2026-01-17
+PO Reference: PO-4084
+Currency: INR
+
+Line Items:
+  SKU-3239   Possible nearly                20 BOX x     653.40 =     13068.00
+  SKU-1183   Bag station                    30 EA  x     380.05 =     11401.50
+  SKU-1650   Customer eye                   18 EA  x     459.26 =      8266.68
+  SKU-6382   Wife thought                   21 EA  x      30.12 =       632.52
+  SKU-8263   Glass indicate                 42 EA  x     246.90 =     10369.80
+  SKU-5575   Hospital staff                 27 EA  x     432.52 =     11678.04
+  SKU-4298   Yes enough                     41 EA  x     368.51 =     15108.91
+  SKU-7868   Old religious                  13 EA  x     257.14 =      3342.82
+
+Subtotal: 73868.27
+Tax (18%): 13296.29
+Total Due: 87164.56

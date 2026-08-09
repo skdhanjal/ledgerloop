@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Gibson, Jones and Larson
+Invoice No: INV-10056
+Date: 2026-06-28
+PO Reference: PO-4056
+Currency: INR
+
+Line Items:
+  SKU-4292   Modern institution             41 BOX x    2401.50 =     98461.50
+  SKU-9003   Road place                     46 EA  x      82.16 =      3779.36
+  SKU-1143   Free whose                      9 EA  x     216.50 =      1948.50
+  SKU-3857   Role society                   11 EA  x      71.26 =       783.86
+  SKU-2568   Draw show                      44 EA  x     326.44 =     14363.36
+  SKU-1689   Discover grow                  21 EA  x     287.03 =      6027.63
+  SKU-5862   Price quickly                   6 EA  x     169.28 =      1015.68
+  SKU-3770   Feeling or                     25 EA  x      10.94 =       273.50
+
+Subtotal: 126653.39
+Tax (18%): 22797.61
+Total Due: 149451.00

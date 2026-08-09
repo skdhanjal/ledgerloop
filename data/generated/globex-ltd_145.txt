@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Stephens-Barton
+Invoice No: INV-10145
+Date: 2026-03-20
+PO Reference: PO-4145
+Currency: INR
+
+Line Items:
+  SKU-3447   Manage evidence                25 EA  x     473.57 =     11839.25
+  SKU-8400   Power including                47 EA  x     282.21 =     13263.87
+  SKU-3318   Official less                  12 EA  x      90.46 =      1085.52
+
+Subtotal: 26188.64
+Tax (18%): 4713.96
+Total Due: 31156.86

@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Douglas Ltd
+Invoice No: INV-10126
+Date: 2026-08-02
+PO Reference: PO-4126
+Currency: INR
+
+Line Items:
+  SKU-9975   Small street                   49 EA  x     233.46 =     11439.54
+  SKU-5795   Ten ask                        47 EA  x     432.35 =     20320.45
+  SKU-2680   College whose                  36 EA  x      25.47 =       916.92
+  SKU-4523   Fly while                      19 EA  x     277.01 =      5263.19
+  SKU-9423   Technology give                 9 EA  x     374.31 =      3368.79
+
+Subtotal: 41308.89
+Tax (18%): 7435.60
+Total Due: 48744.49

@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Richard-Thompson
+Invoice No: INV-10137
+Date: 2026-01-29
+PO Reference: PO-4137
+Currency: INR
+
+Line Items:
+  SKU-9122   Picture where                   8 EA  x      89.75 =       718.00
+  SKU-6839   First record                   17 EA  x     174.15 =      2960.55
+  SKU-2110   Film attorney                  49 EA  x     188.55 =      9238.95
+  SKU-4563   Agree professional             41 EA  x     359.49 =     14739.09
+  SKU-9629   Community federal              44 EA  x     469.53 =     20659.32
+  SKU-1551   East thousand                  33 EA  x     150.03 =      4950.99
+  SKU-8074   Life staff                     11 EA  x      52.01 =       572.11
+  SKU-5436   Us hundred                     14 EA  x     403.55 =      5649.70
+
+Subtotal: 59488.71
+Tax (18%): 10707.97
+Total Due: 70196.68

@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Allen, Jimenez and Green
+Invoice No: INV-10134
+Date: 2026-08-02
+PO Reference: PO-4134
+Currency: INR
+
+Line Items:
+  SKU-7930   Tonight yeah                   12 EA  x     130.40 =      1564.80
+  SKU-5612   Thank son                       2 EA  x     411.52 =       823.04
+  SKU-6836   Though herself                 47 EA  x     483.09 =     22705.23
+  SKU-9152   Stuff fast                     41 EA  x     238.58 =      9781.78
+  SKU-5810   Card parent                    50 EA  x     312.90 =     15645.00
+
+Subtotal: 50519.85
+Tax (18%): 9093.57
+Total Due: 59613.42

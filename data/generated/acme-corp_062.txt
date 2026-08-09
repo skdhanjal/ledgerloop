@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Wright, Joseph and Thomas
+Invoice No: INV-10062
+Date: 2026-05-07
+PO Reference: PO-99062
+Currency: INR
+
+Line Items:
+  SKU-4684   Analysis issue                 41 EA  x     261.90 =     10737.90
+  SKU-6760   Long effort                    20 EA  x      56.75 =      1135.00
+  SKU-4258   Price character                48 EA  x     196.79 =      9445.92
+  SKU-2852   May American                   32 EA  x       9.84 =       314.88
+  SKU-1446   Senior me                      22 EA  x     107.18 =      2357.96
+
+Subtotal: 23991.66
+Tax (18%): 4318.50
+Total Due: 28310.16

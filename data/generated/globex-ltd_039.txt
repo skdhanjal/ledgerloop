@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Ramirez and Sons
+Invoice No: INV-10039
+Date: 2026-07-15
+PO Reference: PO-4039
+Currency: INR
+
+Line Items:
+  SKU-9645   Congress success               40 EA  x     237.22 =      9488.80
+  SKU-3173   Land social                    41 EA  x     469.81 =     19262.21
+  SKU-4163   Author energy                  45 EA  x     368.87 =     16599.15
+  SKU-3981   Also common                    40 EA  x     284.64 =     11385.60
+  SKU-3258   Hand item                       9 EA  x      34.22 =       307.98
+  SKU-3629   Every vote                      1 EA  x     296.36 =       296.36
+  SKU-3672   New four                       24 EA  x     240.14 =      5763.36
+  SKU-9941   Role most                      16 EA  x     325.68 =      5210.88
+
+Subtotal: 68314.34
+Tax (18%): 12296.58
+Total Due: 80610.92

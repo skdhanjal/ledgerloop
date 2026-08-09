@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Woods and Sons
+Invoice No: INV-10059
+Date: 2026-01-10
+PO Reference: PO-4059
+Currency: INR
+
+Line Items:
+  SKU-8811   Include wrong                  10 EA  x     423.83 =      4238.30
+  SKU-1590   Billion and                     3 EA  x     161.41 =       484.23
+  SKU-2450   Music whose                    34 EA  x     387.92 =     13189.28
+  SKU-2001   Six purpose                    26 EA  x      99.37 =      2583.62
+  SKU-8308   Team season                    16 EA  x     444.77 =      7116.32
+
+Subtotal: 27611.75
+Tax (18%): 4970.11
+Total Due: 32701.68

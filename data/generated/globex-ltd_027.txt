@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Nelson LLC
+Invoice No: INV-10027
+Date: 2026-01-02
+PO Reference: PO-4027
+Currency: INR
+
+Line Items:
+  SKU-6621   Outside reveal                 43 EA  x     297.16 =     12777.88
+  SKU-8588   College benefit                42 EA  x      13.81 =       580.02
+  SKU-8520   Tree can                       20 EA  x     337.57 =      6751.40
+
+Subtotal: 20109.30
+Tax (18%): 3619.67
+Total Due: 23728.97

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Kane-Hernandez
+Invoice No: INV-10112
+Date: 2026-01-06
+PO Reference: PO-4112
+Currency: INR
+
+Line Items:
+  SKU-3989   Money head                      2 EA  x     314.32 =       628.64
+  SKU-6148   Accept theory                  50 EA  x      44.33 =      2216.50
+  SKU-2390   Reason trade                   25 EA  x     391.13 =      9778.25
+
+Subtotal: 12623.39
+Tax (18%): 2272.21
+Total Due: 14895.60

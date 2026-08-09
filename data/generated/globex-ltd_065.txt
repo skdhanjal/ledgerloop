@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Thomas-Underwood
+Invoice No: INV-10020
+Date: 2026-01-16
+PO Reference: PO-4065
+Currency: INR
+
+Line Items:
+  SKU-1085   Available sort                 43 EA  x     430.76 =     18522.68
+  SKU-3636   Simple military                10 EA  x     110.28 =      1102.80
+  SKU-1222   Ball under                      5 EA  x     258.46 =      1292.30
+  SKU-6713   History too                    36 EA  x     138.44 =      4983.84
+  SKU-4819   Way behind                     26 EA  x     151.55 =      3940.30
+
+Subtotal: 29841.92
+Tax (18%): 5371.55
+Total Due: 35213.47

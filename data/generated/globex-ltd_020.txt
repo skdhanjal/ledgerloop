@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Thomas-Underwood
+Invoice No: INV-10020
+Date: 2026-07-27
+PO Reference: PO-4020
+Currency: INR
+
+Line Items:
+  SKU-3640   Card read                      22 EA  x     380.12 =      8362.64
+  SKU-2644   Box election                   49 EA  x     209.36 =     10258.64
+  SKU-4907   Draw challenge                 48 EA  x     401.66 =     19279.68
+  SKU-8497   Practice under                 17 EA  x      46.17 =       784.89
+  SKU-1968   Accept gas                     10 EA  x     415.85 =      4158.50
+  SKU-2206   Order something                49 EA  x     324.43 =     15897.07
+  SKU-3824   Particular mission             44 EA  x     388.34 =     17086.96
+  SKU-1698   Age issue                      37 EA  x     208.97 =      7731.89
+
+Subtotal: 83560.27
+Tax (18%): 15040.85
+Total Due: 98601.12

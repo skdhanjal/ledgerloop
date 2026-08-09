@@ -1,0 +1,37 @@
+name: nightly-eval
+
+on:
+  schedule: [{cron: "0 3 * * *"}]
+  workflow_dispatch:
+
+jobs:
+  full-eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+
+      # local model = deterministic, free, no rate limit.
+      # CI scores are NOT production scores; the gate compares to a local
+      # baseline, so consistency matters more than absolute value.
+      - name: Pull local model
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama serve & sleep 5
+          ollama pull ${{ env.LOCAL_MODEL }}
+
+      - name: Full dev eval (100 cases)
+        run: uv run python -m evals.run_eval --split dev --model local --json out.json
+
+      - name: Gate against baseline
+        run: uv run python -m evals.gate --current out.json --report
+
+      - name: Trend history
+        run: |
+          mkdir -p evals/history
+          cp out.json "evals/history/$(date +%F).json"
+
+      - uses: actions/upload-artifact@v4
+        with: {name: eval-report, path: out.json}

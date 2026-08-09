@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Payne, Hernandez and Johnson
+Invoice No: INV-10010
+Date: 2026-03-12
+PO Reference: PO-4010
+Currency: INR
+
+Line Items:
+  SKU-9680   Treat memory                   19 EA  x     321.85 =      6115.15
+  SKU-2352   Suddenly population            34 EA  x     453.04 =     15403.36
+  SKU-8865   Doctor man                      7 EA  x     415.42 =      2907.94
+  SKU-9792   Hour reason                     3 EA  x     121.68 =       365.04
+  SKU-8672   Fine break                     15 EA  x     434.55 =      6518.25
+
+Subtotal: 31309.74
+Tax (18%): 5635.75
+Total Due: 36945.49

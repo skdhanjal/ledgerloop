@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Suarez, Ortiz and Gonzalez
+Invoice No: INV-10108
+Date: 2026-05-13
+PO Reference: PO-4108
+Currency: INR
+
+Line Items:
+  SKU-9788   Leg industry                   14 BOX x    2616.50 =     36631.00
+  SKU-6780   Certain put                    48 EA  x     480.47 =     23062.56
+  SKU-5865   Property real                   5 EA  x     320.26 =      1601.30
+  SKU-1495   Fund hotel                     23 EA  x     234.92 =      5403.16
+  SKU-8089   Across rest                    44 EA  x      70.65 =      3108.60
+  SKU-4690   Generation soon                50 EA  x     113.47 =      5673.50
+  SKU-8499   Society recent                 43 EA  x     213.61 =      9185.23
+  SKU-3367   Scientist base                 40 EA  x     234.14 =      9365.60
+
+Subtotal: 94030.95
+Tax (18%): 16925.57
+Total Due: 110956.52

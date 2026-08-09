@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Rivera-Harper
+Invoice No: INV-10078
+Date: 2026-02-27
+PO Reference: PO-4078
+Currency: INR
+
+Line Items:
+  SKU-3070   Player leg                     37 EA  x     343.21 =     12698.77
+  SKU-2550   Nation stop                    32 EA  x     448.54 =     14353.28
+  SKU-5242   Gas today                      40 EA  x     277.23 =     11089.20
+  SKU-7719   Structure camera               29 EA  x     307.69 =      8923.01
+  SKU-3641   Night commercial                7 EA  x     130.81 =       915.67
+
+Subtotal: 47979.93
+Tax (18%): 8636.39
+Total Due: 56616.32

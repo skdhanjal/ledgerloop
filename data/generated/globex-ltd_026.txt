@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Nelson PLC
+Invoice No: INV-10026
+Date: 2026-02-19
+PO Reference: PO-99026
+Currency: INR
+
+Line Items:
+  SKU-3785   Throw with                     29 EA  x     224.94 =      6523.26
+  SKU-5777   Agency family                  48 EA  x      30.63 =      1470.24
+  SKU-9064   Perform bank                    4 EA  x     396.56 =      1586.24
+  SKU-3247   Teach skin                     20 EA  x     320.80 =      6416.00
+  SKU-8712   Huge by                        17 EA  x     357.80 =      6082.60
+
+Subtotal: 22078.34
+Tax (18%): 3974.10
+Total Due: 26052.44

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Thomas, Lee and Valdez
+Invoice No: INV-10114
+Date: 2026-02-18
+PO Reference: PO-4114
+Currency: INR
+
+Line Items:
+  SKU-7531   Size gas                       30 EA  x     526.30 =     15789.00
+  SKU-7606   Magazine build                 43 EA  x     327.81 =     14095.83
+
+Subtotal: 29884.83
+Tax (18%): 5379.27
+Total Due: 35264.10

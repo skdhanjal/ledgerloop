@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Rodriguez-Blackwell
+Invoice No: INV-10106
+Date: 2026-03-25
+PO Reference: PO-4106
+Currency: INR
+
+Line Items:
+  SKU-6710   Energy view                    32 EA  x     557.83 =     17850.56
+  SKU-1384   Clear direction                12 EA  x     175.90 =      2110.80
+  SKU-8577   Where grow                     25 EA  x     421.67 =     10541.75
+
+Subtotal: 30503.11
+Tax (18%): 5490.56
+Total Due: 35993.67

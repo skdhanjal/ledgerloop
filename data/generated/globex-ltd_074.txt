@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Carpenter LLC
+Invoice No: INV-10074
+Date: 2026-05-11
+PO Reference: PO-4074
+Currency: INR
+
+Line Items:
+  SKU-6143   Contain sign                   29 EA  x     166.84 =      4838.36
+  SKU-3130   Indeed person                   4 EA  x     376.81 =      1507.24
+
+Subtotal: 6345.60
+Tax (18%): 1142.21
+Total Due: 7487.81

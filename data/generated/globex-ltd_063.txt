@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Mcfarland, Nash and Joseph
+Invoice No: INV-10063
+Date: 2026-08-07
+PO Reference: PO-4063
+Currency: INR
+
+Line Items:
+  SKU-3272   Despite bad                    28 EA  x     225.14 =      6303.92
+  SKU-1321   Of decide                       6 EA  x     328.78 =      1972.68
+
+Subtotal: 8276.60
+Tax (18%): 1489.79
+Total Due: 10172.27

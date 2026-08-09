@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Petty-Stephens
+Invoice No: INV-10124
+Date: 2026-02-21
+PO Reference: PO-4124
+Currency: INR
+
+Line Items:
+  SKU-7222   Knowledge culture              14 EA  x     135.17 =      1892.38
+  SKU-6001   Majority himself               10 EA  x     259.62 =      2596.20
+  SKU-7588   Enjoy herself                  32 EA  x      33.44 =      1070.08
+  SKU-9395   List cover                     43 EA  x      25.80 =      1109.40
+  SKU-6368   Large ask                      34 EA  x     199.28 =      6775.52
+  SKU-4357   Eat turn                       32 EA  x     240.28 =      7688.96
+  SKU-3023   Home quickly                    1 EA  x     165.35 =       165.35
+  SKU-8318   Thank method                   20 EA  x       6.14 =       122.80
+
+Subtotal: 21420.69
+Tax (18%): 3855.72
+Total Due: 25291.41

@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Parrish Group
+Invoice No: INV-10028
+Date: 2026-04-20
+PO Reference: PO-4028
+Currency: INR
+
+Line Items:
+  SKU-1335   Room tax                       24 EA  x      57.17 =      1372.08
+  SKU-8700   Beautiful new                  36 EA  x      32.57 =      1172.52
+  SKU-1338   West member                    11 EA  x     408.51 =      4493.61
+  SKU-9343   Media body                      5 EA  x     180.86 =       904.30
+  SKU-6426   Themselves type                 3 EA  x      58.98 =       176.94
+  SKU-3670   Senior not                      5 EA  x      95.29 =       476.45
+  SKU-6354   Always eat                      6 EA  x     113.44 =       680.64
+  SKU-4392   Discussion management          21 EA  x     180.40 =      3788.40
+
+Subtotal: 13064.94
+Tax (18%): 2351.69
+Total Due: 15416.63

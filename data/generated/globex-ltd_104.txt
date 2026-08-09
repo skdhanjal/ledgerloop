@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Paul Inc
+Invoice No: INV-10104
+Date: 2026-07-23
+PO Reference: PO-4104
+Currency: INR
+
+Line Items:
+  SKU-5225   Which at                       46 EA  x     324.17 =     14911.82
+  SKU-4259   Than two                       16 EA  x     238.69 =      3819.04
+  SKU-3735   Also big                       48 EA  x     424.39 =     20370.72
+  SKU-4777   Other mission                   6 EA  x     444.46 =      2666.76
+  SKU-1366   Expect many                    48 EA  x     138.33 =      6639.84
+  SKU-5698   Ten who                        27 EA  x     221.19 =      5972.13
+  SKU-2441   Computer usually               11 EA  x      83.29 =       916.19
+  SKU-1228   Book technology                50 EA  x     412.88 =     20644.00
+
+Subtotal: 75940.50
+Tax (18%): 13669.29
+Total Due: 89609.79

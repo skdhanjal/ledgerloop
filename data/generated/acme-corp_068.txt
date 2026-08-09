@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Carter LLC
+Invoice No: INV-10068
+Date: 2026-04-21
+PO Reference: PO-4068
+Currency: INR
+
+Line Items:
+  SKU-3318   Indicate person                34 EA  x     220.19 =      7486.46
+  SKU-7971   Five family                    27 EA  x     459.08 =     12395.16
+  SKU-4086   Police song                    19 EA  x     438.81 =      8337.39
+  SKU-1300   Carry hope                     17 EA  x     454.27 =      7722.59
+  SKU-1152   Exist task                     47 EA  x     343.93 =     16164.71
+
+Subtotal: 52106.31
+Tax (18%): 9379.14
+Total Due: 61485.45

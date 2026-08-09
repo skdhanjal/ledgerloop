@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Wilson-Chandler
+Invoice No: INV-10036
+Date: 2026-04-12
+PO Reference: PO-4036
+Currency: INR
+
+Line Items:
+  SKU-7677   Spend plant                    21 BOX x     502.20 =     10546.20
+  SKU-1869   Less fact                      40 EA  x     312.47 =     12498.80
+  SKU-1403   Well kitchen                    5 EA  x     489.05 =      2445.25
+
+Subtotal: 25490.25
+Tax (18%): 4588.24
+Total Due: 30078.49

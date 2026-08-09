@@ -1,14 +1,13 @@
-INVOICE
-Vendor: Davis and Sons
-Invoice No: INV-10001
-Date: 2026-07-16
-PO Reference: PO-4001
-Currency: INR
+*** INVOICE DETAILS ***
+Vendor: ALVAREZ, JOHNSON AND WAGNER | Date: 2026-03-11
+Ref PO: PO-4001
 
-Line Items:
-  SKU-4811   Begin performance              33 x     303.00 =      9999.00
-  SKU-4257   Knowledge almost               46 x     326.69 =     15027.74
+ITEM> SKU-3261 | QTY: 44 EA @ 40.57 USD -> TOTAL: 1785.08
+ITEM> SKU-2252 | QTY: 37 EA @ 189.73 USD -> TOTAL: 7020.01
+ITEM> SKU-2662 | QTY: 2 EA @ 375.9 USD -> TOTAL: 751.8
 
-Subtotal: 25026.74
-Tax (18%): 4504.81
-Total Due: 29531.55
+[SUMMARY]
+SUB-TTL: 9556.89
+TAX: 1720.24
+AMOUNT DUE: 11277.13
+--- PAGE 1 OF 1 ---

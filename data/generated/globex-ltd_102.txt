@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Gonzalez, Davis and Bailey
+Invoice No: INV-10102
+Date: 2026-05-27
+PO Reference: PO-4102
+Currency: INR
+
+Line Items:
+  SKU-3833   Source think                    1 EA  x      40.72 =        40.72
+  SKU-6820   Across career                   6 EA  x     182.85 =      1097.10
+  SKU-7687   Late free                      36 EA  x     374.32 =     13475.52
+  SKU-2298   Contain compare                39 EA  x     167.69 =      6539.91
+  SKU-1405   Center share                   28 EA  x     457.84 =     12819.52
+  SKU-3713   Big rest                       20 EA  x     487.75 =      9755.00
+  SKU-2938   Range statement                48 EA  x     136.03 =      6529.44
+  SKU-2455   And full                       47 EA  x     460.91 =     21662.77
+
+Subtotal: 71919.98
+Tax (18%): 12945.60
+Total Due: 84865.58

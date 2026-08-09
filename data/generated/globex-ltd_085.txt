@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Young-James
+Invoice No: INV-10085
+Date: 2026-06-06
+PO Reference: PO-4085
+Currency: INR
+
+Line Items:
+  SKU-9012   Report build                   13 EA  x     313.73 =      4078.49
+  SKU-3090   Mrs mean                        2 EA  x     269.96 =       539.92
+  SKU-5572   Note yet                       10 EA  x     360.56 =      3605.60
+  SKU-9541   Yes prepare                    20 EA  x     387.89 =      7757.80
+  SKU-5828   Thousand law                   41 EA  x     224.57 =      9207.37
+  SKU-1868   Commercial rule                30 EA  x     236.30 =      7089.00
+  SKU-7425   Attention amount               36 EA  x     222.98 =      8027.28
+  SKU-8747   Rest knowledge                 35 EA  x     224.01 =      7840.35
+
+Subtotal: 48145.81
+Tax (18%): 8666.25
+Total Due: 56812.06

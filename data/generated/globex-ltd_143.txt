@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Gonzalez-Leblanc
+Invoice No: INV-10143
+Date: 2026-07-08
+PO Reference: PO-99143
+Currency: INR
+
+Line Items:
+  SKU-3156   Prove similar                  38 EA  x     177.60 =      6748.80
+  SKU-5468   Theory school                  16 EA  x     105.54 =      1688.64
+
+Subtotal: 8437.44
+Tax (18%): 1518.74
+Total Due: 9956.18

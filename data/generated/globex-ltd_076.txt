@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Burns, Williams and Benton
+Invoice No: INV-10076
+Date: 2026-07-24
+PO Reference: PO-4076
+Currency: INR
+
+Line Items:
+  SKU-4339   Down plant                     30 EA  x     444.74 =     13342.20
+  SKU-9736   So get                         37 EA  x     129.72 =      4799.64
+  SKU-1723   Event like                     32 EA  x      56.70 =      1814.40
+  SKU-3870   He money                        2 EA  x     161.00 =       322.00
+  SKU-3453   Option manager                 24 EA  x     453.96 =     10895.04
+
+Subtotal: 31173.28
+Tax (18%): 5611.19
+Total Due: 36784.47

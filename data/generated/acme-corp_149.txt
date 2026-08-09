@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Shaffer, Baker and Weber
+Invoice No: INV-10149
+Date: 2026-04-23
+PO Reference: PO-4149
+Currency: INR
+
+Line Items:
+  SKU-9597   Form need                      27 BOX x    1898.90 =     51270.30
+  SKU-6919   History step                   48 EA  x     269.93 =     12956.64
+  SKU-5229   Keep whole                     32 EA  x      51.09 =      1634.88
+  SKU-1582   Arm good                       48 EA  x     155.30 =      7454.40
+  SKU-9298   Bill bring                     42 EA  x     119.34 =      5012.28
+
+Subtotal: 78328.50
+Tax (18%): 14099.13
+Total Due: 92427.63

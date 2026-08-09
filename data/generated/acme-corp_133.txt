@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Cruz, Gardner and Brooks
+Invoice No: INV-10133
+Date: 2026-03-29
+PO Reference: PO-4133
+Currency: INR
+
+Line Items:
+  SKU-9270   Citizen compare                30 EA  x     325.32 =      9759.60
+  SKU-5349   Over education                 35 EA  x      13.95 =       488.25
+  SKU-5417   Property surface               27 EA  x     287.06 =      7750.62
+
+Subtotal: 17998.47
+Tax (18%): 3239.72
+Total Due: 21253.19

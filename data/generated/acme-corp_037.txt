@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Ramos, Becker and Mayer
+Invoice No: INV-10037
+Date: 2026-01-21
+PO Reference: PO-4037
+Currency: INR
+
+Line Items:
+  SKU-9479   All forget                      8 EA  x     312.54 =      2500.32
+  SKU-1338   North instead                  35 EA  x     210.42 =      7364.70
+  SKU-3779   Kitchen staff                  33 EA  x     200.58 =      6619.14
+  SKU-5959   Expert section                 18 EA  x     479.43 =      8629.74
+  SKU-3126   Question forget                24 EA  x     138.32 =      3319.68
+  SKU-3774   His national                   19 EA  x     332.96 =      6326.24
+  SKU-5642   Media tend                     10 EA  x     222.15 =      2221.50
+  SKU-6646   Defense so                     23 EA  x     223.28 =      5135.44
+
+Subtotal: 42116.76
+Tax (18%): 7581.02
+Total Due: 49697.78

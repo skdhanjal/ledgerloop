@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Galloway, Wagner and Gray
+Invoice No: INV-10009
+Date: 2026-02-13
+PO Reference: PO-4009
+Currency: INR
+
+Line Items:
+  SKU-5958   Wish knowledge                 29 EA  x      22.50 =       652.50
+  SKU-1376   He election                    18 EA  x     296.85 =      5343.30
+  SKU-7187   Commercial suffer               8 EA  x      93.62 =       748.96
+  SKU-9589   Thank then                      9 EA  x     286.71 =      2580.39
+  SKU-3633   Knowledge suggest               6 EA  x     433.36 =      2600.16
+
+Subtotal: 11925.31
+Tax (18%): 2146.56
+Total Due: 14071.87

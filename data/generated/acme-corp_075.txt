@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Wright, Mills and Price
+Invoice No: INV-10075
+Date: 2026-02-06
+PO Reference: PO-4075
+Currency: INR
+
+Line Items:
+  SKU-8598   Their send                     21 EA  x     405.91 =      8524.11
+  SKU-6478   Home difficult                 11 EA  x     101.39 =      1115.29
+  SKU-3053   Require goal                   23 EA  x     469.69 =     10802.87
+  SKU-1785   Accept alone                   38 EA  x     299.57 =     11383.66
+  SKU-3425   Expert when                    17 EA  x      79.84 =      1357.28
+  SKU-3059   Father eye                     48 EA  x     212.34 =     10192.32
+  SKU-5468   Market foot                    26 EA  x     163.58 =      4253.08
+  SKU-5557   Perform there                  46 EA  x     381.71 =     17558.66
+
+Subtotal: 65187.27
+Tax (18%): 11733.71
+Total Due: 76920.98

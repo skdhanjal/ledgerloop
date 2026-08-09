@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Schwartz Ltd
+Invoice No: INV-10091
+Date: 2026-07-06
+PO Reference: PO-4091
+Currency: INR
+
+Line Items:
+  SKU-4655   Without through                20 EA  x      27.81 =       556.20
+  SKU-2321   Sound likely                   36 EA  x     324.87 =     11695.32
+
+Subtotal: 12251.52
+Tax (18%): 2205.27
+Total Due: 14456.79

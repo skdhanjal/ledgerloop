@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Guerrero-Church
+Invoice No: INV-10060
+Date: 2026-04-10
+PO Reference: PO-4060
+Currency: INR
+
+Line Items:
+  SKU-2850   Special choose                 37 EA  x     443.52 =     16410.24
+  SKU-4533   Offer above                    44 EA  x      19.79 =       870.76
+  SKU-4556   Develop focus                  29 EA  x     307.80 =      8926.20
+  SKU-8403   Food memory                    30 EA  x     222.46 =      6673.80
+  SKU-3245   Action idea                    42 EA  x     318.60 =     13381.20
+  SKU-6268   Current against                24 EA  x       9.19 =       220.56
+  SKU-6366   Investment walk                49 EA  x     376.92 =     18469.08
+  SKU-2306   Food that                      37 EA  x     440.31 =     16291.47
+
+Subtotal: 81243.31
+Tax (18%): 14623.80
+Total Due: 95867.11

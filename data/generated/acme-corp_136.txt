@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Palmer, Becker and Thompson
+Invoice No: INV-10136
+Date: 2026-05-03
+PO Reference: PO-4136
+Currency: INR
+
+Line Items:
+  SKU-7881   Per country                    32 EA  x     147.26 =      4712.32
+  SKU-8048   Spend simply                   15 EA  x     184.23 =      2763.45
+  SKU-5997   Indicate which                  7 EA  x     319.73 =      2238.11
+
+Subtotal: 9713.88
+Tax (18%): 1748.50
+Total Due: 11462.38

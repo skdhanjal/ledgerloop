@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Carr-Hayes
+Invoice No: INV-10107
+Date: 2026-06-30
+PO Reference: PO-4107
+Currency: INR
+
+Line Items:
+  SKU-4213   Threat though                  30 EA  x     210.96 =      6328.80
+  SKU-3767   Respond all                    27 EA  x     168.57 =      4551.39
+  SKU-3450   Law state                      29 EA  x     429.10 =     12443.90
+  SKU-4554   Themselves under                5 EA  x     400.87 =      2004.35
+  SKU-7702   Safe director                  31 EA  x     220.27 =      6828.37
+
+Subtotal: 32156.81
+Tax (18%): 5788.23
+Total Due: 37945.04

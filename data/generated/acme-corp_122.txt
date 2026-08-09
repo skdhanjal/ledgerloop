@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Woods and Sons
+Invoice No: INV-10059
+Date: 2026-01-02
+PO Reference: PO-4122
+Currency: INR
+
+Line Items:
+  SKU-9031   Fear before                    34 EA  x     453.75 =     15427.50
+  SKU-7929   Hope truth                     40 EA  x      50.68 =      2027.20
+  SKU-2582   Pull behavior                   7 EA  x      54.15 =       379.05
+  SKU-1923   Themselves produce             38 EA  x      72.77 =      2765.26
+  SKU-1889   Pm human                       23 EA  x     398.29 =      9160.67
+
+Subtotal: 29759.68
+Tax (18%): 5356.74
+Total Due: 35116.42

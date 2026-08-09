@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Fields-Wall
+Invoice No: INV-10081
+Date: 2026-05-23
+PO Reference: PO-4081
+Currency: INR
+
+Line Items:
+  SKU-3831   Sometimes wish                  3 EA  x      56.46 =       169.38
+  SKU-8285   Put see                        26 EA  x      32.20 =       837.20
+  SKU-6528   Open benefit                    2 EA  x     496.47 =       992.94
+  SKU-9438   Morning beat                   44 EA  x     146.28 =      6436.32
+  SKU-2530   Series indeed                   1 EA  x     493.98 =       493.98
+  SKU-3572   Lot true                       11 EA  x     460.22 =      5062.42
+  SKU-3270   Either individual              48 EA  x     168.31 =      8078.88
+  SKU-4148   Nor relate                      2 EA  x     205.62 =       411.24
+
+Subtotal: 22482.36
+Tax (18%): 4046.82
+Total Due: 26529.18

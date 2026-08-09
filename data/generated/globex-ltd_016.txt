@@ -1,15 +1,17 @@
 INVOICE
-Vendor: Brown PLC
+Vendor: Velez-Hatfield
 Invoice No: INV-10016
-Date: 2026-01-31
-PO Reference: PO-99016
+Date: 2026-03-27
+PO Reference: PO-4016
 Currency: INR
 
 Line Items:
-  SKU-7930   Woman him                      45 x     478.87 =     21549.15
-  SKU-8973   Unit theory                    10 x      99.00 =       990.00
-  SKU-4566   Surface food                    4 x     291.69 =      1166.76
+  SKU-9493   Analysis glass                 31 EA  x     433.48 =     13437.88
+  SKU-9746   Worker major                   29 EA  x     394.31 =     11434.99
+  SKU-2641   Open institution               50 EA  x      30.52 =      1526.00
+  SKU-1064   Community TV                    6 EA  x     359.29 =      2155.74
+  SKU-1629   Catch character                32 EA  x     353.26 =     11304.32
 
-Subtotal: 23705.91
-Tax (18%): 4267.06
-Total Due: 27972.97
+Subtotal: 39858.93
+Tax (18%): 7174.61
+Total Due: 47033.54

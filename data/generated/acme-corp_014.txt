@@ -1,14 +1,15 @@
-INVOICE
-Vendor: Gill, Romero and Rodriguez
-Invoice No: INV-10014
-Date: 2026-04-26
-PO Reference: PO-4014
-Currency: INR
+*** INVOICE DETAILS ***
+Vendor: SAWYER AND SONS | Date: 2026-04-13
+Ref PO: PO-4014
 
-Line Items:
-  SKU-4116   Seven type                     35 x     306.53 =     10728.55
-  SKU-7912   Serve everyone                 12 x     142.88 =      1714.56
+ITEM> SKU-8647 | QTY: 31 EA @ 247.2 USD -> TOTAL: 7663.2
+ITEM> SKU-6146 | QTY: 47 EA @ 410.67 USD -> TOTAL: 19301.49
+ITEM> SKU-8127 | QTY: 30 EA @ 42.84 USD -> TOTAL: 1285.2
+ITEM> SKU-5685 | QTY: 45 EA @ 453.54 USD -> TOTAL: 20409.3
+ITEM> SKU-2352 | QTY: 42 EA @ 424.11 USD -> TOTAL: 17812.62
 
-Subtotal: 12443.11
-Tax (18%): 2239.76
-Total Due: 14682.87
+[SUMMARY]
+SUB-TTL: 66471.81
+TAX: 11964.93
+AMOUNT DUE: 78436.74
+--- PAGE 1 OF 1 ---

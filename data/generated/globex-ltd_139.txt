@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Ortega-Burton
+Invoice No: INV-10139
+Date: 2026-07-31
+PO Reference: PO-4139
+Currency: INR
+
+Line Items:
+  SKU-4253   Research better                19 EA  x     286.00 =      5434.00
+  SKU-5016   Actually close                 11 EA  x     359.98 =      3959.78
+  SKU-6620   Computer wide                   1 EA  x      46.70 =        46.70
+  SKU-2367   Discuss start                  50 EA  x     283.49 =     14174.50
+  SKU-5182   Certainly situation            25 EA  x     289.39 =      7234.75
+  SKU-4726   Girl involve                   44 EA  x     219.52 =      9658.88
+  SKU-8949   Once dark                      29 EA  x     491.57 =     14255.53
+  SKU-4800   Air into                        2 EA  x     129.26 =       258.52
+
+Subtotal: 55022.66
+Tax (18%): 9904.08
+Total Due: 64926.74

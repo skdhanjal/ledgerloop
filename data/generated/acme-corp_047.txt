@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Silva Inc
+Invoice No: INV-10047
+Date: 2026-01-01
+PO Reference: PO-4047
+Currency: INR
+
+Line Items:
+  SKU-7448   President most                 30 BOX x    4355.30 =    130659.00
+  SKU-7486   Term research                  35 EA  x     336.03 =     11761.05
+
+Subtotal: 142420.05
+Tax (18%): 25635.61
+Total Due: 168055.66

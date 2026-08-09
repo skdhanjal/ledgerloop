@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Myers, Morris and Lopez
+Invoice No: INV-10000
+Date: 2026-07-11
+PO Reference: PO-4000
+Currency: INR
+
+Line Items:
+  SKU-5701   Travel just                    18 EA  x     127.10 =      2287.80
+  SKU-6769   Catch air                       7 EA  x     420.87 =      2946.09
+
+Subtotal: 5233.89
+Tax (18%): 942.10
+Total Due: 6175.99

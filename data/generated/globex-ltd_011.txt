@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Garcia-Stevens
+Invoice No: INV-10011
+Date: 2026-01-07
+PO Reference: PO-4011
+Currency: INR
+
+Line Items:
+  SKU-7476   Appear myself                  20 EA  x     324.45 =      6489.00
+  SKU-9606   Make carry                     13 EA  x     272.85 =      3547.05
+  SKU-2705   Despite dog                    16 EA  x     231.98 =      3711.68
+  SKU-4138   Future hope                    10 EA  x     358.77 =      3587.70
+  SKU-4522   Table change                   24 EA  x     172.57 =      4141.68
+
+Subtotal: 21477.11
+Tax (18%): 3865.88
+Total Due: 25342.99

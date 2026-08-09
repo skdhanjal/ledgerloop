@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Boyd Group
+Invoice No: INV-10041
+Date: 2026-03-04
+PO Reference: PO-99041
+Currency: INR
+
+Line Items:
+  SKU-2635   Example protect                10 EA  x     126.43 =      1264.30
+  SKU-9578   Top buy                        22 EA  x     367.19 =      8078.18
+  SKU-3617   Although here                  21 EA  x     480.08 =     10081.68
+
+Subtotal: 19424.16
+Tax (18%): 3496.35
+Total Due: 22920.51

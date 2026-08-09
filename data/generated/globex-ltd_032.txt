@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Stafford, Johnson and Walker
+Invoice No: INV-10032
+Date: 2026-05-16
+PO Reference: PO-4032
+Currency: INR
+
+Line Items:
+  SKU-5476   List bed                       41 EA  x     420.45 =     17238.45
+  SKU-1363   Little call                    40 EA  x      66.68 =      2667.20
+  SKU-4767   Walk action                    41 EA  x     324.02 =     13284.82
+  SKU-9494   Pm half                         5 EA  x     198.58 =       992.90
+  SKU-2603   Land hard                       3 EA  x     258.55 =       775.65
+
+Subtotal: 34959.02
+Tax (18%): 6292.62
+Total Due: 41251.64

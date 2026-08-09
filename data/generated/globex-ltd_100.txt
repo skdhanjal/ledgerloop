@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Hays-Taylor
+Invoice No: INV-10100
+Date: 2026-04-09
+PO Reference: PO-4100
+Currency: INR
+
+Line Items:
+  SKU-4023   Mean responsibility             6 EA  x     295.82 =      1774.92
+  SKU-8934   Protect key                    14 EA  x     267.79 =      3749.06
+  SKU-7285   Sure determine                  2 EA  x     419.09 =       838.18
+
+Subtotal: 6362.16
+Tax (18%): 1145.19
+Total Due: 7522.35

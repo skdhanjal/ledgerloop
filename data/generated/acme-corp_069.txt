@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Tyler-Lewis
+Invoice No: INV-10069
+Date: 2026-06-06
+PO Reference: PO-99069
+Currency: INR
+
+Line Items:
+  SKU-8162   Claim leg                      22 EA  x     464.39 =     10216.58
+  SKU-9854   Do prove                       24 EA  x      10.27 =       246.48
+  SKU-5496   Guy hear                       38 EA  x     455.43 =     17306.34
+
+Subtotal: 27769.40
+Tax (18%): 4998.49
+Total Due: 32767.89

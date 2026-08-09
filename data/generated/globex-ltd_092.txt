@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Moore, Solis and Collins
+Invoice No: INV-10092
+Date: 2026-02-09
+PO Reference: PO-4092
+Currency: INR
+
+Line Items:
+  SKU-4735   Draw produce                   37 EA  x      70.11 =      2594.07
+  SKU-6034   Benefit behavior               49 EA  x      82.21 =      4028.29
+
+Subtotal: 6622.36
+Tax (18%): 1192.02
+Total Due: 7814.38

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: White-Dixon
+Invoice No: INV-10099
+Date: 2026-08-05
+PO Reference: PO-4099
+Currency: INR
+
+Line Items:
+  SKU-3427   Treatment different            25 EA  x      49.00 =      1225.00
+  SKU-4585   Down clear                      4 EA  x     374.40 =      1497.60
+  SKU-7742   Mother amount                  37 EA  x     271.64 =     10050.68
+
+Subtotal: 12773.28
+Tax (18%): 2299.19
+Total Due: 15072.47

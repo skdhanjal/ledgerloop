@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Johnson, Warner and Beard
+Invoice No: INV-10038
+Date: 2026-01-07
+PO Reference: PO-4051
+Currency: INR
+
+Line Items:
+  SKU-4665   Tell area                       1 EA  x     359.90 =       359.90
+  SKU-7723   Strong win                     38 EA  x     177.46 =      6743.48
+  SKU-2415   Similar certain                44 EA  x     131.94 =      5805.36
+  SKU-9947   Focus pull                     43 EA  x      17.90 =       769.70
+  SKU-8313   Successful market              12 EA  x     347.91 =      4174.92
+  SKU-8888   Environment seem               15 EA  x     315.13 =      4726.95
+  SKU-2495   Break hospital                  6 EA  x     324.80 =      1948.80
+  SKU-6112   Sport cover                    48 EA  x      54.99 =      2639.52
+
+Subtotal: 27168.63
+Tax (18%): 4890.35
+Total Due: 32058.98

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Davis Inc
+Invoice No: INV-10135
+Date: 2026-01-30
+PO Reference: PO-4135
+Currency: INR
+
+Line Items:
+  SKU-3950   His it                          3 EA  x     313.09 =       939.27
+  SKU-7885   Will light                     34 EA  x     427.50 =     14535.00
+  SKU-2142   Population more                25 EA  x      90.73 =      2268.25
+
+Subtotal: 17742.52
+Tax (18%): 3193.65
+Total Due: 20936.17

@@ -1,0 +1,17 @@
+INVOICE
+Vendor: Lane, Wong and Williams
+Invoice No: INV-10131
+Date: 2026-02-10
+PO Reference: PO-4131
+Currency: INR
+
+Line Items:
+  SKU-5110   See sort                       40 EA  x     226.45 =      9058.00
+  SKU-2613   Hundred under                  36 EA  x      31.05 =      1117.80
+  SKU-9287   Tough stay                     21 EA  x     316.22 =      6640.62
+  SKU-8746   Hospital Democrat              10 EA  x     176.93 =      1769.30
+  SKU-3855   Look view                       8 EA  x     386.99 =      3095.92
+
+Subtotal: 21681.64
+Tax (18%): 3902.70
+Total Due: 25584.34

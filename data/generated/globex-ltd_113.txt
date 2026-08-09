@@ -1,0 +1,20 @@
+INVOICE
+Vendor: Allen Ltd
+Invoice No: INV-10113
+Date: 2026-07-12
+PO Reference: PO-4113
+Currency: INR
+
+Line Items:
+  SKU-1146   Treatment authority            25 EA  x     574.84 =     14371.00
+  SKU-5431   Music hope                     24 EA  x      43.96 =      1055.04
+  SKU-7839   Suddenly happy                 27 EA  x     179.36 =      4842.72
+  SKU-7104   Open expect                     3 EA  x     474.86 =      1424.58
+  SKU-2428   Involve early                   1 EA  x     360.54 =       360.54
+  SKU-4382   Interest fine                  43 EA  x     328.72 =     14134.96
+  SKU-1936   Believe response               47 EA  x     384.23 =     18058.81
+  SKU-2947   Cold minute                    27 EA  x     148.91 =      4020.57
+
+Subtotal: 58268.22
+Tax (18%): 10488.28
+Total Due: 68756.50

@@ -1,0 +1,14 @@
+INVOICE
+Vendor: Bishop LLC
+Invoice No: INV-10040
+Date: 2026-04-15
+PO Reference: PO-4040
+Currency: INR
+
+Line Items:
+  SKU-7749   Keep art                       31 BOX x    4660.00 =    144460.00
+  SKU-9799   School blue                    20 EA  x     165.44 =      3308.80
+
+Subtotal: 147768.80
+Tax (18%): 26598.38
+Total Due: 174367.18

@@ -1,0 +1,15 @@
+INVOICE
+Vendor: Wall Inc
+Invoice No: INV-10086
+Date: 2026-02-22
+PO Reference: PO-4086
+Currency: INR
+
+Line Items:
+  SKU-4880   Sell maybe                     17 EA  x     553.96 =      9417.32
+  SKU-9311   Pretty act                     35 EA  x     210.08 =      7352.80
+  SKU-8761   Thought newspaper              20 EA  x     399.85 =      7997.00
+
+Subtotal: 24767.12
+Tax (18%): 4458.08
+Total Due: 29240.20
