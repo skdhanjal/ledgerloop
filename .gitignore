@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+
+# Node
+node_modules/
+frontend/dist/
+
+# Env & secrets — provider keys live only in litellm-proxy/.env, never committed
+.env
+*.env
+!*.env.example
+
+# Terraform
+infra/**/.terraform/
+infra/**/*.tfstate
+infra/**/*.tfstate.*
+infra/**/tfplan
+
+# Local data / DB
+*.sqlite
+*.sqlite3
+data/base/
+data/golden/
+data/adversarial/
+data/smoke/
+
+# OS / editor
+.DS_Store
+*.swp

@@ -1,0 +1,59 @@
+[project]
+name = "ledgerloop"
+version = "0.1.0"
+description = "LedgerLoop agent service — multi-tenant accounts-payable exception agent on LangGraph"
+readme = "README.md"
+authors = [
+    { name = "Shashi Kumar", email = "skdhanjal777@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "faker>=40.38.0,<41",
+    "fastapi>=0.141.1,<0.142",
+    "fastembed>=0.8.0,<0.9",
+    "httpx>=0.28.1,<0.29",
+    "langchain>=1.4.0,<2",
+    "langchain-openai>=1.6.0,<2",
+    "langgraph>=1.2.11,<1.3",
+    "langgraph-checkpoint-postgres>=3.1.2,<4",
+    "langsmith>=0.12.1,<0.13",
+    "psycopg[binary,pool]>=3.3.5,<4",
+    "pydantic>=2.13.5,<3",
+    "pydantic-settings>=2.15.0",
+    "python-dotenv>=1.2.3",
+    "python-jose[cryptography]>=3.5.0,<4",
+    "sse-starlette>=3.4.10,<4",
+    "structlog>=26.1.0",
+    "uvicorn[standard]>=0.52.4,<0.53",
+]
+
+[project.scripts]
+ledgerloop = "ledgerloop:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "langgraph-cli>=0.4.31,<0.5",
+    "locust>=2.46.4,<3",
+    "mypy>=2.3.1",
+    "pytest>=9.1.1,<10",
+    "pytest-asyncio>=1.4.0",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.16.6,<0.17",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "TID"]
+
+[tool.ruff.lint.flake8-tidy-imports.banned-api]
+"openai".msg = "Call the LiteLLM gateway, never a provider SDK directly (C10)."
+"google.generativeai".msg = "Call the LiteLLM gateway, never a provider SDK directly (C10)."
+"google.genai".msg = "Call the LiteLLM gateway, never a provider SDK directly (C10)."
+"anthropic".msg = "Call the LiteLLM gateway, never a provider SDK directly (C10)."
