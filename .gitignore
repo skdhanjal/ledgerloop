@@ -34,3 +34,9 @@ data/smoke/
 # OS / editor
 .DS_Store
 *.swp
+
+# Personal reference/learning material — not project deliverables (DECISIONS.md and
+# BENCH.md ARE deliverables and stay tracked; everything else under docs/ doesn't)
+docs/*
+!docs/DECISIONS.md
+!docs/BENCH.md
