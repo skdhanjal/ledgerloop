@@ -37,3 +37,17 @@ One entry per trade-off made along the way, written the day it's made. This is t
 **Why.** The gateway (Day 4) exposes an OpenAI-compatible endpoint for every tier (`fast`/`balanced`/`deep`/`judge`), regardless of which real provider backs a given tier. The standard way to speak that protocol from LangChain is `langchain_openai.ChatOpenAI` pointed at the gateway's `base_url` with a virtual key — that's calling *the gateway*, not a provider SDK, so it doesn't violate C10 or trip the Day-4 `ruff` gateway-guard rule (which bans importing `openai`/`google.generativeai` directly in service code, not the LangChain wrapper). Since every tier is reached through the same OpenAI-shaped endpoint, `langchain-google-genai` has no call site in agent-service at all — the multi-provider fallback is entirely the gateway's concern, invisible to the service. §1.10.2's literal `uv add` command (the one actually meant to be run) already omits both packages from agent-service; this entry just makes explicit *why* one of them still needed adding.
 
 ---
+
+## Day 2 — Synthetic data: file layout, invoice-count interpretation, exception vocabulary
+
+**Decision.** Three things the doc's Day 2 build commands left ambiguous, resolved before writing the generator:
+
+1. **Output layout is one JSON file per document**, not one JSONL file per tenant per doc-type: `data/base/<tenant_id>/{invoices,purchase_orders,goods_receipts,ground_truth}/<DOC-ID>.json`, plus `<tenant_id>/tenant.json` and a top-level `manifest.json`.
+2. **`--invoices 150` means the total across all tenants**, split as evenly as possible (3 tenants → 50 each), not 150 per tenant.
+3. **Exception types seeded by the generator are exactly the vocabulary Day 5's policy cascade will use**: `duplicate`, `missing_po`, `arithmetic_error`, `price_variance`, `short_shipment`, `over_ceiling`, plus `clean`.
+
+**Why.** (1) A later `ledgerloop.cli run --tenant acme --invoice INV-0007` (Day 6) needs to open a single invoice by id directly — a JSONL layout would require scanning or a separate index. The trade is more files (556 for the committed set) in exchange for direct lookup. (2) Today's generator produces the *base* fixture set; the doc's own phase map puts the larger stratified and adversarial sets on Days 17 and 23, so keeping the base set closer to 150 than 450 documents matches that scoping. (3) Seeding exactly Day 5's rule vocabulary now means every rule in that cascade has real, labeled test cases the day it's implemented, instead of the generator and the policy engine drifting into two different ideas of what an "exception" is.
+
+**Details.** All three were confirmed with the user via `AskUserQuestion` before implementation (both had a clearly better default, but both shape how every later day reads this data, so worth a direct check rather than a silent judgment call). Resolved counts for the committed `seed=42` set: 150 invoices (50/tenant), mix `{clean: 90, duplicate: 12, missing_po: 12, price_variance: 9, over_ceiling: 9, arithmetic_error: 9, short_shipment: 9}`.
+
+---
