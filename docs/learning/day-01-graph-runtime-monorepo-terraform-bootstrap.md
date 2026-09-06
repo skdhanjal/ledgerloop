@@ -102,9 +102,77 @@ Every entry is a floor-and-ceiling range (concept #2 above), not a bare minimum.
 
 **`infra/main.tf`** — currently just a comment block. This is the resource inventory table from the master doc (which day adds what), written directly into the file that will eventually hold those resources, so the sequencing decision is visible in the code itself, not just in a doc that could drift from what's actually there.
 
-## Claude Code technique used today
+## Verify it yourself
 
-**Plan mode**, twice. First to work out the overall multi-week execution approach (cadence, GCP/spend decisions) before touching the keyboard, and a second time — right now — to redesign the operating rhythm itself after your feedback that Day 1's chat summary wasn't a substitute for something you could actually study from. Plan mode's value here wasn't "get permission to write code," it was forcing an explicit, editable, written-down plan *before* acting, so a wrong assumption (like "a chat paragraph counts as documentation") gets caught and corrected before it repeats across 29 more days instead of after.
+Every one of these was actually run during the build — this is the same evidence, framed so you can reproduce it, not just take my word for it. Run them from `~/projects/ledgerloop` unless noted.
+
+**1. The monorepo layout exists.**
+```bash
+ls
+# expect: agent-service  data  docs  evals  frontend  infra  litellm-proxy
+git log --oneline
+# expect: the Day 1 build commit, followed by one or more learning-doc retrofit commits
+```
+
+**2. The dependency graph is locked and matches what's installed.**
+```bash
+cd agent-service
+uv run python scripts/check_versions.py
+```
+Expected tail of the output:
+```
+version graph OK
+```
+If you want to see the actual lockfile contents for one package:
+```bash
+grep -A2 '^name = "langgraph"' uv.lock
+```
+Expected:
+```
+name = "langgraph"
+version = "1.2.11"
+source = { registry = "https://pypi.org/simple" }
+```
+
+**3. The gateway-guard lint rule actually fails a build — don't take this on faith, break it yourself.**
+```bash
+echo 'import openai' > /tmp/guard_test.py
+uv run ruff check /tmp/guard_test.py
+echo "exit code: $?"
+rm /tmp/guard_test.py
+```
+Expected: a `TID251` error naming `openai` as banned, with the message *"Call the LiteLLM gateway, never a provider SDK directly (C10)."*, and **exit code 1** (a real failure, not a warning).
+
+**4. The GCP project, billing, and budget alert are real.**
+```bash
+gcloud projects describe ledgerloop-880ac9 --format="value(projectId,lifecycleState)"
+# expect: ledgerloop-880ac9  ACTIVE
+
+gcloud billing projects describe ledgerloop-880ac9 --format="value(billingEnabled)"
+# expect: True
+
+gcloud billing budgets list --billing-account=01D6C8-3B6B7B-19CD26 --format="value(displayName)" | grep ledgerloop
+# expect: ledgerloop-monthly
+```
+
+**5. Terraform state is real and there's genuinely nothing deployed yet.**
+```bash
+cd ../infra
+gsutil ls gs://ledgerloop-880ac9-tfstate/
+# expect: gs://ledgerloop-880ac9-tfstate/terraform/  (the state prefix `terraform init` created)
+
+terraform plan
+# expect: "No changes. Your infrastructure matches the configuration." — zero resources, and that's correct
+
+gcloud run services list --project=ledgerloop-880ac9
+# expect: an empty list — no Cloud Run service exists yet, on purpose
+```
+
+If any of these don't match, something drifted since this was written — that's worth flagging, not silently working around.
+
+## Claude Code concept(s) used today
+
+**Plan mode.** Full explanation lives in [`CLAUDE_CODE_GUIDE.md`](CLAUDE_CODE_GUIDE.md#plan-mode) (start there for the general concept); the LedgerLoop-specific note: it was used twice on Day 1 alone — once to work out the overall multi-week execution approach (cadence, GCP/spend decisions) before touching a keyboard, and again to redesign the operating rhythm itself after the feedback that a chat summary wasn't a substitute for something study-able. Both times, the value wasn't "get permission to write code" — it was forcing an explicit, editable, written-down plan *before* acting, so a wrong assumption (like "a chat paragraph counts as documentation") gets caught and corrected once instead of repeating across 29 more days.
 
 ## New terms
 
