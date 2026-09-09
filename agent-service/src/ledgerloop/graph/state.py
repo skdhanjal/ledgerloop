@@ -1,22 +1,12 @@
-"""InvoiceState: the durable, per-thread pipeline state, plus the
-input/output/context schemas that bound what a caller sends in, what they
-get back, and what non-serializable dependencies a node can reach.
+"""InvoiceState and the schemas that bound it.
 
-Three different lifetimes, easy to collapse into one if you're not
-careful (Day 3's concept note):
-
-- STATE   (`InvoiceState`)    durable, per-thread, serialized into every
-                                checkpoint from Day 9 onward.
-- CONTEXT (`LedgerContext`)   per-run dependencies, injected via
-                                `Runtime[LedgerContext]`, never checkpointed --
-                                the only place a DB connection or an HTTP
-                                client is allowed to live.
-- CONFIG  (`RunnableConfig`)  LangGraph plumbing (`thread_id`, recursion
-                                limit). Never put anything here that a
-                                reducer, a Store namespace, or an eval needs
-                                to see -- `tenant_id` lives in STATE for
-                                exactly that reason (see docs/DECISIONS.md,
-                                Day 3).
+Three lifetimes, easy to collapse into one: state is durable per-thread
+data, serialized into every checkpoint. Context is per-run, injected via
+Runtime, and never checkpointed -- the only place non-serializable
+dependencies (a DB connection, an HTTP client) may live. Config is
+LangGraph's own plumbing, invisible to reducers, Store namespaces, and
+evals. `tenant_id` lives in state, not just config, so it's visible to
+all three.
 """
 
 from __future__ import annotations
@@ -33,17 +23,10 @@ Decision = Literal["auto_approve", "hold", "reject"]
 
 
 class InvoiceFields(BaseModel):
-    """Extracted invoice fields. Day 8's real extractor fills this in;
-    Day 2/3 use a hardcoded stand-in. Pydantic, not TypedDict, because
-    this crosses the extraction boundary and we want validation on the
-    way in -- a malformed `total` should fail loudly, not silently
-    become a policy decision.
-
-    `bank_account` / `routing_number` are payment-routing fields some
-    invoices carry for wire transfer. They must never leave the graph
-    through `invoke()` -- `DecisionResult` (the output schema below)
-    omits `fields` entirely on purpose, and Day 3's test proves it.
-    """
+    """Pydantic, not TypedDict: this is the extraction boundary, where a
+    malformed value should fail loudly rather than silently become a
+    policy decision. `bank_account`/`routing_number` must never leave the
+    graph -- `DecisionResult` omits `fields` entirely."""
 
     vendor: str
     invoice_no: str
@@ -54,10 +37,6 @@ class InvoiceFields(BaseModel):
 
 
 class LineMatch(TypedDict):
-    """One line item's three-way-match result. Day 14 fans out one matcher
-    branch per line, keyed by `line_index`, writing into `line_matches`
-    below -- this is the payload each branch produces."""
-
     line_index: int
     po_quantity: float
     received_quantity: float
@@ -67,30 +46,19 @@ class LineMatch(TypedDict):
 
 
 class ExceptionRecord(TypedDict):
-    """One policy exception. `code` matches Day 5's rule-cascade vocabulary
-    (see `ledgerloop.data.models.EXCEPTION_TYPES`); `severity` is what
-    `dedupe_keep_severest` compares when the same code is raised twice."""
-
     code: str
     severity: int
     message: str
 
 
 class AuditEntry(TypedDict):
-    """One audit-trail entry. Structured, not a bare string, so Day 26's
-    audit log can filter or sort by node without parsing free text."""
-
     node: str
     message: str
 
 
 class InvoiceState(TypedDict, total=False):
-    """The full pipeline state, durable across every checkpoint. Every
-    field here is serialized on every superstep -- see the module
-    docstring for what does *not* belong here."""
-
     invoice_id: str
-    tenant_id: str  # first-class in state, not just config -- see module docstring
+    tenant_id: str
     raw_text: str
     fields: InvoiceFields | None
     line_matches: Annotated[dict[int, LineMatch], merge_by_index]
@@ -103,12 +71,9 @@ class InvoiceState(TypedDict, total=False):
 
 @dataclass
 class LedgerContext:
-    """Per-run dependencies, injected via `Runtime[LedgerContext]` and
-    never checkpointed. `tenant_id` is duplicated here even though it also
-    lives in state: a node resolving `erp_client` / `po_db` from a
-    connection pool needs it as a lookup key at call time, but state --
-    not context -- is the source of truth a reducer, a Store namespace,
-    or an eval can see."""
+    """Per-run dependencies, injected via Runtime, never checkpointed.
+    `tenant_id` is duplicated from state as a lookup key for resolving
+    `erp_client`/`po_db`; state remains the source of truth."""
 
     tenant_id: str
     model: str = "balanced"
@@ -118,20 +83,14 @@ class LedgerContext:
 
 
 class InvoiceRequest(TypedDict):
-    """What a caller sends in to `invoke()`. Deliberately narrow --
-    everything else in `InvoiceState` starts empty and is built up by
-    the graph as it runs."""
-
     invoice_id: str
     tenant_id: str
     raw_text: str
 
 
 class DecisionResult(TypedDict):
-    """What `invoke()` returns. No `raw_text`, no `fields` (and therefore
-    no bank details), no `messages` -- a caller gets the decision and the
-    audit trail, never the extracted document or the conversation that
-    produced it."""
+    """No `raw_text`, no `fields` -- a caller gets the decision and audit
+    trail, never the extracted document."""
 
     invoice_id: str
     tenant_id: str

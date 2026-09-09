@@ -2,9 +2,7 @@ from ledgerloop.graph.reducers import append_capped, dedupe_keep_severest, merge
 
 
 def test_merge_by_index_overwrites_retried_branch():
-    # Day 14 fans out one matcher branch per line index. A retried branch
-    # writes the same index again -- overwrite, not duplicate, is what
-    # keeps the reducer idempotent under a replay.
+    # A retried write at the same index should replace, not duplicate.
     current = {0: {"line_index": 0, "matched": False}}
     update = {0: {"line_index": 0, "matched": True}}
 
